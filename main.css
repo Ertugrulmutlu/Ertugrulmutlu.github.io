@@ -1,0 +1,79 @@
+html, body {
+    height: 100%;
+    font-family: "Open Sans";
+  }
+  .container{
+    margin-bottom: 2%;
+    width: 100%;
+    height: 100%;
+  }
+  section{
+    width: 100%;
+    height: 100%;
+  }
+  .navbar_color{
+  
+    -webkit-box-shadow: 0px 5px 65px 4px rgba(66,66,66,1);
+    -moz-box-shadow: 0px 5px 65px 4px rgba(66,66,66,1);
+    box-shadow: 0px 5px 65px 4px rgbargba(66,66,66,1);
+  }
+  .container_shadow{
+    -webkit-box-shadow: 0px 5px 65px 4px rgba(0,0,0,0.45);
+    -moz-box-shadow: 0px 5px 65px 4px rgba(0,0,0,0.45);
+    box-shadow: 0px 5px 65px 4px rgba(0,0,0,0.45);
+  }
+  a{
+    color: black;
+  }
+  li{
+    color: black;
+  }
+  .btn:hover{
+    background-color: whitesmoke;
+    border:  2px solid whitesmoke;
+    color: rgba(0, 0, 0, 0.8); 
+  }
+
+  .btn-outline{
+    border:  2px solid rgb(0, 0, 0);
+    color: rgb(129, 129, 129);
+  }
+  .btn-text{
+    color: rgba(17, 12, 12, 0.8); 
+  }
+  .text_shadow{
+    text-shadow: 4px 6px 5px rgba(0,0,0,0.66);
+  }
+  
+  .footer {
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  .scrollable-container {
+    max-height: 300px; /* Set the desired maximum height for the container */
+    max-width: 300px;
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+  .secondary_container_color{
+    background: antiquewhite;
+  }
+  .custom-carousel-button {
+    background-color: black;
+  }
+  
+  .custom-carousel-button:hover {
+    background-color: #333; /* Darken the background on hover */
+  }
+  
+  footer {
+    background-color: transparent;
+    color: white;
+    padding: 20px;
+    margin-top: auto; /* Push footer to the bottom */
+    position: sticky;
+    bottom: 0;
+}
