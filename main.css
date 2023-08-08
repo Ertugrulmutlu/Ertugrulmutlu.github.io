@@ -1,6 +1,8 @@
 html, body {
     height: 100%;
     font-family: "Open Sans";
+    -webkit-overflow-srolling: touch;
+    overflow-y: auto;
   }
   .container{
     margin-bottom: 2%;
