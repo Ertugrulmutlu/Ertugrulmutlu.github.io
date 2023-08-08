@@ -30,10 +30,10 @@ function scrollThroughSections() {
     updateProgressBar();
 
     if (currentIndex < sectionIds.length) {
-      setTimeout(scrollThroughSections, 50); // Scroll every 4 seconds
+      setTimeout(scrollThroughSections, 4500); // Scroll every 4 seconds
     }
   }
 }
 
 // Start scrolling
-setTimeout(scrollThroughSections, 0);
+setTimeout(scrollThroughSections, 4500);
