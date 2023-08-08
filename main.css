@@ -77,3 +77,7 @@ html, body {
     position: sticky;
     bottom: 0;
 }
+.pagination .page-item.active .page-link {
+  background-color: green;
+  color: green; /* Change text color for visibility */
+}
