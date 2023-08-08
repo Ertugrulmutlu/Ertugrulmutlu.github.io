@@ -36,4 +36,4 @@ function scrollThroughSections() {
 }
 
 // Start scrolling
-setTimeout(scrollThroughSections, 4500);
+setTimeout(scrollThroughSections, 0);
