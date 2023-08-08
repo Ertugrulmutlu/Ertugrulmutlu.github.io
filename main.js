@@ -11,7 +11,7 @@ function scrollToSection(sectionId) {
     progressBar.style.width = `${progress}%`;
   }
   // Scroll through sections every 4 seconds
-  const sectionIds = ['1', '2', '3', '4', '5'];
+  const sectionIds = ['1', '2', '3'];
   let currentIndex = 0;
   
   function scrollThroughSections() {
