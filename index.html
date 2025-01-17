@@ -3,279 +3,250 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ertuğrul Mutlu</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>   
-    <link rel="stylesheet" href="main.css">
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
-    <script src="main.js"></script> 
+    <title>Ertuğrul Mutlu - Portfolio</title>
+    <style>
+        :root {
+            --neon-green: #00FF00;
+            --dark-bg: #000000;
+            --dark-card: #0a0a0a;
+            --dark-input: #111111;
+            --text-light: #ffffff;
+            --text-gray: #888888;
+            --neon-glow: 0 0 10px #00FF00, 0 0 20px #00FF00, 0 0 30px #00FF00;
+            --card-glow: 0 0 15px rgba(0, 255, 0, 0.1);
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 0;
+        }
+
+        .neon-title {
+            color: var(--neon-green);
+            text-shadow: var(--neon-glow);
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            color: var(--text-gray);
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.2rem;
+        }
+
+        .card {
+            background-color: var(--dark-card);
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 1rem;
+            box-shadow: var(--card-glow);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 0 25px rgba(0, 255, 0, 0.2);
+        }
+
+        .card-title {
+            color: var(--neon-green);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .btn {
+            background-color: transparent;
+            border: 2px solid var(--neon-green);
+            color: var(--neon-green);
+            padding: 0.8rem 2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: var(--neon-green);
+            color: var(--dark-bg);
+            box-shadow: var(--neon-glow);
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .social-icons a {
+            color: var(--neon-green);
+            font-size: 1.5rem;
+            transition: text-shadow 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            text-shadow: var(--neon-glow);
+        }
+
+        @media (max-width: 768px) {
+            .neon-title {
+                font-size: 2rem;
+            }
+            
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <!--Header section-->
+    <main>
+        <!-- Intro Section -->
+        <section class="section">
+            <div class="container">
+                <h1 class="neon-title">Welcome to My Portfolio</h1>
+                <p class="subtitle">Discover my journey in software development</p>
+                <div style="text-align: center;">
+                    <a href="#about" class="btn">Learn More</a>
+                </div>
+            </div>
+        </section>
 
-<!--Header section-->
-<section id="0">
-    <div class="container  container_shadow py-5">
-        <div class="row h-100 align-items-center py-4">
-            <div class="col-lg-12">
-                <lottie-player src="https://lottie.host/a69cd10a-df9d-4fe9-b861-a8d9ab6a080c/TCy5uei6RJ.json"  background="transparent" speed="1" style="width: 100%; height: 100%;" loop autoplay></lottie-player>
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="neon-title">About Me</h2>
+                <div class="card">
+                    <p>I am a 19-year-old software developer who has been passionate about software for 7 years and continues to pursue it with ambition and pleasure.</p>
+                    <p style="color: var(--text-gray); margin-top: 1rem;">This site will briefly introduce me to you. Explore my skills, experiences, and projects as you navigate through the sections.</p>
+                </div>
             </div>
-        </div>
-</section>
-<section id="1">
-    <div class="container bg-dark container_shadow py-5">
-        <div class="row h-100 align-items-center py-4">
-            <div class="col-lg-12 d-flex justify-content-center">
-                <h1 class="mb-5 text-white">First of all, what is this site</h1>
-            </div>
-            <div class="col-lg-12 d-flex justify-content-center">
-                <p class="lead text-white">
-                    This site will briefly introduce me to you in 1 minute, please do not touch your mouse or scroll the site, I wish you a pleasant watch.
-                </p>
-            </div>
-            <div class="col-lg-12 d-flex justify-content-center">
-                <p class="lead text-white">
-                    Don't worry, you'll have a chance to come back at the end of the show.
-                </p>
-            </div>
-        </div>
-    </div>
+        </section>
 
-</section>
-<section id="2">
-    <div class="container  container_shadow py-5">
-        <div class="row h-100 align-items-center py-4">
-            <div class="col-lg-12 d-flex justify-content-center">
-                <h1 class="mb-5 ">Who am I?</h1>
-            </div>
-            <div class="col-lg-12 d-flex justify-content-center">
-                <p class="lead ">
-                    I am a 19-year-old software developer who has been interested in software for 7 years and continues to do so with ambition and pleasure.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="3">
-    <div class="container bg-dark container_shadow py-5">
-        <div class="row h-100 align-items-center py-4">
-            <div class="col-lg-12 d-flex justify-content-center">
-                <h1 class=" text-white">What technologies have I used and am using</h1>
-            </div>
-            <div class="col-lg-4 d-flex justify-content-center">
-                <h4 class=" text-white">I have worked and continue to work with many technologies. <br>Technologies:</h4>
-            </div>
-            <div class="col-lg-8 d-flex justify-content-center">
-                <div class="table-responsive ">
-                    <table class="table text-white">
-                    <thead >
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Technologies</th>
-                        <th scope="col">Which language</th>
-                        <th scope="col">Time</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Web</td>
-                        <td>HTML-CSS-JS (Node.js)-Python (Flask)-MongoDb-PostgreSQL-MSSQL</td>
-                        <td>2 year</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Mobile</td>
-                        <td>Flutter-Python</td>
-                        <td>1 year</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>Ai</td>
-                        <td>Python (Tenserflow,Yolo)</td>
-                        <td>3 year</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">4</th>
-                        <td>Embeeded Systems</td>
-                        <td>Assembly(x86,x64,MASM,NASM)</td>
-                        <td>1 year</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">5</th>
-                        <td>IOT</td>
-                        <td>C-Python</td>
-                        <td>5 year</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">6</th>
-                        <td>Desktop Application</td>
-                        <td>C# (Winform)- Python(Tkinter)</td>
-                        <td>6 month</td>
-                      </tr>
-                    </tbody>
-                </table>
-              </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="4">
-    <div class="container  container_shadow py-5">
-        <div class="row h-100 align-items-center py-4">
-            <div class="col-lg-12 d-flex justify-content-center">
-                <h1 class="mb-5 ">My Experiences</h1>
-            </div>
-            <div class="col-lg-12 d-flex justify-content-center">
-                <div class="row h-100 align-items-center py-4">
-                    <div class="col-lg-4 d-flex justify-content-center">
-                        <div class="card mb-3" style="width: 18rem;">
-                            <div class="card-body">
-                              <h5 class="card-title">TürkAi</h5>
-                              <h6 class="card-subtitle mb-2 text-muted">Software Developer</h6>
-                              <p class="card-text">Artificial intelligence and algorithm development on microprocessors such as H7/7+, arduino, esp32.</p>
-                            </div>
-                          </div>
+        <!-- Technologies Section -->
+        <section id="technologies" class="section">
+            <div class="container">
+                <h2 class="neon-title">Technologies I've Used</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3 class="card-title">Web Development</h3>
+                        <p>HTML, CSS, JS (Node.js), Python (Flask), MongoDB, PostgreSQL, MSSQL</p>
+                        <p style="color: var(--text-gray); margin-top: 1rem;">Experience: 2 years</p>
                     </div>
-                    <div class="col-lg-4 d-flex justify-content-center">
-                        <div class="card mb-3" style="width: 18rem;">
-                            <div class="card-body">
-                              <h5 class="card-title">AnkaXLabs</h5>
-                              <h6 class="card-subtitle mb-2 text-muted">Software Developer</h6>
-                              <p class="card-text">Software and machine development in the field of artificial intelligence and iot.</p>
-                            </div>
-                          </div>
+                    <div class="card">
+                        <h3 class="card-title">Mobile Development</h3>
+                        <p>Flutter, Python</p>
+                        <p style="color: var(--text-gray); margin-top: 1rem;">Experience: 1 year</p>
                     </div>
-                    <div class="col-lg-4 d-flex justify-content-center">
-                        <div class="card mb-3" style="width: 18rem;">
-                            <div class="card-body">
-                              <h5 class="card-title">Qgen</h5>
-                              <h6 class="card-subtitle mb-2 text-muted">Co-Founder/Software developr</h6>
-                              <p class="card-text">Software development in the field of educational technologies</p>
-
-                            </div>
-                          </div>
+                    <div class="card">
+                        <h3 class="card-title">Artificial Intelligence</h3>
+                        <p>Python (TensorFlow, YOLO)</p>
+                        <p style="color: var(--text-gray); margin-top: 1rem;">Experience: 3 years</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Embedded Systems</h3>
+                        <p>Assembly (x86, x64, MASM, NASM)</p>
+                        <p style="color: var(--text-gray); margin-top: 1rem;">Experience: 1 year</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Internet of Things</h3>
+                        <p>C, Python</p>
+                        <p style="color: var(--text-gray); margin-top: 1rem;">Experience: 5 years</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Desktop Applications</h3>
+                        <p>C# (WinForms), Python (Tkinter)</p>
+                        <p style="color: var(--text-gray); margin-top: 1rem;">Experience: 6 months</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-<section id="5">
-    <div class="container bg-dark container_shadow py-5">
-        <div class="row h-100 align-items-center py-4">
-            <div class="col-lg-12 d-flex justify-content-center">
-                <h1 class="mb-5 text-white">First of all, what is this site</h1>
-            </div>
-            <div class="col-lg-12 d-flex justify-content-center">
-                <p class="lead text-white">
-                    Thank you for watching, now you can navigate between the pages via the buttons on the bottom right, or you can visit my social media such as instagram github.
-                </p>
-            </div>
-        </div>
-    </div>
+        </section>
 
-</section>
-
-</div>
-<footer>
-    <div class="progress" id="display_progresbar" >
-        <div id="progressbarr" class="progress-bar" role="progressbar" aria-valuenow="0"  aria-valuemin="0" aria-valuemax="100"></div>
-    </div>
-</footer>
-<footer>
-    <div class="elevator" id="elevator" style="display: none;">
-        <nav aria-label="Page navigation example">
-            <ul class="pagination justify-content-end">
-              <li class="page-item"><a class="page-link" href="#1">1</a></li>
-              <li class="page-item"><a class="page-link" href="#2">2</a></li>
-              <li class="page-item"><a class="page-link" href="#3">3</a></li>
-              <li class="page-item"><a class="page-link" href="#4">4</a></li>
-              <li class="page-item"><a class="page-link" href="#5">5</a></li>
-              <li class="page-item"><a class="page-link" data-bs-toggle="modal" data-bs-target="#exampleModal">Site Map</a></li>
-              <li class="page-item"><a class="page-link" data-bs-toggle="modal" data-bs-target="#exampleModal2">Social Media</a></li>
-
-            </ul>
-          </nav>
-    </div>
-</footer>
-
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Site Map</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="neon-title">My Experiences</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3 class="card-title">TürkAi</h3>
+                        <h4 style="color: var(--text-gray); margin-bottom: 1rem;">Software Developer</h4>
+                        <p>Artificial intelligence and algorithm development on microprocessors such as H7/7+, Arduino, ESP32.</p>
                     </div>
-                    <div class="modal-body">
-                        1-> What is this site ?<br>
-                        2->Who am I?<br>
-                        3->Which Tech?<br>
-                        4->Experiences..<br>
-                        5->Closure..<br>
+                    <div class="card">
+                        <h3 class="card-title">AnkaXLabs</h3>
+                        <h4 style="color: var(--text-gray); margin-bottom: 1rem;">Software Developer</h4>
+                        <p>Software and machine development in the field of artificial intelligence and IoT.</p>
                     </div>
-                    <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    
-
+                    <div class="card">
+                        <h3 class="card-title">Qgen</h3>
+                        <h4 style="color: var(--text-gray); margin-bottom: 1rem;">Co-Founder/Software Developer</h4>
+                        <p>Software development in the field of educational technologies.</p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="neon-title">Get in Touch</h2>
+                <div class="card">
+                    <p class="subtitle">Thank you for exploring my portfolio. Feel free to connect with me on social media or via email.</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/ertugrul._.mutlu/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/ertuğrul-mutlu/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Ertugrulmutlu" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                    <p style="text-align: center; margin-top: 2rem; color: var(--text-gray);">
+                        Email: <a href="mailto:ertugrulmutlu@gmail.com" style="color: var(--neon-green); text-decoration: none;">ertugrulmutlu@gmail.com</a>
+                    </p>
                 </div>
             </div>
+        </section>
+    </main>
 
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Social media and contact</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="col-lg-12 d-flex justify-content-center">
-                                        <h3>İnstagram: </h3> <a href="https://www.instagram.com/ertugrul._.mutlu/">İnstagram</a><br>
-                                    </div>
-                                    <div class="col-lg-12 d-flex justify-content-center">
-                                        <h3>Linkedin: </h3> <a href="https://www.linkedin.com/in/ertuğrul-mutlu/">Linkedin</a><br>
-                                    </div>
-                                    <div class="col-lg-12 d-flex justify-content-center">
-                                        <h3>Github: </h3> <a href="https://github.com/Ertugrulmutlu">Github</a><br>
-                                    </div>
-                                    <div class="col-lg-12 d-flex justify-content-center">
-                                        <button class="btn btn-warining" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Contact</button>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                </div>
-
-                            </div>
-                            </div>
-
-                        </div>
-                        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                            <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h5 class="modal-title" id="exampleModalToggleLabel2">E-mail</h5>
-                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                  Email: ertugrulmutlu004@gmail.com
-                                </div>
-                                <div class="modal-footer">
-                                  <button class="btn btn-primary" data-bs-target="#exampleModal2" data-bs-toggle="modal" data-bs-dismiss="modal">Go back</button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-
-
-
-
-
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
