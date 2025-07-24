@@ -4,132 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ertuğrul Mutlu - Portfolio</title>
-    <style>
-        :root {
-            --neon-green: #00FF00;
-            --dark-bg: #000000;
-            --dark-card: #0a0a0a;
-            --dark-input: #111111;
-            --text-light: #ffffff;
-            --text-gray: #888888;
-            --neon-glow: 0 0 10px #00FF00, 0 0 20px #00FF00, 0 0 30px #00FF00;
-            --card-glow: 0 0 15px rgba(0, 255, 0, 0.1);
-        }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: var(--dark-bg);
-            color: var(--text-light);
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .section {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 80px 0;
-        }
-
-        .neon-title {
-            color: var(--neon-green);
-            text-shadow: var(--neon-glow);
-            font-size: 3rem;
-            text-align: center;
-            margin-bottom: 1rem;
-        }
-
-        .subtitle {
-            color: var(--text-gray);
-            text-align: center;
-            margin-bottom: 2rem;
-            font-size: 1.2rem;
-        }
-
-        .card {
-            background-color: var(--dark-card);
-            border-radius: 10px;
-            padding: 2rem;
-            margin: 1rem;
-            box-shadow: var(--card-glow);
-            transition: box-shadow 0.3s ease;
-        }
-
-        .card:hover {
-            box-shadow: 0 0 25px rgba(0, 255, 0, 0.2);
-        }
-
-        .card-title {
-            color: var(--neon-green);
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .btn {
-            background-color: transparent;
-            border: 2px solid var(--neon-green);
-            color: var(--neon-green);
-            padding: 0.8rem 2rem;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 1rem;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .btn:hover {
-            background-color: var(--neon-green);
-            color: var(--dark-bg);
-            box-shadow: var(--neon-glow);
-        }
-
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .social-icons a {
-            color: var(--neon-green);
-            font-size: 1.5rem;
-            transition: text-shadow 0.3s ease;
-        }
-
-        .social-icons a:hover {
-            text-shadow: var(--neon-glow);
-        }
-
-        @media (max-width: 768px) {
-            .neon-title {
-                font-size: 2rem;
-            }
-            
-            .grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <main>
@@ -155,6 +32,86 @@
             </div>
         </section>
 
+       <!-- Blog Section -->
+    <section id="articles" class="section">
+            <div class="container">
+                <h2 class="neon-title">My Articles</h2>
+                <p class="subtitle">I share my thoughts and experiences on software development on platforms like dev.to.</p>
+                <div class="grid">
+
+                    <div class="card">
+                        <h3 class="card-title">Comparison of Machine Learning Algorithms</h3>
+                        <p style="color: var(--text-gray); margin-bottom: 1.5rem;">
+                            This article compares SVM, Decision Tree, and KNN using accuracy, precision, recall, and F1 metrics to highlight their strengths and weaknesses.
+                        </p>
+                        <a href="https://dev.to/ertugrulmutlu/comparison-of-machine-learning-algorithms-2ag4" class="btn" target="_blank" rel="noopener noreferrer">
+                            Read on dev.to <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">Text Generation with Artificial Intelligence</h3>
+                        <p style="color: var(--text-gray); margin-bottom: 1.5rem;">
+                           This article applies Q-learning to natural language processing for generating a target sentence through reward-based character prediction.
+                        </p>
+                        <a href="https://dev.to/ertugrulmutlu/text-generation-with-artificial-intelligence-generation-of-target-sentences-with-q-learning-algorithm-12m0" class="btn" target="_blank" rel="noopener noreferrer">
+                            Read on dev.to <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">How I Built a Simple Shell in C – A Beginner's Guide to System Programming (1/3) </h3>
+                        <p style="color: var(--text-gray); margin-bottom: 1.5rem;">
+                            I’ll show you how I built a simple shell in C from scratch — nothing fancy, just enough to run commands, manage processes, and get a feel for system programming basics. If you’re curious about how terminals work under the hood, this guide is for you.
+                        </p>
+                        <a href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-13-238e" class="btn" target="_blank" rel="noopener noreferrer">
+                            Read on dev.to <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">How I Built a Simple Shell in C – A Beginner's Guide to System Programming (2/3) </h3>
+                        <p style="color: var(--text-gray); margin-bottom: 1.5rem;">
+                            I’ll show you how I built a simple shell in C from scratch — nothing fancy, just enough to run commands, manage processes, and get a feel for system programming basics. If you’re curious about how terminals work under the hood, this guide is for you.
+                        </p>
+                        <a href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-23-3m2i" class="btn" target="_blank" rel="noopener noreferrer">
+                            Read on dev.to <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">How I Built a Simple Shell in C – A Beginner's Guide to System Programming (3/3) </h3>
+                        <p style="color: var(--text-gray); margin-bottom: 1.5rem;">
+                            I’ll show you how I built a simple shell in C from scratch — nothing fancy, just enough to run commands, manage processes, and get a feel for system programming basics. If you’re curious about how terminals work under the hood, this guide is for you.
+                        </p>
+                        <a href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-33-eah" class="btn" target="_blank" rel="noopener noreferrer">
+                            Read on dev.to <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">Using Wavelets and Clustering to Predict Odd or Even Numbers: An Overengineered Approach with Pretty (But Confusing) Plots </h3>
+                        <p style="color: var(--text-gray); margin-bottom: 1.5rem;">
+                            Ever wondered if you could predict odd or even numbers without actually checking the last bit? In this project, I used wavelets and clustering — for no practical reason — to classify parity from binary signals. It's wildly overengineered, a bit chaotic, but somehow… it works (kind of).
+                        </p>
+                        <a href="https://dev.to/ertugrulmutlu/using-wavelets-and-clustering-to-predict-odd-or-even-numbers-an-overengineered-approach-with-3ld4" class="btn" target="_blank" rel="noopener noreferrer">
+                            Read on dev.to <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">Text Generation with Artificial Intelligence: Generation of Target Sentences with Q-Learning Algorithm</h3>
+                        <p style="color: var(--text-gray); margin-bottom: 1.5rem;">
+                            This project explores how the Q-learning algorithm, a reinforcement learning method, can be applied to generate a specific target sentence in the context of natural language processing.
+                        </p>
+                        <a href="https://dev.to/ertugrulmutlu/text-generation-with-artificial-intelligence-generation-of-target-sentences-with-q-learning-algorithm-12m0" class="btn" target="_blank" rel="noopener noreferrer">
+                            Read on dev.to <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
         <!-- Technologies Section -->
         <section id="technologies" class="section">
             <div class="container">
@@ -236,17 +193,5 @@
             </div>
         </section>
     </main>
-
-    <script>
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
 </body>
 </html>
