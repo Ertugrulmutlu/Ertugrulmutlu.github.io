@@ -1,206 +1,426 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ertuğrul Mutlu - Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ertuğrul Mutlu - Portfolio</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="main.css">
+
 </head>
 <body>
-    <main>
-        <!-- Intro Section -->
-        <section class="section">
-            <div class="container">
-                <h1 class="neon-title">Welcome to My Portfolio</h1>
-                <p class="subtitle">Discover my journey in software development</p>
-                <div style="text-align: center;">
-                    <a href="#about" class="btn">Learn More</a>
+  <main>
+    <!-- Intro Section -->
+    <section class="section">
+      <div class="container">
+        <h1 class="neon-title">Welcome to My Portfolio</h1>
+        <p class="subtitle">Discover my journey in software development</p>
+        <div style="text-align: center;">
+          <a href="#about" class="btn">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="neon-title">About Me</h2>
+        <div class="card" style="color: var(--text-gray--alt); margin-top: 1rem;">
+          <p>
+            I am a 19-year-old software developer who has been passionate about software for 7 years and continues to pursue it with ambition and pleasure.
+          </p>
+          <p style="color: var(--text-gray); margin-top: 1rem;">
+            This site will briefly introduce me to you. Explore my skills, experiences, and projects as you navigate through the sections.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="neon-title">My Projects</h2>
+        <p class="subtitle">Explore my software development projects with links to GitHub repositories and detailed articles.</p>
+        <div class="grid">
+                      <!-- JumpNet – Vision-Based AI Agent for Platformer Games - Series -->
+          <div class="card wide-card">
+            <div>
+              <h3 class="card-title">JumpNet – Vision-Based AI Agent for Platformer Games - Complete Series</h3>
+              <p style="color: var(--text-gray); margin-bottom: 1rem;">
+                JumpNet is a modular AI system I developed to train an intelligent agent capable of playing a fast-paced platformer game using only one key.
+              </p>
+
+              <div class="series-wrapper">
+                <!-- Grid görünüm (geniş ekran) -->
+                <div class="series-grid">
+                  <div class="carousel-content">
+                    <h5>Part 1/3 - Data Foundations</h5>
+                    <p>From Raw Gameplay to Labeled Intelligence — Building the Data Foundation for JumpNet</p>
+                    <a href="https://dev.to/ertugrulmutlu/jumpnet-part-1-from-raw-gameplay-to-labeled-intelligence-building-the-data-foundation-for-2e2f" class="btn" target="_blank">Read Part 1</a>
+                  </div>
+                  <div class="carousel-content">
+                    <h5>Part 2/3 - Training Process</h5>
+                    <p>From Pixels to Policy — Training JumpNet to Make the Right Move</p>
+                    <a href="https://dev.to/ertugrulmutlu/jumpnet-part-1-from-raw-gameplay-to-labeled-intelligence-building-the-data-foundation-for-3c49" class="btn" target="_blank">Read Part 2</a>
+                  </div>
+                  <div class="carousel-content">
+                    <h5>Part 3/3 - AI Gameplay</h5>
+                    <p>Real-Time Inference — Watching JumpNet Come Alive</p>
+                    <a href="https://dev.to/ertugrulmutlu/jumpnet-part-3-real-time-inference-watching-jumpnet-come-alive-21b2" class="btn" target="_blank">Read Part 3</a>
+                  </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- About Section -->
-        <section id="about" class="section">
-            <div class="container">
-                <h2 class="neon-title">About Me</h2>
-                <div class="card">
-                    <p>I am a 19-year-old software developer who has been passionate about software for 7 years and continues to pursue it with ambition and pleasure.</p>
-                    <p style="color: var(--text-gray); margin-top: 1rem;">This site will briefly introduce me to you. Explore my skills, experiences, and projects as you navigate through the sections.</p>
+                <!-- Carousel görünüm (küçük ekran) -->
+                <div class="series-carousel">
+                  <div id="shellCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#shellCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Part 1"></button>
+                      <button type="button" data-bs-target="#shellCarousel" data-bs-slide-to="1" aria-label="Part 2"></button>
+                      <button type="button" data-bs-target="#shellCarousel" data-bs-slide-to="2" aria-label="Part 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="carousel-content">
+                          <h5>Part 1/3 - Data Foundations</h5>
+                          <p>From Raw Gameplay to Labeled Intelligence — Building the Data Foundation for JumpNet</p>
+                          <a href="https://dev.to/ertugrulmutlu/jumpnet-part-1-from-raw-gameplay-to-labeled-intelligence-building-the-data-foundation-for-2e2f" class="btn" target="_blank">Read Part 1</a>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="carousel-content">
+                          <h5>Part 2/3 - Training Process</h5>
+                          <p>From Pixels to Policy — Training JumpNet to Make the Right Move</p>
+                          <a href="https://dev.to/ertugrulmutlu/jumpnet-part-1-from-raw-gameplay-to-labeled-intelligence-building-the-data-foundation-for-3c49" class="btn" target="_blank">Read Part 2</a>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="carousel-content">
+                          <h5>Part 3/3 - AI Gameplay</h5>
+                          <p>Real-Time Inference — Watching JumpNet Come Alive</p>
+                          <a href="https://dev.to/ertugrulmutlu/jumpnet-part-3-real-time-inference-watching-jumpnet-come-alive-21b2" class="btn" target="_blank">Read Part 3</a>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#shellCarousel" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#shellCarousel" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
                 </div>
+              </div>
             </div>
-        </section>
 
-       <!-- Blog Section -->
-    <section id="articles" class="section">
-            <div class="container">
-                <h2 class="neon-title">My Articles</h2>
-                <p class="subtitle">I share my thoughts and experiences on software development on platforms like dev.to.</p>
-                <div class="grid">
+            <div class="project-buttons">
+              <a href="https://github.com/Ertugrulmutlu/JumpNet" class="btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+        <!--PDF Summary Chatbot-->
+          <div class="card">
+            <h3 class="card-title">PDF Summary Chatbot</h3>
+            <p style="color: var(--text-gray); margin-bottom: 1rem;">
+              📄 Local PDF Summarizer — Built in under 24 hours. A lightweight, AI-powered tool for summarizing PDF documents entirely offline.
+            </p>
+            <div class="project-buttons">
+              <a href="https://github.com/Ertugrulmutlu/PDF-Summary" class="btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        <!-- Applied Linear Regression Projects in Python -->
+          <div class="card">
+            <h3 class="card-title">Applied Linear Regression Projects in Python</h3>
+            <p style="color: var(--text-gray); margin-bottom: 1rem;">
+              Designed and implemented 5 independent regression models using Python and scikit-learn — each focused on a unique real-world use case:
+            </p>
+            <div class="project-buttons">
+              <a href="https://github.com/Ertugrulmutlu/5-Linear-Regression-Projects" class="btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+              <a href="https://dev.to/ertugrulmutlu/real-time-regression-projects-in-python-with-full-code-p5g" class="btn" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Article</a>
+            </div>
+          </div>
+        <!-- Advanced Dataset Viewer & Data Collector - Series -->
+          <div class="card wide-card">
+            <div>
+              <h3 class="card-title">Advanced Dataset Viewer & Data Collector</h3>
+              <p style="color: var(--text-gray); margin-bottom: 1rem;">
+                A modular Python toolset to collect, inspect, and analyze screen-keypress datasets for behavior cloning.
+              </p>
 
-                    <div class="card">
-                        <h3 class="card-title">Comparison of Machine Learning Algorithms</h3>
-                        <p style="color: var(--text-gray); margin-bottom: 1.5rem;">
-                            This article compares SVM, Decision Tree, and KNN using accuracy, precision, recall, and F1 metrics to highlight their strengths and weaknesses.
-                        </p>
-                        <a href="https://dev.to/ertugrulmutlu/comparison-of-machine-learning-algorithms-2ag4" class="btn" target="_blank" rel="noopener noreferrer">
-                            Read on dev.to <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-
-                    <div class="card">
-                        <h3 class="card-title">Text Generation with Artificial Intelligence</h3>
-                        <p style="color: var(--text-gray); margin-bottom: 1.5rem;">
-                           This article applies Q-learning to natural language processing for generating a target sentence through reward-based character prediction.
-                        </p>
-                        <a href="https://dev.to/ertugrulmutlu/text-generation-with-artificial-intelligence-generation-of-target-sentences-with-q-learning-algorithm-12m0" class="btn" target="_blank" rel="noopener noreferrer">
-                            Read on dev.to <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-
-                    <div class="card">
-                        <h3 class="card-title">How I Built a Simple Shell in C – A Beginner's Guide to System Programming (1/3) </h3>
-                        <p style="color: var(--text-gray); margin-bottom: 1.5rem;">
-                            I’ll show you how I built a simple shell in C from scratch — nothing fancy, just enough to run commands, manage processes, and get a feel for system programming basics. If you’re curious about how terminals work under the hood, this guide is for you.
-                        </p>
-                        <a href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-13-238e" class="btn" target="_blank" rel="noopener noreferrer">
-                            Read on dev.to <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-
-                    <div class="card">
-                        <h3 class="card-title">How I Built a Simple Shell in C – A Beginner's Guide to System Programming (2/3) </h3>
-                        <p style="color: var(--text-gray); margin-bottom: 1.5rem;">
-                            I’ll show you how I built a simple shell in C from scratch — nothing fancy, just enough to run commands, manage processes, and get a feel for system programming basics. If you’re curious about how terminals work under the hood, this guide is for you.
-                        </p>
-                        <a href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-23-3m2i" class="btn" target="_blank" rel="noopener noreferrer">
-                            Read on dev.to <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-
-                    <div class="card">
-                        <h3 class="card-title">How I Built a Simple Shell in C – A Beginner's Guide to System Programming (3/3) </h3>
-                        <p style="color: var(--text-gray); margin-bottom: 1.5rem;">
-                            I’ll show you how I built a simple shell in C from scratch — nothing fancy, just enough to run commands, manage processes, and get a feel for system programming basics. If you’re curious about how terminals work under the hood, this guide is for you.
-                        </p>
-                        <a href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-33-eah" class="btn" target="_blank" rel="noopener noreferrer">
-                            Read on dev.to <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-
-                    <div class="card">
-                        <h3 class="card-title">Using Wavelets and Clustering to Predict Odd or Even Numbers: An Overengineered Approach with Pretty (But Confusing) Plots </h3>
-                        <p style="color: var(--text-gray); margin-bottom: 1.5rem;">
-                            Ever wondered if you could predict odd or even numbers without actually checking the last bit? In this project, I used wavelets and clustering — for no practical reason — to classify parity from binary signals. It's wildly overengineered, a bit chaotic, but somehow… it works (kind of).
-                        </p>
-                        <a href="https://dev.to/ertugrulmutlu/using-wavelets-and-clustering-to-predict-odd-or-even-numbers-an-overengineered-approach-with-3ld4" class="btn" target="_blank" rel="noopener noreferrer">
-                            Read on dev.to <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-
-                    <div class="card">
-                        <h3 class="card-title">Text Generation with Artificial Intelligence: Generation of Target Sentences with Q-Learning Algorithm</h3>
-                        <p style="color: var(--text-gray); margin-bottom: 1.5rem;">
-                            This project explores how the Q-learning algorithm, a reinforcement learning method, can be applied to generate a specific target sentence in the context of natural language processing.
-                        </p>
-                        <a href="https://dev.to/ertugrulmutlu/text-generation-with-artificial-intelligence-generation-of-target-sentences-with-q-learning-algorithm-12m0" class="btn" target="_blank" rel="noopener noreferrer">
-                            Read on dev.to <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                    
-                    <div class="card">
-                        <h3 class="card-title">5 Regression Projects in Python (with Full Code)</h3>
-                        <p style="color: var(--text-gray); margin-bottom: 1.5rem;">
-                            Developed 5 Python-based linear regression models to solve real-world prediction problems with scikit-learn, including preprocessing, evaluation (R² & MSE), and visual analysis.
-                        </p>
-                        <a href="https://dev.to/ertugrulmutlu/real-time-regression-projects-in-python-with-full-code-p5g" class="btn" target="_blank" rel="noopener noreferrer">
-                            Read on dev.to <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
+              <div class="series-wrapper">
+                <!-- Grid görünüm (geniş ekran) -->
+                <div class="series-grid">
+                  <div class="carousel-content">
+                    <h5>Part 1/2 - Data collecting</h5>
+                    <p>Modular Snip Recorder: A Data Collection Tool for Behavior Cloning, Data collecting Functions</p>
+                    <a href="https://dev.to/ertugrulmutlu/modular-snip-recorder-a-data-collection-tool-for-behavior-cloning-12-5di8" class="btn" target="_blank">Read Part 1</a>
+                  </div>
+                  <div class="carousel-content">
+                    <h5>Part 2/2 - Data Viewer</h5>
+                    <p>Modular Snip Recorder: A Data Collection Tool for Behavior Cloning, Data Viewer</p>
+                    <a href="https://dev.to/ertugrulmutlu/modular-snip-recorder-a-data-collection-tool-for-behavior-cloning-22-1lgl" class="btn" target="_blank">Read Part 2</a>
+                  </div>
                 </div>
-            </div>
-        </section>
-        <!-- Technologies Section -->
-        <section id="technologies" class="section">
-            <div class="container">
-                <h2 class="neon-title">Technologies I've Used</h2>
-                <div class="grid">
-                    <div class="card">
-                        <h3 class="card-title">Web Development</h3>
-                        <p>HTML, CSS, JS (Node.js), Python (Flask), MongoDB, PostgreSQL, MSSQL</p>
-                        <p style="color: var(--text-gray); margin-top: 1rem;">Experience: 2 years</p>
-                    </div>
-                    <div class="card">
-                        <h3 class="card-title">Mobile Development</h3>
-                        <p>Flutter, Python</p>
-                        <p style="color: var(--text-gray); margin-top: 1rem;">Experience: 1 year</p>
-                    </div>
-                    <div class="card">
-                        <h3 class="card-title">Artificial Intelligence</h3>
-                        <p>Python (TensorFlow, YOLO)</p>
-                        <p style="color: var(--text-gray); margin-top: 1rem;">Experience: 3 years</p>
-                    </div>
-                    <div class="card">
-                        <h3 class="card-title">Embedded Systems</h3>
-                        <p>Assembly (x86, x64, MASM, NASM)</p>
-                        <p style="color: var(--text-gray); margin-top: 1rem;">Experience: 1 year</p>
-                    </div>
-                    <div class="card">
-                        <h3 class="card-title">Internet of Things</h3>
-                        <p>C, Python</p>
-                        <p style="color: var(--text-gray); margin-top: 1rem;">Experience: 5 years</p>
-                    </div>
-                    <div class="card">
-                        <h3 class="card-title">Desktop Applications</h3>
-                        <p>C# (WinForms), Python (Tkinter)</p>
-                        <p style="color: var(--text-gray); margin-top: 1rem;">Experience: 6 months</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Experience Section -->
-        <section id="experience" class="section">
-            <div class="container">
-                <h2 class="neon-title">My Experiences</h2>
-                <div class="grid">
-                    <div class="card">
-                        <h3 class="card-title">TürkAi</h3>
-                        <h4 style="color: var(--text-gray); margin-bottom: 1rem;">Software Developer</h4>
-                        <p>Artificial intelligence and algorithm development on microprocessors such as H7/7+, Arduino, ESP32.</p>
+                <!-- Carousel görünüm (küçük ekran) -->
+                <div class="series-carousel">
+                  <div id="shellCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#shellCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Part 1"></button>
+                      <button type="button" data-bs-target="#shellCarousel" data-bs-slide-to="1" aria-label="Part 2"></button>
+                      <button type="button" data-bs-target="#shellCarousel" data-bs-slide-to="2" aria-label="Part 3"></button>
                     </div>
-                    <div class="card">
-                        <h3 class="card-title">AnkaXLabs</h3>
-                        <h4 style="color: var(--text-gray); margin-bottom: 1rem;">Software Developer</h4>
-                        <p>Software and machine development in the field of artificial intelligence and IoT.</p>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="carousel-content">
+                          <h5>Part 1/2 - Data collecting</h5>
+                          <p>Modular Snip Recorder: A Data Collection Tool for Behavior Cloning, Data collecting Functions</p>
+                          <a href="https://dev.to/ertugrulmutlu/modular-snip-recorder-a-data-collection-tool-for-behavior-cloning-12-5di8" class="btn" target="_blank">Read Part 1</a>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="carousel-content">
+                          <h5>Part 2/2 - Data Viewer</h5>
+                          <p>Modular Snip Recorder: A Data Collection Tool for Behavior Cloning, Data Viewer</p>
+                          <a href="https://dev.to/ertugrulmutlu/modular-snip-recorder-a-data-collection-tool-for-behavior-cloning-22-1lgl" class="btn" target="_blank">Read Part 2</a>
+                        </div>
+                      </div>
                     </div>
-                    <div class="card">
-                        <h3 class="card-title">Qgen</h3>
-                        <h4 style="color: var(--text-gray); margin-bottom: 1rem;">Co-Founder/Software Developer</h4>
-                        <p>Software development in the field of educational technologies.</p>
-                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#shellCarousel" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#shellCarousel" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
                 </div>
+              </div>
             </div>
-        </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="section">
-            <div class="container">
-                <h2 class="neon-title">Get in Touch</h2>
-                <div class="card">
-                    <p class="subtitle">Thank you for exploring my portfolio. Feel free to connect with me on social media or via email.</p>
-                    <div class="social-icons">
-                        <a href="https://www.instagram.com/ertugrul._.mutlu/" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/ertuğrul-mutlu/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/Ertugrulmutlu" target="_blank"><i class="fab fa-github"></i></a>
-                    </div>
-                    <p style="text-align: center; margin-top: 2rem; color: var(--text-gray);">
-                        Email: <a href="mailto:ertugrulmutlu@gmail.com" style="color: var(--neon-green); text-decoration: none;">ertugrulmutlu@gmail.com</a>
-                    </p>
-                </div>
+            <div class="project-buttons">
+              <a href="https://github.com/Ertugrulmutlu/-Data-Scrap-Tool-Advanced-Dataset-Viewer" class="btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
             </div>
-        </section>
-    </main>
+          </div>
+
+          <!-- Machine Learning Algorithms Comparison -->
+          <div class="card">
+            <h3 class="card-title">Machine Learning Algorithms Comparison</h3>
+            <p style="color: var(--text-gray); margin-bottom: 1rem;">
+              A comprehensive comparison of SVM, Decision Tree, and KNN algorithms using accuracy, precision, recall, and F1 metrics to highlight their strengths and weaknesses.
+            </p>
+            <div class="project-buttons">
+              <a href="https://github.com/Ertugrulmutlu/Machine_Learning_Alg_Comp" class="btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+              <a href="https://dev.to/ertugrulmutlu/comparison-of-machine-learning-algorithms-2ag4" class="btn" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Article</a>
+            </div>
+          </div>
+          <!-- Wavelets and Clustering -->
+          <div class="card">
+            <h3 class="card-title">Wavelets and Clustering for Parity Prediction</h3>
+            <p style="color: var(--text-gray); margin-bottom: 1rem;">
+              An overengineered approach to predicting odd or even numbers using wavelets and clustering techniques. A creative exploration of signal processing applied to binary classification.
+            </p>
+            <div class="project-buttons">
+              <a href="https://dev.to/ertugrulmutlu/using-wavelets-and-clustering-to-predict-odd-or-even-numbers-an-overengineered-approach-with-3ld4" class="btn" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Article</a>
+            </div>
+          </div>
+          <!-- Q-Learning Text Generation -->
+          <div class="card">
+            <h3 class="card-title">Q-Learning Text Generation</h3>
+            <p style="color: var(--text-gray); margin-bottom: 1rem;">
+              Application of Q-learning to natural language processing for generating target sentences through reward-based character prediction using reinforcement learning.
+            </p>
+            <div class="project-buttons">
+              <a href="https://github.com/Ertugrulmutlu/Q_learning_Sentence_prediction_with" class="btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+              <a href="https://dev.to/ertugrulmutlu/text-generation-with-artificial-intelligence-generation-of-target-sentences-with-q-learning-algorithm-12m0" class="btn" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Article</a>
+            </div>
+          </div>
+
+          <!-- Simple Shell in C - Series -->
+          <div class="card wide-card">
+            <div>
+              <h3 class="card-title">Simple Shell in C - Complete Series</h3>
+              <p style="color: var(--text-gray); margin-bottom: 1rem;">
+                A comprehensive 3-part series on building a simple shell in C from scratch, covering command execution, process management, and system programming fundamentals.
+              </p>
+
+              <div class="series-wrapper">
+                <!-- Grid görünüm (geniş ekran) -->
+                <div class="series-grid">
+                  <div class="carousel-content">
+                    <h5>Part 1/3 - Foundations</h5>
+                    <p>Setting up the basic shell structure and implementing command parsing</p>
+                    <a href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-13-238e" class="btn" target="_blank">Read Part 1</a>
+                  </div>
+                  <div class="carousel-content">
+                    <h5>Part 2/3 - Process Management</h5>
+                    <p>Implementing process creation, execution, and basic process control</p>
+                    <a href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-23-3m2i" class="btn" target="_blank">Read Part 2</a>
+                  </div>
+                  <div class="carousel-content">
+                    <h5>Part 3/3 - Advanced Features</h5>
+                    <p>Adding advanced shell features and finalizing the implementation</p>
+                    <a href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-33-eah" class="btn" target="_blank">Read Part 3</a>
+                  </div>
+                </div>
+
+                <!-- Carousel görünüm (küçük ekran) -->
+                <div class="series-carousel">
+                  <div id="shellCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#shellCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Part 1"></button>
+                      <button type="button" data-bs-target="#shellCarousel" data-bs-slide-to="1" aria-label="Part 2"></button>
+                      <button type="button" data-bs-target="#shellCarousel" data-bs-slide-to="2" aria-label="Part 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="carousel-content">
+                          <h5>Part 1/3 - Foundations</h5>
+                          <p>Setting up the basic shell structure and implementing command parsing</p>
+                          <a href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-13-238e" class="btn" target="_blank">Read Part 1</a>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="carousel-content">
+                          <h5>Part 2/3 - Process Management</h5>
+                          <p>Implementing process creation, execution, and basic process control</p>
+                          <a href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-23-3m2i" class="btn" target="_blank">Read Part 2</a>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="carousel-content">
+                          <h5>Part 3/3 - Advanced Features</h5>
+                          <p>Adding advanced shell features and finalizing the implementation</p>
+                          <a href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-33-eah" class="btn" target="_blank">Read Part 3</a>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#shellCarousel" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#shellCarousel" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-buttons">
+              <a href="https://github.com/Ertugrulmutlu/shell_of_mine" class="btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id="technologies" class="section">
+      <div class="container">
+        <h2 class="neon-title">Technologies I've Used</h2>
+        <div class="grid">
+          <div class="card">
+            <h3 class="card-title">Web Development</h3>
+            <p style="color: var(--text-gray--alt);">HTML, CSS, JS (Node.js), Python (Flask), MongoDB, PostgreSQL, MSSQL</p>
+            <p style="color: var(--text-gray); margin-top: 1rem;">Experience: 2 years</p>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Mobile Development</h3>
+            <p style="color: var(--text-gray--alt);">Flutter, Python</p>
+            <p style="color: var(--text-gray); margin-top: 1rem;">Experience: 1 year</p>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Artificial Intelligence</h3>
+            <p style="color: var(--text-gray--alt);">Python (TensorFlow, YOLO)</p>
+            <p style="color: var(--text-gray); margin-top: 1rem;">Experience: 3 years</p>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Embedded Systems</h3>
+            <p style="color: var(--text-gray--alt);">Assembly (x86, x64, MASM, NASM)</p>
+            <p style="color: var(--text-gray); margin-top: 1rem;">Experience: 1 year</p>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Internet of Things</h3>
+            <p style="color: var(--text-gray--alt);">C, Python</p>
+            <p style="color: var(--text-gray); margin-top: 1rem;">Experience: 5 years</p>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Desktop Applications</h3>
+            <p style="color: var(--text-gray--alt);">C# (WinForms), Python (Tkinter)</p>
+            <p style="color: var(--text-gray); margin-top: 1rem;">Experience: 6 months</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+      <div class="container">
+        <h2 class="neon-title">My Experiences</h2>
+        <div class="grid">
+          <div class="card">
+            <h3 class="card-title">TürkAi</h3>
+            <h4 style="color: var(--text-gray); margin-bottom: 1rem;">Software Developer</h4>
+            <p style="color: var(--text-gray--alt);">Artificial intelligence and algorithm development on microprocessors such as H7/7+, Arduino, ESP32.</p>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Qgen</h3>
+            <h4 style="color: var(--text-gray); margin-bottom: 1rem;">Co-Founder/Software Developer</h4>
+            <p style="color: var(--text-gray--alt);">Software development in the field of educational technologies.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="neon-title">Get in Touch</h2>
+        <div class="card">
+          <p class="subtitle">Thank you for exploring my portfolio. Feel free to connect with me on social media or via email.</p>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/ertugrul._.mutlu/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/ertuğrul-mutlu/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Ertugrulmutlu" target="_blank"><i class="fab fa-github"></i></a>
+          </div>
+          <p style="text-align: center; margin-top: 1.5rem; color: var(--text-gray);">
+            Email: <a href="mailto:ertugrulmutlu@gmail.com" style="color: var(--neon-green); text-decoration: none;">ertugrulmutlu@gmail.com</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        document
+          .querySelector(this.getAttribute("href"))
+          .scrollIntoView({ behavior: "smooth" });
+      });
+    });
+
+    // Initialize carousel
+    document.addEventListener("DOMContentLoaded", function () {
+      const myCarousel = document.querySelector("#shellCarousel");
+      if (myCarousel) {
+        new bootstrap.Carousel(myCarousel, {
+          interval: 5000,
+          wrap: true,
+        });
+      }
+    });
+  </script>
 </body>
 </html>
