@@ -122,256 +122,274 @@
       </div>
     </section>
   <!-- ===== PROJECTS ===== -->
-    <section class="section container" id="projects">
-      <h2>Projects</h2>
-      <p class="muted mt-1">Organized by category. Short descriptions, tech badges, and quick links only.</p>
+<!-- ===== PROJECTS ===== -->
+<section class="section container" id="projects">
+  <h2>Projects</h2>
+  <p class="muted mt-1">Organized by category. Short descriptions, tech badges, and quick links only.</p>
 
-      <!-- Quick index (no JS) -->
-      <nav class="projects-index" aria-label="Project categories">
-        <a class="p-chip" href="#grp-edge">Edge & Vision</a>
-        <a class="p-chip" href="#grp-gen">Generative</a>
-        <a class="p-chip" href="#grp-tools">Data Tools</a>
-        <a class="p-chip" href="#grp-ml">ML Projects</a>
-        <a class="p-chip" href="#grp-systems">Systems & Web</a>
-      </nav>
-      <!-- ===== Group: Edge & Vision ===== -->
-      <section class="group" id="grp-edge">
-        <h3 class="group-title">Edge & Vision</h3>
-        <div class="projects-grid mt-3">
-          <!-- JumpNet -->
-          <article class="card p-card">
-            <h3>JumpNet — Vision-Based AI Agent</h3>
-            <p>Real‑time visual decision system for a one‑button platformer (~18 ms, ~87% accuracy).</p>
-            <div class="techbar">
-              <span class="tech">PyTorch</span>
-              <span class="tech">Behavior Cloning</span>
-              <span class="tech">OpenCV</span>
-            </div>
-            <div class="links" style="padding-top: 1rem;">
-              <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/JumpNet"><i class="fa-brands fa-github"></i> GitHub</a>
-              <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/jumpnet-part-1-from-raw-gameplay-to-labeled-intelligence-building-the-data-foundation-for-2e2f">Part 1</a>
-              <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/jumpnet-part-2-from-pixels-to-policy-training-jumpnet-to-make-the-right-move-1eoi">Part 2</a>
-              <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/jumpnet-part-3-real-time-inference-watching-jumpnet-come-alive-21b2">Part 3</a>
+  <!-- Quick index (no JS) -->
+  <nav class="projects-index" aria-label="Project categories">
+    <a class="p-chip" href="#grp-edge">Edge AI & Vision</a>
+    <a class="p-chip" href="#grp-gen">Generative Models</a>
+    <a class="p-chip" href="#grp-tools">Tools & Apps (Data)</a>
+    <a class="p-chip" href="#grp-ml">Applied ML & RL</a>
+    <a class="p-chip" href="#grp-systems">Systems & Web</a>
+  </nav>
 
-            </div>
-          </article>
-
+  <!-- ===== Group: Edge AI & Vision ===== -->
+  <section class="group" id="grp-edge">
+    <h3 class="group-title">Edge AI & Vision</h3>
+    <div class="projects-grid mt-3">
+      <!-- JumpNet -->
+      <article class="card p-card">
+        <h3>JumpNet — Vision-Based AI Agent</h3>
+        <p>Real-time visual decision system for a one-button platformer (~18 ms, ~87% accuracy).</p>
+        <div class="techbar">
+          <span class="tech">PyTorch</span>
+          <span class="tech">Behavior Cloning</span>
+          <span class="tech">OpenCV</span>
+          <span class="tech">Latency: 18 ms</span>
+          <span class="tech">Acc: ~87%</span>
         </div>
-      </section>
-
-      <!-- ===== Group: Generative ===== -->
-      <section class="group" id="grp-gen">
-        <h3 class="group-title">Generative</h3>
-        <div class="projects-grid mt-3">
-          <!-- VAE vs VQ-VAE -->
-          <article class="card p-card">
-            <h3>Compressing Faces — VAE vs VQ‑VAE</h3>
-            <p>Identity retention vs compression—continuous latents vs codebooks.</p>
-            <div class="techbar">
-              <span class="tech">PyTorch</span>
-              <span class="tech">VAE</span>
-              <span class="tech">VQ‑VAE</span>
-            </div>
-            <div class="links" style="padding-top: 1rem;">
-              <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/VQVAE-and-VAE"><i class="fa-brands fa-github"></i> GitHub</a>
-              <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/compressing-human-faces-with-vae-vs-vq-vae-a-deep-dive-into-autoencoder-design-j59">Part 1</a>
-            </div>
-          </article>
-
-          <!-- cGAN Sketch -->
-          <article class="card p-card">
-            <h3>Conditional GAN — Sketch Generation</h3>
-            <p>Class‑conditioned B/W sketch synthesis; projection discriminator experiments.</p>
-            <div class="techbar">
-              <span class="tech">PyTorch</span>
-              <span class="tech">cGAN</span>
-              <span class="tech">Computer Vision</span>
-            </div>
-            <div class="links" style="padding-top: 1rem;">
-              <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/ConditionalGAN-SketchGeneration"><i class="fa-brands fa-github"></i> GitHub</a>
-              <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/a-cgan-story-three-attempts-and-an-incomplete-ending-2a1b">Part 1</a>
-            </div>
-          </article>
+        <div class="links" style="padding-top: 1rem;">
+          <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/JumpNet"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/jumpnet-part-1-from-raw-gameplay-to-labeled-intelligence-building-the-data-foundation-for-2e2f">Part 1</a>
+          <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/jumpnet-part-2-from-pixels-to-policy-training-jumpnet-to-make-the-right-move-1eoi">Part 2</a>
+          <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/jumpnet-part-3-real-time-inference-watching-jumpnet-come-alive-21b2">Part 3</a>
         </div>
-      </section>
+      </article>
+    </div>
+  </section>
 
-      <!-- ===== Group: Data Tools ===== -->
-      <section class="group" id="grp-tools">
-        <h3 class="group-title">Data Tools</h3>
-        <div class="projects-grid mt-3">
-          <!-- Dataset Viewer -->
-          <article class="card p-card">
-            <h3>Advanced Dataset Viewer & Collector</h3>
-            <p>Record screen+keypress, browse entries, and analyze behavior‑cloning datasets.</p>
-            <div class="techbar">
-              <span class="tech">Python</span>
-              <span class="tech">Streamlit</span>
-              <span class="tech">OpenCV</span>
-            </div>
-            <div class="links" style="padding-top: 1rem;">
-              <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/-Data-Scrap-Tool-Advanced-Dataset-Viewer"><i class="fa-brands fa-github"></i> GitHub</a>
-              <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/modular-snip-recorder-a-data-collection-tool-for-behavior-cloning-12-5di8">Part 1</a>
-              <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/modular-snip-recorder-a-data-collection-tool-for-behavior-cloning-22-1lgl">Part 2</a>
-
-            </div>
-          </article>
-
-          <!-- PDF Summary Chatbot -->
-          <article class="card p-card">
-            <h3>PDF Summary Chatbot (Local)</h3>
-            <p>Offline PDF summarizer with page‑range selection and export.</p>
-            <div class="techbar">
-              <span class="tech">Python</span>
-              <span class="tech">Streamlit</span>
-              <span class="tech">Local LLM</span>
-            </div>
-            <div class="links" style="padding-top: 1rem;">
-              <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/PDF-Summary"><i class="fa-brands fa-github"></i> GitHub</a>
-              <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/building-a-local-pdf-summarizer-with-llms-in-under-24-hours-2ijn">Part 1</a>
-            </div>
-          </article>
+  <!-- ===== Group: Generative Models ===== -->
+  <section class="group" id="grp-gen">
+    <h3 class="group-title">Generative Models</h3>
+    <div class="projects-grid mt-3">
+      <!-- VAE vs VQ-VAE -->
+      <article class="card p-card">
+        <h3>Compressing Faces — VAE vs VQ-VAE</h3>
+        <p>Identity retention vs compression — continuous latents vs codebooks.</p>
+        <div class="techbar">
+          <span class="tech">PyTorch</span>
+          <span class="tech">VAE</span>
+          <span class="tech">VQ-VAE</span>
         </div>
-      </section>
-
-      <!-- ===== Group: ML Projects ===== -->
-      <section class="group" id="grp-ml" data-visible="3">
-        <h3 class="group-title">ML Projects</h3>
-        <div class="projects-grid mt-3">
-          <!-- 5 Linear Regression -->
-          <article class="card p-card">
-            <h3>Applied Linear Regression (x5)</h3>
-            <p>Five scikit‑learn regressors on real datasets (salary, cars, wine, insurance, trips).</p>
-            <div class="techbar">
-              <span class="tech">Python</span>
-              <span class="tech">scikit‑learn</span>
-              <span class="tech">Pandas</span>
-            </div>
-            <div class="links" style="padding-top: 1rem;">
-              <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/5-Linear-Regression-Projects"><i class="fa-brands fa-github"></i> GitHub</a>
-              <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/real-time-regression-projects-in-python-with-full-code-p5g">Part 1</a>
-
-            </div>
-          </article>
-
-          <!-- ML Algorithms Comparison -->
-          <article class="card p-card">
-            <h3>Machine Learning Algorithms Comparison</h3>
-            <p>Decision Tree, SVM, and KNN evaluated with Accuracy, Precision, Recall, F1.</p>
-            <div class="techbar">
-              <span class="tech">Python</span>
-              <span class="tech">scikit‑learn</span>
-              <span class="tech">Metrics</span>
-            </div>
-            <div class="links" style="padding-top: 1rem;">
-              <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/Machine_Learning_Alg_Comp"><i class="fa-brands fa-github"></i> GitHub</a>
-              <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/comparison-of-machine-learning-algorithms-2ag4">Part 1</a>
-            </div>
-          </article>
-
-          <!-- Q‑Learning Sentence Prediction -->
-          <article class="card p-card">
-            <h3>Sentence Prediction with Q‑Learning</h3>
-            <p>Character‑level RL to reach target sentences; simple RL/NLP crossover.</p>
-            <div class="techbar">
-              <span class="tech">Python</span>
-              <span class="tech">Q‑Learning</span>
-              <span class="tech">NLP</span>
-            </div>
-            <div class="links" style="padding-top: 1rem;">
-              <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/Q_learning_Sentence_prediction_with"><i class="fa-brands fa-github"></i> GitHub</a>
-              <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/text-generation-with-artificial-intelligence-generation-of-target-sentences-with-q-learning-algorithm-12m0">Part 1</a>
-
-            </div>
-          </article>
-
-          <!-- Wavelets & Clustering -->
-          <article class="card p-card">
-            <h3>Wavelets & Clustering Parity</h3>
-            <p>Odd/even classification with wavelet features and clustering — a playful study.</p>
-            <div class="techbar">
-              <span class="tech">PyWavelets</span>
-              <span class="tech">Clustering</span>
-              <span class="tech">NumPy</span>
-            </div>
-            <div class="links" style="padding-top: 1rem;">
-              <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/using-wavelets-and-clustering-to-predict-odd-or-even-numbers-an-overengineered-approach-with-3ld4">Part 1</a>
-            </div>
-          </article>
+        <div class="links" style="padding-top: 1rem;">
+          <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/VQVAE-and-VAE"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/compressing-human-faces-with-vae-vs-vq-vae-a-deep-dive-into-autoencoder-design-j59">Part 1</a>
         </div>
-      </section>
+      </article>
 
-      <!-- ===== Group: Systems & Web ===== -->
-      <section class="group" id="grp-systems">
-        <h3 class="group-title">Systems & Web</h3>
-        <div class="projects-grid mt-3">
-          <!-- Simple Shell in C -->
-          <article class="card p-card">
-            <h3>Simple Shell in C</h3>
-            <p>Minimal CLI to explore processes, files, and basic system calls.</p>
-            <div class="techbar">
-              <span class="tech">C</span>
-              <span class="tech">POSIX</span>
-              <span class="tech">Processes</span>
-            </div>
-            <div class="links" style="padding-top: 1rem;">
-              <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/Shell_of_mine"><i class="fa-brands fa-github"></i> GitHub</a>
-              <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-13-238e">Part 1</a>
-              <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-23-3m2i">Part 2</a>
-              <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-33-eah">Part 3</a>
-            </div>
-          </article>
-
+      <!-- cGAN Sketch -->
+      <article class="card p-card">
+        <h3>Conditional GAN — Sketch Generation</h3>
+        <p>Class-conditioned B/W sketch synthesis; projection discriminator experiments.</p>
+        <div class="techbar">
+          <span class="tech">PyTorch</span>
+          <span class="tech">cGAN</span>
+          <span class="tech">Computer Vision</span>
         </div>
-      </section>
-    </section>
-  </main>
+        <div class="links" style="padding-top: 1rem;">
+          <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/ConditionalGAN-SketchGeneration"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/a-cgan-story-three-attempts-and-an-incomplete-ending-2a1b">Part 1</a>
+        </div>
+      </article>
+    </div>
+  </section>
 
- <!-- ===== SKILLS MATRIX ===== -->
-    <section class="section container" id="skills" data-visible="3">
-      <h2>Skills Matrix</h2>
-      <div class="skills-matrix mt-3">
-        <article class="s-card holo">
-          <h3><i class="fa-solid fa-robot"></i> AI / ML</h3>
-          <ul class="s-list">
-            <li>PyTorch, TensorFlow, ONNX, TFLite Micro</li>
-            <li>Quantization (INT8), pruning, distillation</li>
-            <li>OpenCV; data pipelines & augmentation</li>
-          </ul>
-          <div class="evidence">Proof: <a href="#grp-edge">JumpNet</a>, <a href="#grp-gen">VAE vs VQ‑VAE</a>, <a href="#grp-gen">cGAN</a></div>
-        </article>
+  <!-- ===== Group: Tools & Apps (Data) ===== -->
+  <section class="group" id="grp-tools">
+    <h3 class="group-title">Tools & Apps (Data)</h3>
+    <div class="projects-grid mt-3">
+      <!-- Dataset Viewer -->
+      <article class="card p-card">
+        <h3>Advanced Dataset Viewer & Collector</h3>
+        <p>Record screen+keypress, browse entries, and analyze behavior-cloning datasets.</p>
+        <div class="techbar">
+          <span class="tech">Python</span>
+          <span class="tech">Streamlit</span>
+          <span class="tech">OpenCV</span>
+        </div>
+        <div class="links" style="padding-top: 1rem;">
+          <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/-Data-Scrap-Tool-Advanced-Dataset-Viewer"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/modular-snip-recorder-a-data-collection-tool-for-behavior-cloning-12-5di8">Part 1</a>
+          <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/modular-snip-recorder-a-data-collection-tool-for-behavior-cloning-22-1lgl">Part 2</a>
+        </div>
+      </article>
 
-        <article class="s-card holo">
-          <h3><i class="fa-solid fa-microchip"></i> Embedded</h3>
-          <ul class="s-list">
-            <li>C/C++, HAL, DMA, low‑power</li>
-            <li>CMSIS‑NN, ESP‑NN; SPI/I²C</li>
-            <li>Zephyr / FreeRTOS</li>
-          </ul>
-          <div class="evidence">Proof: <a href="#grp-edge">Edge & Vision</a>, <a href="#p-shell">Shell in C</a></div>
-        </article>
+      <!-- PDF Summary Chatbot -->
+      <article class="card p-card">
+        <h3>PDF Summary Chatbot (Local)</h3>
+        <p>Offline PDF summarizer with page-range selection and export.</p>
+        <div class="techbar">
+          <span class="tech">Python</span>
+          <span class="tech">Streamlit</span>
+          <span class="tech">Local LLM</span>
+        </div>
+        <div class="links" style="padding-top: 1rem;">
+          <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/PDF-Summary"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/building-a-local-pdf-summarizer-with-llms-in-under-24-hours-2ijn">Part 1</a>
+        </div>
+      </article>
+    </div>
+  </section>
 
-        <article class="s-card holo">
-          <h3><i class="fa-solid fa-gears"></i> DevOps</h3>
-          <ul class="s-list">
-            <li>GitHub Actions, CMake / PlatformIO</li>
-            <li>pytest, pre‑commit</li>
-            <li>CI for training & firmware</li>
-          </ul>
-          <div class="evidence">Proof: <a href="#grp-tools">Dataset Viewer</a>, <a href="#grp-ml">ML Projects</a></div>
-        </article>
+  <!-- ===== Group: Applied ML & RL ===== -->
+  <section class="group" id="grp-ml" data-visible="3">
+    <h3 class="group-title">Applied ML & RL</h3>
+    <div class="projects-grid mt-3">
+      <!-- 5 Linear Regression -->
+      <article class="card p-card">
+        <h3>Applied Linear Regression (x5)</h3>
+        <p>Five scikit-learn regressors on real datasets (salary, cars, wine, insurance, trips).</p>
+        <div class="techbar">
+          <span class="tech">Python</span>
+          <span class="tech">scikit-learn</span>
+          <span class="tech">Pandas</span>
+        </div>
+        <div class="links" style="padding-top: 1rem;">
+          <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/5-Linear-Regression-Projects"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/real-time-regression-projects-in-python-with-full-code-p5g">Part 1</a>
+        </div>
+      </article>
 
-        <article class="s-card holo">
-          <h3><i class="fa-solid fa-wave-square"></i> Tools</h3>
-          <ul class="s-list">
-            <li>Logic analyzer & oscilloscope</li>
-            <li>Latency / power validation</li>
-            <li>Profiling & instrumentation</li>
-          </ul>
-          <div class="evidence">Proof: <a href="#grp-edge">Edge projects</a></div>
-        </article>
-      </div>
-    </section>
-  </main>
+      <!-- ML Algorithms Comparison -->
+      <article class="card p-card">
+        <h3>Machine Learning Algorithms Comparison</h3>
+        <p>Decision Tree, SVM, and KNN evaluated with Accuracy, Precision, Recall, F1.</p>
+        <div class="techbar">
+          <span class="tech">Python</span>
+          <span class="tech">scikit-learn</span>
+          <span class="tech">Metrics</span>
+        </div>
+        <div class="links" style="padding-top: 1rem;">
+          <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/Machine_Learning_Alg_Comp"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/comparison-of-machine-learning-algorithms-2ag4">Part 1</a>
+        </div>
+      </article>
+
+      <!-- Q-Learning Sentence Prediction -->
+      <article class="card p-card">
+        <h3>Sentence Prediction with Q-Learning</h3>
+        <p>Character-level RL to reach target sentences; simple RL/NLP crossover.</p>
+        <div class="techbar">
+          <span class="tech">Python</span>
+          <span class="tech">Q-Learning</span>
+          <span class="tech">NLP</span>
+        </div>
+        <div class="links" style="padding-top: 1rem;">
+          <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/Q_learning_Sentence_prediction_with"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/text-generation-with-artificial-intelligence-generation-of-target-sentences-with-q-learning-algorithm-12m0">Part 1</a>
+        </div>
+      </article>
+
+      <!-- Wavelets & Clustering -->
+      <article class="card p-card">
+        <h3>Wavelets & Clustering Parity</h3>
+        <p>Odd/even classification with wavelet features and clustering — a playful study.</p>
+        <div class="techbar">
+          <span class="tech">PyWavelets</span>
+          <span class="tech">Clustering</span>
+          <span class="tech">NumPy</span>
+        </div>
+        <div class="links" style="padding-top: 1rem;">
+          <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/using-wavelets-and-clustering-to-predict-odd-or-even-numbers-an-overengineered-approach-with-3ld4">Part 1</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== Group: Systems & Web ===== -->
+  <section class="group" id="grp-systems">
+    <h3 class="group-title">Systems & Web</h3>
+    <div class="projects-grid mt-3">
+      <!-- Simple Shell in C -->
+      <article class="card p-card">
+        <h3>Simple Shell in C</h3>
+        <p>Minimal CLI to explore processes, files, and basic system calls.</p>
+        <div class="techbar">
+          <span class="tech">C</span>
+          <span class="tech">POSIX</span>
+          <span class="tech">Processes</span>
+        </div>
+        <div class="links" style="padding-top: 1rem;">
+          <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/Shell_of_mine"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-13-238e">Part 1</a>
+          <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-23-3m2i">Part 2</a>
+          <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-33-eah">Part 3</a>
+        </div>
+      </article>
+    </div>
+  </section>
+</section>
+
+<!-- ===== SKILLS MATRIX ===== -->
+<section class="section container" id="skills" data-visible="3">
+  <h2>Skills Matrix</h2>
+  <div class="skills-matrix mt-3">
+    <article class="s-card holo">
+      <h3><i class="fa-solid fa-brain"></i> AI / ML</h3>
+      <ul class="s-list">
+        <li><i class="fa-solid fa-square-root-variable"></i> PyTorch, torchvision, torchmetrics, NumPy, pandas, scikit-learn</li>
+        <li><i class="fa-solid fa-chart-line"></i> Metrics & logging: TensorBoard, matplotlib</li>
+      </ul>
+      <div class="evidence">Proof: <a href="#grp-edge">JumpNet</a>, <a href="#grp-gen">VAE vs VQ-VAE</a>, <a href="#grp-ml">ML Algorithms</a></div>
+    </article>
+
+    <article class="s-card holo">
+      <h3><i class="fa-solid fa-wand-magic-sparkles"></i> Generative Models</h3>
+      <ul class="s-list">
+        <li><i class="fa-solid fa-cubes"></i> VAE, VQ-VAE (vector quantization)</li>
+        <li><i class="fa-solid fa-wand-magic-sparkles"></i> cGAN</li>
+        <li><i class="fa-solid fa-sliders"></i> Losses: MSE / KL / BCE</li>
+      </ul>
+      <div class="evidence">Proof: <a href="#grp-gen">VAE vs VQ-VAE</a>, <a href="#grp-gen">cGAN – Sketch Generation</a></div>
+    </article>
+
+    <article class="s-card holo">
+      <h3><i class="fa-solid fa-camera"></i> Vision & Data</h3>
+      <ul class="s-list">
+        <li><i class="fa-solid fa-image"></i> OpenCV, Albumentations, Pillow; loaders & balancing</li>
+        <li><i class="fa-solid fa-table"></i> Dataset tools & exports: pandas / CSV / JSON, Plotly</li>
+      </ul>
+      <div class="evidence">Proof: <a href="#grp-tools">Dataset Viewer</a>, <a href="#grp-edge">JumpNet</a>, <a href="#grp-gen">cGAN</a></div>
+    </article>
+
+    <article class="s-card holo">
+      <h3><i class="fa-solid fa-microchip"></i> Embedded</h3>
+      <ul class="s-list">
+        <li><i class="fa-solid fa-terminal"></i> CLI / syscalls in C</li>
+      </ul>
+      <div class="evidence">Proof: <a href="#grp-systems">Simple Shell in C</a></div>
+    </article>
+
+    <article class="s-card holo">
+      <h3><i class="fa-solid fa-gears"></i> DevOps & Quality</h3>
+      <ul class="s-list">
+        <li><i class="fa-brands fa-github"></i> Git / GitHub</li>
+      </ul>
+      <div class="evidence">Proof: <a href="#projects">All Projects</a></div>
+    </article>
+
+    <article class="s-card holo">
+      <h3><i class="fa-solid fa-window-restore"></i> Apps, UI & Viz</h3>
+      <ul class="s-list">
+        <li><i class="fa-solid fa-window-maximize"></i> Streamlit, Tkinter (local-first UIs)</li>
+        <li><i class="fa-solid fa-globe"></i> Flask / HTML / CSS / JS (lightweight demos)</li>
+      </ul>
+      <div class="evidence">Proof: <a href="#grp-tools">Dataset Viewer</a>, <a href="/index.html">Website</a></div>
+    </article>
+
+    <article class="s-card holo">
+      <h3><i class="fa-solid fa-layer-group"></i> Extras</h3>
+      <ul class="s-list">
+        <li><i class="fa-solid fa-chess-knight"></i> RL basics: tabular Q-Learning</li>
+        <li><i class="fa-solid fa-wave-square"></i> Signals & clustering: PyWavelets, k-means</li>
+      </ul>
+      <div class="evidence">Proof: <a href="#grp-ml">Sentence Prediction with Q-Learning</a>, <a href="#grp-ml">Wavelets & Clustering Parity</a></div>
+    </article>
+  </div>
+</section>
       <!-- ===== REFERENCES / FEEDBACK ===== -->
     <section class="section container" id="references">
       <h2>References & Feedback</h2>
@@ -427,5 +445,4 @@
 
   <script src="script.js"></script>
 </body>
-
 </html>
