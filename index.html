@@ -2,757 +2,429 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ertuğrul Mutlu - Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ertuğrul Mutlu — Cyberpunk Portfolio</title>
+  <meta name="description" content="Edge AI & Embedded — real‑time vision and low‑latency optimization." />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <style>
-    :root {
-      --neon-green: #00FF00;
-      --dark-bg: #0b0b0b;
-      --dark-card: #1a1a1a;
-      --text-light: #f0f0f0;
-      --text-gray: #bbbbbb;
-      --text-gray--alt: #999898;
-      --neon-glow: 0 0 6px #00FF00, 0 0 12px #00FF00;
-      --card-glow: 0 0 10px rgba(0, 255, 0, 0.15);
-      --accent: #0aff9d;
-      --transition-speed: 0.3s;
-    }
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Share+Tech+Mono&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', 'Arial', sans-serif;
-      background-color: var(--dark-bg);
-      color: var(--text-light);
-      line-height: 1.6;
-      font-size: clamp(14px, 1.025vw, 18px);
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 1.5rem 1rem;
-    }
-
-    .section {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 3rem 1rem;
-      text-align: center;
-    }
-
-    .neon-title {
-      color: var(--neon-green);
-      text-shadow: var(--neon-glow);
-      font-size: clamp(2rem, 4vw, 3.5rem);
-      margin-bottom: 0.75rem;
-      line-height: 1.1;
-    }
-
-    .subtitle {
-      color: var(--text-gray);
-      font-size: clamp(1rem, 1.5vw, 1.35rem);
-      margin-bottom: 1.5rem;
-    }
-
-    .card {
-      background-color: var(--dark-card);
-      border-radius: 12px;
-      padding: 1.75rem;
-      margin: 1rem 0.5rem;
-      box-shadow: var(--card-glow);
-      transition: box-shadow var(--transition-speed), transform var(--transition-speed);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 0.75rem;
-      position: relative;
-    }
-
-    .card:hover {
-      box-shadow: 0 0 25px rgba(0, 255, 0, 0.25);
-      transform: translateY(-3px);
-    }
-
-    .card-title {
-      color: var(--neon-green);
-      font-size: clamp(1.3rem, 2vw, 1.8rem);
-      margin-bottom: 0.75rem;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .btn {
-      background: none;
-      border: 2px solid var(--accent);
-      color: var(--accent);
-      padding: 3rem 1.5rem;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 0.95rem;
-      transition: background-color var(--transition-speed), color var(--transition-speed),
-        box-shadow var(--transition-speed);
-      text-decoration: none;
-      display: inline-block;
-    }
-
-    .btn:hover {
-      background-color: var(--accent);
-      color: var(--dark-bg);
-      box-shadow: 0 0 10px var(--accent), 0 0 20px var(--accent);
-    }
-
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 1.25rem;
-      margin-top: 2rem;
-    }
-
-    .social-icons a {
-      color: var(--accent);
-      font-size: 1.5rem;
-      transition: text-shadow var(--transition-speed);
-    }
-
-    .social-icons a:hover {
-      text-shadow: var(--neon-glow);
-    }
-
-    .project-buttons {
-      display: flex;
-      gap: 0.75rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 0.5rem;
-    }
-
-    .project-buttons .btn {
-      flex: 1 1 140px;
-      min-width: 110px;
-    }
-
-    /* Carousel & series */
-    .carousel-inner {
-      position: relative;
-      width: 100%;
-      overflow: hidden;
-      border-radius: 8px;
-      background: rgba(10, 10, 10, 0.5);
-    }
-
-    .carousel-item {
-      position: relative;
-      display: none;
-      width: 100%;
-      backface-visibility: hidden;
-      transition: transform 0.6s ease-in-out;
-    }
-
-    .carousel-item.active {
-      display: block;
-    }
-
-    .carousel-content {
-      background: rgba(26, 26, 26, 0.95);
-      border-radius: 8px;
-      padding: 1.75rem 1.25rem;
-      text-align: center;
-      border: 1px solid rgba(10, 255, 157, 0.3);
-      min-height: 160px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 0.5rem;
-    }
-
-    .carousel-content h5 {
-      color: var(--neon-green);
-      margin-bottom: 0.5rem;
-      font-size: clamp(1.1rem, 1.5vw, 1.4rem);
-      text-shadow: 0 0 3px rgba(0, 255, 0, 0.5);
-    }
-
-    .carousel-content p {
-      color: var(--text-gray);
-      margin-bottom: 0.75rem;
-      font-size: 0.9rem;
-      line-height: 1.4;
-    }
-
-    .carousel-content .btn {
-      padding: 1rem 1.25rem;
-      font-size: 0.85rem;
-      align-self: center;
-      margin-top: auto;
-    }
-
-    .carousel-indicators {
-      position: absolute;
-      bottom: -20px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 8px;
-      padding: 0;
-      margin: 0;
-      list-style: none;
-    }
-
-    .carousel-indicators button {
-      width: 12px !important;
-      height: 12px !important;
-      border-radius: 50% !important;
-      background-color: rgba(10, 255, 157, 0.5);
-      border: none;
-      opacity: 0.6;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .carousel-indicators .active {
-      background-color: var(--neon-green);
-      opacity: 1;
-      box-shadow: 1px 1px 1px var(--neon-green);
-    }
-
-    .carousel-control-prev,
-    .carousel-control-next {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 12%;
-      padding: 0;
-      color: #fff;
-      background: none;
-      border: none;
-      opacity: 0.6;
-      transition: opacity 0.15s ease;
-    }
-
-    .carousel-control-prev:hover,
-    .carousel-control-next:hover {
-      opacity: 1;
-    }
-
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-      display: inline-block;
-      width: 26px;
-      height: 26px;
-      background-repeat: no-repeat;
-      background-position: 50%;
-      background-size: 100% 100%;
-      filter: drop-shadow(0 0 3px rgba(0, 255, 0, 0.5));
-    }
-
-    .carousel-control-prev-icon {
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2300ff00'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
-    }
-
-    .carousel-control-next-icon {
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2300ff00'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-    }
-
-    /* Responsive adaptations */
-    .wide-card {
-      grid-column: span 3;
-    }
-  /* Mobilde sağ-sol okları gizle */
-  @media (max-width: 768px) {
-    .carousel-control-prev,
-    .carousel-control-next {
-      display: none !important;
-    }
-  }
-    @media (max-width: 1100px) {
-      .wide-card {
-        grid-column: auto;
-      }
-    }
-
-    @media (max-width: 992px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
-      .project-buttons {
-        flex-direction: column;
-      }
-      .project-buttons .btn {
-        width: 100%;
-        text-align: center;
-      }
-    }
-
-    /* Shell series: geniş ekranda mini-grid, küçük ekranda carousel */
-    .series-wrapper {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .series-grid {
-      display: none;
-      gap: 1rem;
-    }
-
-    @media (min-width: 1100px) {
-      .series-grid {
-        display: flex;
-      }
-      .series-carousel {
-        display: none;
-      }
-    }
-
-    @media (max-width: 1099px) {
-      .series-grid {
-        display: none;
-      }
-      .series-carousel {
-        display: block;
-      }
-    }
-
-    /* Footer/contact tweaks */
-    #contact .card {
-      padding: 2rem;
-    }
-
-    a {
-      word-break: break-word;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main>
-    <!-- Intro Section -->
-    <section class="section">
-      <div class="container">
-        <h1 class="neon-title">Welcome to My Portfolio</h1>
-        <p class="subtitle">Discover my journey in software development</p>
-        <div style="text-align: center;">
-          <a href="#about" class="btn">Learn More</a>
-        </div>
+  <div class="bg" aria-hidden="true"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <div class="logo" aria-hidden="true"></div>
+        <span>ERTUĞRUL&nbsp;MUTLU</span>
+      </a>
+
+      <!-- single toggle (duplicate removed) -->
+      <button class="menu-toggle" aria-label="Open menu" aria-controls="primary-menu" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <div id="primary-menu" class="menu" role="navigation" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#references">References</a>
+        <a href="#contact" class="cta-btn">Contact</a>
       </div>
-    </section>
+    </div>
+  </nav>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-      <div class="container">
-        <h2 class="neon-title">About Me</h2>
-        <div class="card" style="color: var(--text-gray--alt); margin-top: 1rem;">
-          <p>
-            I am a 19-year-old software developer who has been passionate about software for 7 years and continues to pursue it with ambition and pleasure.
-          </p>
-          <p style="color: var(--text-gray); margin-top: 1rem;">
-            This site will briefly introduce me to you. Explore my skills, experiences, and projects as you navigate through the sections.
-          </p>
-        </div>
-      </div>
-    </section>
+  <main id="top">
+    <!-- ===== HERO ===== -->
+    <section class="section container" id="hero">
+      <div class="hero">
+        <div>
+          <div class="kicker">AI • Computer Vision • Embedded</div>
+          <h1 class="value-prop">
+            <span class="glitch" data-text="Edge AI & Embedded — real‑time vision and low‑latency optimization.">Edge AI & Computer Vision — real-time agents and local LLM tools.</span>
+          </h1>
+          <p class="mt-1 muted">From ESP32/OpenMV prototypes to offline RAG apps — practical, reproducible, open-source.</p>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-      <div class="container">
-        <h2 class="neon-title">My Projects</h2>
-        <p class="subtitle">Explore my software development projects with links to GitHub repositories and detailed articles.</p>
-        <div class="grid">
-                      <!-- JumpNet – Vision-Based AI Agent for Platformer Games - Series -->
-          <div class="card wide-card">
-            <div>
-              <h3 class="card-title">JumpNet – Vision-Based AI Agent for Platformer Games - Complete Series</h3>
-              <p style="color: var(--text-gray); margin-bottom: 1rem;">
-                JumpNet is a modular AI system I developed to train an intelligent agent capable of playing a fast-paced platformer game using only one key.
-              </p>
+          <!-- Quick bullets (3) -->
+          <ul class="features" aria-label="Key highlights">
+            <li><i class="fa-solid fa-bolt"></i> JumpNet: frame-to-action agent + real-time GUI</li>
+            <li><i class="fa-solid fa-sliders"></i> Edge prototyping on <strong>ESP32 / OpenMV</strong></li>
+            <li><i class="fa-solid fa-microchip"></i>VQ-VAE @128×128→ sharper than VAE, up to 60× smaller</li>
+          </ul>
 
-              <div class="series-wrapper">
-                <!-- Grid görünüm (geniş ekran) -->
-                <div class="series-grid">
-                  <div class="carousel-content">
-                    <h5>Part 1/3 - Data Foundations</h5>
-                    <p>From Raw Gameplay to Labeled Intelligence — Building the Data Foundation for JumpNet</p>
-                    <a href="https://dev.to/ertugrulmutlu/jumpnet-part-1-from-raw-gameplay-to-labeled-intelligence-building-the-data-foundation-for-2e2f" class="btn" target="_blank">Read Part 1</a>
-                  </div>
-                  <div class="carousel-content">
-                    <h5>Part 2/3 - Training Process</h5>
-                    <p>From Pixels to Policy — Training JumpNet to Make the Right Move</p>
-                    <a href="https://dev.to/ertugrulmutlu/jumpnet-part-1-from-raw-gameplay-to-labeled-intelligence-building-the-data-foundation-for-3c49" class="btn" target="_blank">Read Part 2</a>
-                  </div>
-                  <div class="carousel-content">
-                    <h5>Part 3/3 - AI Gameplay</h5>
-                    <p>Real-Time Inference — Watching JumpNet Come Alive</p>
-                    <a href="https://dev.to/ertugrulmutlu/jumpnet-part-3-real-time-inference-watching-jumpnet-come-alive-21b2" class="btn" target="_blank">Read Part 3</a>
-                  </div>
-                </div>
-
-                <!-- Carousel görünüm (küçük ekran) -->
-                <div class="series-carousel">
-                  <div id="shellCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-                    <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#shellCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Part 1"></button>
-                      <button type="button" data-bs-target="#shellCarousel" data-bs-slide-to="1" aria-label="Part 2"></button>
-                      <button type="button" data-bs-target="#shellCarousel" data-bs-slide-to="2" aria-label="Part 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <div class="carousel-content">
-                          <h5>Part 1/3 - Data Foundations</h5>
-                          <p>From Raw Gameplay to Labeled Intelligence — Building the Data Foundation for JumpNet</p>
-                          <a href="https://dev.to/ertugrulmutlu/jumpnet-part-1-from-raw-gameplay-to-labeled-intelligence-building-the-data-foundation-for-2e2f" class="btn" target="_blank">Read Part 1</a>
-                        </div>
-                      </div>
-                      <div class="carousel-item">
-                        <div class="carousel-content">
-                          <h5>Part 2/3 - Training Process</h5>
-                          <p>From Pixels to Policy — Training JumpNet to Make the Right Move</p>
-                          <a href="https://dev.to/ertugrulmutlu/jumpnet-part-1-from-raw-gameplay-to-labeled-intelligence-building-the-data-foundation-for-3c49" class="btn" target="_blank">Read Part 2</a>
-                        </div>
-                      </div>
-                      <div class="carousel-item">
-                        <div class="carousel-content">
-                          <h5>Part 3/3 - AI Gameplay</h5>
-                          <p>Real-Time Inference — Watching JumpNet Come Alive</p>
-                          <a href="https://dev.to/ertugrulmutlu/jumpnet-part-3-real-time-inference-watching-jumpnet-come-alive-21b2" class="btn" target="_blank">Read Part 3</a>
-                        </div>
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#shellCarousel" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#shellCarousel" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="project-buttons">
-              <a href="https://github.com/Ertugrulmutlu/JumpNet" class="btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
-            </div>
+          <!-- CTAs (no Live Demo now) -->
+          <div class="links ctas">
+            <a class="btn" href="#about"><i class="fa-solid fa-user"></i> About me</a>
+            <a class="btn" href="#projects"><i class="fa-solid fa-diagram-project"></i> Projects</a>
+            <a class="btn" href="#skills"><i class="fa-solid fa-sliders"></i> Skills</a>
+            <a class="btn" href="#contact"><i class="fa-regular fa-envelope"></i> Contact</a>
+            <a class="btn pink" href="docs/cv.pdf" target="_blank" rel="noopener"><i class="fa-regular fa-file-pdf"></i> CV (PDF)</a>
           </div>
         </div>
-        <!--PDF Summary Chatbot-->
-          <div class="card">
-            <h3 class="card-title">PDF Summary Chatbot</h3>
-            <p style="color: var(--text-gray); margin-bottom: 1rem;">
-              📄 Local PDF Summarizer — Built in under 24 hours. A lightweight, AI-powered tool for summarizing PDF documents entirely offline.
-            </p>
-            <div class="project-buttons">
-              <a href="https://github.com/Ertugrulmutlu/Q_learning_Sentence_prediction_with" class="btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
-              <a href="https://dev.to/ertugrulmutlu/building-a-local-pdf-summarizer-with-llms-in-under-24-hours-2ijn" class="btn" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Article</a>
 
+        <!-- Mini showcase: 2 projects with videos -->
+        <div class="mini-grid">
+          <article class="showcase-card holo">
+            <div class="badge" style="color: rgb(165, 165, 165);">JumpNet</div>
+            <div class="mediaframe">
+              <!-- Put your actual poster at assets/posters/jumpnet.jpg -->
+              <video autoplay class="media" preload="metadata" muted playsinline loop controls poster="assets/posters/jumpnet.jpg">
+                <!-- change to your final path if needed -->
+                <source src="assets/videos/jumpnet.mp4" type="video/mp4" />
+              </video>
             </div>
-          </div>
-        <!-- Applied Linear Regression Projects in Python -->
-          <div class="card">
-            <h3 class="card-title">Applied Linear Regression Projects in Python</h3>
-            <p style="color: var(--text-gray); margin-bottom: 1rem;">
-              Designed and implemented 5 independent regression models using Python and scikit-learn — each focused on a unique real-world use case:
-            </p>
-            <div class="project-buttons">
-              <a href="https://github.com/Ertugrulmutlu/5-Linear-Regression-Projects" class="btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
-              <a href="https://dev.to/ertugrulmutlu/real-time-regression-projects-in-python-with-full-code-p5g" class="btn" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Article</a>
+            <p class="mb-0">Real‑time visual decision system for a one‑button platformer</p>
+          </article>
+
+          <article class="showcase-card holo">
+            <div class="badge" style="color: rgb(0, 55, 138);">Image‑to‑Image</div>
+            <div class="mediaframe">
+              <!-- Put your actual poster at assets/posters/image2image.jpg -->
+              <video autoplay class="media" preload="metadata" muted playsinline loop controls poster="assets/posters/image2image.jpg">
+                <source  src="assets/videos/image2image.mp4" type="video/mp4" />
+              </video>
             </div>
-          </div>
-        <!-- Advanced Dataset Viewer & Data Collector - Series -->
-          <div class="card wide-card">
-            <div>
-              <h3 class="card-title">Advanced Dataset Viewer & Data Collector</h3>
-              <p style="color: var(--text-gray); margin-bottom: 1rem;">
-                A modular Python toolset to collect, inspect, and analyze screen-keypress datasets for behavior cloning.
-              </p>
-
-              <div class="series-wrapper">
-                <!-- Grid görünüm (geniş ekran) -->
-                <div class="series-grid">
-                  <div class="carousel-content">
-                    <h5>Part 1/2 - Data collecting</h5>
-                    <p>Modular Snip Recorder: A Data Collection Tool for Behavior Cloning, Data collecting Functions</p>
-                    <a href="https://dev.to/ertugrulmutlu/modular-snip-recorder-a-data-collection-tool-for-behavior-cloning-12-5di8" class="btn" target="_blank">Read Part 1</a>
-                  </div>
-                  <div class="carousel-content">
-                    <h5>Part 2/2 - Data Viewer</h5>
-                    <p>Modular Snip Recorder: A Data Collection Tool for Behavior Cloning, Data Viewer</p>
-                    <a href="https://dev.to/ertugrulmutlu/modular-snip-recorder-a-data-collection-tool-for-behavior-cloning-22-1lgl" class="btn" target="_blank">Read Part 2</a>
-                  </div>
-                </div>
-
-                <!-- Carousel görünüm (küçük ekran) -->
-                <div class="series-carousel">
-                  <div id="shellCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-                    <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#shellCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Part 1"></button>
-                      <button type="button" data-bs-target="#shellCarousel" data-bs-slide-to="1" aria-label="Part 2"></button>
-                    </div>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <div class="carousel-content">
-                          <h5>Part 1/2 - Data collecting</h5>
-                          <p>Modular Snip Recorder: A Data Collection Tool for Behavior Cloning, Data collecting Functions</p>
-                          <a href="https://dev.to/ertugrulmutlu/modular-snip-recorder-a-data-collection-tool-for-behavior-cloning-12-5di8" class="btn" target="_blank">Read Part 1</a>
-                        </div>
-                      </div>
-                      <div class="carousel-item">
-                        <div class="carousel-content">
-                          <h5>Part 2/2 - Data Viewer</h5>
-                          <p>Modular Snip Recorder: A Data Collection Tool for Behavior Cloning, Data Viewer</p>
-                          <a href="https://dev.to/ertugrulmutlu/modular-snip-recorder-a-data-collection-tool-for-behavior-cloning-22-1lgl" class="btn" target="_blank">Read Part 2</a>
-                        </div>
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#shellCarousel" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#shellCarousel" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="project-buttons">
-              <a href="https://github.com/Ertugrulmutlu/-Data-Scrap-Tool-Advanced-Dataset-Viewer" class="btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-          </div>
-
-          <!-- Machine Learning Algorithms Comparison -->
-          <div class="card">
-            <h3 class="card-title">Machine Learning Algorithms Comparison</h3>
-            <p style="color: var(--text-gray); margin-bottom: 1rem;">
-              A comprehensive comparison of SVM, Decision Tree, and KNN algorithms using accuracy, precision, recall, and F1 metrics to highlight their strengths and weaknesses.
-            </p>
-            <div class="project-buttons">
-              <a href="https://github.com/Ertugrulmutlu/Machine_Learning_Alg_Comp" class="btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
-              <a href="https://dev.to/ertugrulmutlu/comparison-of-machine-learning-algorithms-2ag4" class="btn" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Article</a>
-            </div>
-          </div>
-          <!-- Wavelets and Clustering -->
-          <div class="card">
-            <h3 class="card-title">Wavelets and Clustering for Parity Prediction</h3>
-            <p style="color: var(--text-gray); margin-bottom: 1rem;">
-              An overengineered approach to predicting odd or even numbers using wavelets and clustering techniques. A creative exploration of signal processing applied to binary classification.
-            </p>
-            <div class="project-buttons">
-              <a href="https://dev.to/ertugrulmutlu/using-wavelets-and-clustering-to-predict-odd-or-even-numbers-an-overengineered-approach-with-3ld4" class="btn" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Article</a>
-            </div>
-          </div>
-          <!-- Q-Learning Text Generation -->
-          <div class="card">
-            <h3 class="card-title">Q-Learning Text Generation</h3>
-            <p style="color: var(--text-gray); margin-bottom: 1rem;">
-              Application of Q-learning to natural language processing for generating target sentences through reward-based character prediction using reinforcement learning.
-            </p>
-            <div class="project-buttons">
-              <a href="https://github.com/Ertugrulmutlu/Q_learning_Sentence_prediction_with" class="btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
-              <a href="https://dev.to/ertugrulmutlu/text-generation-with-artificial-intelligence-generation-of-target-sentences-with-q-learning-algorithm-12m0" class="btn" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Article</a>
-            </div>
-          </div>
-
-          <!-- Simple Shell in C - Series -->
-          <div class="card wide-card">
-            <div>
-              <h3 class="card-title">Simple Shell in C - Complete Series</h3>
-              <p style="color: var(--text-gray); margin-bottom: 1rem;">
-                A comprehensive 3-part series on building a simple shell in C from scratch, covering command execution, process management, and system programming fundamentals.
-              </p>
-
-              <div class="series-wrapper">
-                <!-- Grid görünüm (geniş ekran) -->
-                <div class="series-grid">
-                  <div class="carousel-content">
-                    <h5>Part 1/3 - Foundations</h5>
-                    <p>Setting up the basic shell structure and implementing command parsing</p>
-                    <a href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-13-238e" class="btn" target="_blank">Read Part 1</a>
-                  </div>
-                  <div class="carousel-content">
-                    <h5>Part 2/3 - Process Management</h5>
-                    <p>Implementing process creation, execution, and basic process control</p>
-                    <a href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-23-3m2i" class="btn" target="_blank">Read Part 2</a>
-                  </div>
-                  <div class="carousel-content">
-                    <h5>Part 3/3 - Advanced Features</h5>
-                    <p>Adding advanced shell features and finalizing the implementation</p>
-                    <a href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-33-eah" class="btn" target="_blank">Read Part 3</a>
-                  </div>
-                </div>
-
-                <!-- Carousel görünüm (küçük ekran) -->
-                <div class="series-carousel">
-                  <div id="shellCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-                    <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#shellCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Part 1"></button>
-                      <button type="button" data-bs-target="#shellCarousel" data-bs-slide-to="1" aria-label="Part 2"></button>
-                      <button type="button" data-bs-target="#shellCarousel" data-bs-slide-to="2" aria-label="Part 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <div class="carousel-content">
-                          <h5>Part 1/3 - Foundations</h5>
-                          <p>Setting up the basic shell structure and implementing command parsing</p>
-                          <a href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-13-238e" class="btn" target="_blank">Read Part 1</a>
-                        </div>
-                      </div>
-                      <div class="carousel-item">
-                        <div class="carousel-content">
-                          <h5>Part 2/3 - Process Management</h5>
-                          <p>Implementing process creation, execution, and basic process control</p>
-                          <a href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-23-3m2i" class="btn" target="_blank">Read Part 2</a>
-                        </div>
-                      </div>
-                      <div class="carousel-item">
-                        <div class="carousel-content">
-                          <h5>Part 3/3 - Advanced Features</h5>
-                          <p>Adding advanced shell features and finalizing the implementation</p>
-                          <a href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-33-eah" class="btn" target="_blank">Read Part 3</a>
-                        </div>
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#shellCarousel" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#shellCarousel" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="project-buttons">
-              <a href="https://github.com/Ertugrulmutlu/shell_of_mine" class="btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-          </div>
-
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Technologies Section -->
-    <section id="technologies" class="section">
-      <div class="container">
-        <h2 class="neon-title">Technologies I've Used</h2>
-        <div class="grid">
-          <div class="card">
-            <h3 class="card-title">Web Development</h3>
-            <p style="color: var(--text-gray--alt);">HTML, CSS, JS (Node.js), Python (Flask), MongoDB, PostgreSQL, MSSQL</p>
-            <p style="color: var(--text-gray); margin-top: 1rem;">Experience: 2 years</p>
-          </div>
-          <div class="card">
-            <h3 class="card-title">Mobile Development</h3>
-            <p style="color: var(--text-gray--alt);">Flutter, Python</p>
-            <p style="color: var(--text-gray); margin-top: 1rem;">Experience: 1 year</p>
-          </div>
-          <div class="card">
-            <h3 class="card-title">Artificial Intelligence</h3>
-            <p style="color: var(--text-gray--alt);">Python (TensorFlow, YOLO)</p>
-            <p style="color: var(--text-gray); margin-top: 1rem;">Experience: 3 years</p>
-          </div>
-          <div class="card">
-            <h3 class="card-title">Embedded Systems</h3>
-            <p style="color: var(--text-gray--alt);">Assembly (x86, x64, MASM, NASM)</p>
-            <p style="color: var(--text-gray); margin-top: 1rem;">Experience: 1 year</p>
-          </div>
-          <div class="card">
-            <h3 class="card-title">Internet of Things</h3>
-            <p style="color: var(--text-gray--alt);">C, Python</p>
-            <p style="color: var(--text-gray); margin-top: 1rem;">Experience: 5 years</p>
-          </div>
-          <div class="card">
-            <h3 class="card-title">Desktop Applications</h3>
-            <p style="color: var(--text-gray--alt);">C# (WinForms), Python (Tkinter)</p>
-            <p style="color: var(--text-gray); margin-top: 1rem;">Experience: 6 months</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="section">
-      <div class="container">
-        <h2 class="neon-title">My Experiences</h2>
-        <div class="grid">
-          <div class="card">
-            <h3 class="card-title">TürkAi</h3>
-            <h4 style="color: var(--text-gray); margin-bottom: 1rem;">Software Developer</h4>
-            <p style="color: var(--text-gray--alt);">Artificial intelligence and algorithm development on microprocessors such as H7/7+, Arduino, ESP32.</p>
-          </div>
-          <div class="card">
-            <h3 class="card-title">Qgen</h3>
-            <h4 style="color: var(--text-gray); margin-bottom: 1rem;">Co-Founder/Software Developer</h4>
-            <p style="color: var(--text-gray--alt);">Software development in the field of educational technologies.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-      <div class="container">
-        <h2 class="neon-title">Get in Touch</h2>
-        <div class="card">
-          <p class="subtitle">Thank you for exploring my portfolio. Feel free to connect with me on social media or via email.</p>
-          <div class="social-icons">
-            <a href="https://www.instagram.com/ertugrul._.mutlu/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/ertuğrul-mutlu/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/Ertugrulmutlu" target="_blank"><i class="fab fa-github"></i></a>
-          </div>
-          <p style="text-align: center; margin-top: 1.5rem; color: var(--text-gray);">
-            Email: <a href="mailto:ertugrulmutlu@gmail.com" style="color: var(--neon-green); text-decoration: none;">ertugrulmutlu@gmail.com</a>
-          </p>
+            <p class="mb-0">Lightweight image‑to‑image pipeline </p>
+          </article>
         </div>
       </div>
     </section>
   </main>
+ <!-- ===== ABOUT ===== -->
+    <section class="section container" id="about">
+      <div class="about holo">
+        <div class="about-grid">
+          <div class="about-copy">
+            <h2>About</h2>
+            <p class="mb-1">I’m a developer focused on <strong>Edge AI</strong>, <strong>computer vision</strong>, and <strong>embedded systems</strong>.</p>
+            <p class="mb-1">I’ve been coding since I was 12. Today I study Computer Engineering at <strong>RWTH Aachen University</strong>, exploring how software and hardware come together to solve real‑world problems.</p>
+            <p class="mb-1">I build lightweight AI pipelines and deploy them on microcontrollers and SoCs, with a focus on <strong>measurable latency</strong> and <strong>small memory</strong>. I also co‑founded <strong>Qgen</strong>, an EdTech startup making learning more interactive and impactful.</p>
+            <ul class="facts">
+              <li class="tech">RWTH Aachen University</li>
+              <li class="tech">Coding since 12</li>
+            </ul>
+            <div class="links mt-2" style="padding-top: 1.25rem;">
+          <a class="btn" target="_blank" rel="noopener" href="https://www.linkedin.com/in/ertu%C4%9Frul-mutlu/"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+          <a class="btn pink" target="_blank" rel="noopener" href="docs/cv.pdf"><i class="fa-regular fa-file-pdf"></i> CV (PDF)</a>
+        </div>
+            <div class="availability mt-2"><i class="fa-regular fa-circle-dot"></i> Open to Werkstudent / Internship / Part‑time in AI, Computer Vision, or Embedded Systems.</div>
+          </div>
+          <figure class="about-photo" aria-label="Portrait">
+            <img class="avatar" src="assets/img/image.png" alt="Portrait of Ertuğrul Mutlu" loading="lazy" decoding="async" width="320" height="320" />
+          </figure>
+        </div>
+      </div>
+    </section>
+  <!-- ===== PROJECTS ===== -->
+    <section class="section container" id="projects">
+      <h2>Projects</h2>
+      <p class="muted mt-1">Organized by category. Short descriptions, tech badges, and quick links only.</p>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Smooth scrolling
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-        document
-          .querySelector(this.getAttribute("href"))
-          .scrollIntoView({ behavior: "smooth" });
-      });
-    });
+      <!-- Quick index (no JS) -->
+      <nav class="projects-index" aria-label="Project categories">
+        <a class="p-chip" href="#grp-edge">Edge & Vision</a>
+        <a class="p-chip" href="#grp-gen">Generative</a>
+        <a class="p-chip" href="#grp-tools">Data Tools</a>
+        <a class="p-chip" href="#grp-ml">ML Projects</a>
+        <a class="p-chip" href="#grp-systems">Systems & Web</a>
+      </nav>
+      <!-- ===== Group: Edge & Vision ===== -->
+      <section class="group" id="grp-edge">
+        <h3 class="group-title">Edge & Vision</h3>
+        <div class="projects-grid mt-3">
+          <!-- JumpNet -->
+          <article class="card p-card">
+            <h3>JumpNet — Vision-Based AI Agent</h3>
+            <p>Real‑time visual decision system for a one‑button platformer (~18 ms, ~87% accuracy).</p>
+            <div class="techbar">
+              <span class="tech">PyTorch</span>
+              <span class="tech">Behavior Cloning</span>
+              <span class="tech">OpenCV</span>
+            </div>
+            <div class="links" style="padding-top: 1rem;">
+              <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/JumpNet"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/jumpnet-part-1-from-raw-gameplay-to-labeled-intelligence-building-the-data-foundation-for-2e2f">Part 1</a>
+              <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/jumpnet-part-2-from-pixels-to-policy-training-jumpnet-to-make-the-right-move-1eoi">Part 2</a>
+              <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/jumpnet-part-3-real-time-inference-watching-jumpnet-come-alive-21b2">Part 3</a>
 
-    // Initialize carousel
-    document.addEventListener("DOMContentLoaded", function () {
-      const myCarousel = document.querySelector("#shellCarousel");
-      if (myCarousel) {
-        new bootstrap.Carousel(myCarousel, {
-          interval: 5000,
-          wrap: true,
-        });
-      }
-    });
-  </script>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ===== Group: Generative ===== -->
+      <section class="group" id="grp-gen">
+        <h3 class="group-title">Generative</h3>
+        <div class="projects-grid mt-3">
+          <!-- VAE vs VQ-VAE -->
+          <article class="card p-card">
+            <h3>Compressing Faces — VAE vs VQ‑VAE</h3>
+            <p>Identity retention vs compression—continuous latents vs codebooks.</p>
+            <div class="techbar">
+              <span class="tech">PyTorch</span>
+              <span class="tech">VAE</span>
+              <span class="tech">VQ‑VAE</span>
+            </div>
+            <div class="links" style="padding-top: 1rem;">
+              <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/VQVAE-and-VAE"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/compressing-human-faces-with-vae-vs-vq-vae-a-deep-dive-into-autoencoder-design-j59">Part 1</a>
+            </div>
+          </article>
+
+          <!-- cGAN Sketch -->
+          <article class="card p-card">
+            <h3>Conditional GAN — Sketch Generation</h3>
+            <p>Class‑conditioned B/W sketch synthesis; projection discriminator experiments.</p>
+            <div class="techbar">
+              <span class="tech">PyTorch</span>
+              <span class="tech">cGAN</span>
+              <span class="tech">Computer Vision</span>
+            </div>
+            <div class="links" style="padding-top: 1rem;">
+              <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/ConditionalGAN-SketchGeneration"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/a-cgan-story-three-attempts-and-an-incomplete-ending-2a1b">Part 1</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===== Group: Data Tools ===== -->
+      <section class="group" id="grp-tools">
+        <h3 class="group-title">Data Tools</h3>
+        <div class="projects-grid mt-3">
+          <!-- Dataset Viewer -->
+          <article class="card p-card">
+            <h3>Advanced Dataset Viewer & Collector</h3>
+            <p>Record screen+keypress, browse entries, and analyze behavior‑cloning datasets.</p>
+            <div class="techbar">
+              <span class="tech">Python</span>
+              <span class="tech">Streamlit</span>
+              <span class="tech">OpenCV</span>
+            </div>
+            <div class="links" style="padding-top: 1rem;">
+              <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/-Data-Scrap-Tool-Advanced-Dataset-Viewer"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/modular-snip-recorder-a-data-collection-tool-for-behavior-cloning-12-5di8">Part 1</a>
+              <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/modular-snip-recorder-a-data-collection-tool-for-behavior-cloning-22-1lgl">Part 2</a>
+
+            </div>
+          </article>
+
+          <!-- PDF Summary Chatbot -->
+          <article class="card p-card">
+            <h3>PDF Summary Chatbot (Local)</h3>
+            <p>Offline PDF summarizer with page‑range selection and export.</p>
+            <div class="techbar">
+              <span class="tech">Python</span>
+              <span class="tech">Streamlit</span>
+              <span class="tech">Local LLM</span>
+            </div>
+            <div class="links" style="padding-top: 1rem;">
+              <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/PDF-Summary"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/building-a-local-pdf-summarizer-with-llms-in-under-24-hours-2ijn">Part 1</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===== Group: ML Projects ===== -->
+      <section class="group" id="grp-ml" data-visible="3">
+        <h3 class="group-title">ML Projects</h3>
+        <div class="projects-grid mt-3">
+          <!-- 5 Linear Regression -->
+          <article class="card p-card">
+            <h3>Applied Linear Regression (x5)</h3>
+            <p>Five scikit‑learn regressors on real datasets (salary, cars, wine, insurance, trips).</p>
+            <div class="techbar">
+              <span class="tech">Python</span>
+              <span class="tech">scikit‑learn</span>
+              <span class="tech">Pandas</span>
+            </div>
+            <div class="links" style="padding-top: 1rem;">
+              <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/5-Linear-Regression-Projects"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/real-time-regression-projects-in-python-with-full-code-p5g">Part 1</a>
+
+            </div>
+          </article>
+
+          <!-- ML Algorithms Comparison -->
+          <article class="card p-card">
+            <h3>Machine Learning Algorithms Comparison</h3>
+            <p>Decision Tree, SVM, and KNN evaluated with Accuracy, Precision, Recall, F1.</p>
+            <div class="techbar">
+              <span class="tech">Python</span>
+              <span class="tech">scikit‑learn</span>
+              <span class="tech">Metrics</span>
+            </div>
+            <div class="links" style="padding-top: 1rem;">
+              <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/Machine_Learning_Alg_Comp"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/comparison-of-machine-learning-algorithms-2ag4">Part 1</a>
+            </div>
+          </article>
+
+          <!-- Q‑Learning Sentence Prediction -->
+          <article class="card p-card">
+            <h3>Sentence Prediction with Q‑Learning</h3>
+            <p>Character‑level RL to reach target sentences; simple RL/NLP crossover.</p>
+            <div class="techbar">
+              <span class="tech">Python</span>
+              <span class="tech">Q‑Learning</span>
+              <span class="tech">NLP</span>
+            </div>
+            <div class="links" style="padding-top: 1rem;">
+              <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/Q_learning_Sentence_prediction_with"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/text-generation-with-artificial-intelligence-generation-of-target-sentences-with-q-learning-algorithm-12m0">Part 1</a>
+
+            </div>
+          </article>
+
+          <!-- Wavelets & Clustering -->
+          <article class="card p-card">
+            <h3>Wavelets & Clustering Parity</h3>
+            <p>Odd/even classification with wavelet features and clustering — a playful study.</p>
+            <div class="techbar">
+              <span class="tech">PyWavelets</span>
+              <span class="tech">Clustering</span>
+              <span class="tech">NumPy</span>
+            </div>
+            <div class="links" style="padding-top: 1rem;">
+              <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/using-wavelets-and-clustering-to-predict-odd-or-even-numbers-an-overengineered-approach-with-3ld4">Part 1</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===== Group: Systems & Web ===== -->
+      <section class="group" id="grp-systems">
+        <h3 class="group-title">Systems & Web</h3>
+        <div class="projects-grid mt-3">
+          <!-- Simple Shell in C -->
+          <article class="card p-card">
+            <h3>Simple Shell in C</h3>
+            <p>Minimal CLI to explore processes, files, and basic system calls.</p>
+            <div class="techbar">
+              <span class="tech">C</span>
+              <span class="tech">POSIX</span>
+              <span class="tech">Processes</span>
+            </div>
+            <div class="links" style="padding-top: 1rem;">
+              <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/Shell_of_mine"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-13-238e">Part 1</a>
+              <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-23-3m2i">Part 2</a>
+              <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-33-eah">Part 3</a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+    </section>
+  </main>
+
+ <!-- ===== SKILLS MATRIX ===== -->
+    <section class="section container" id="skills" data-visible="3">
+      <h2>Skills Matrix</h2>
+      <div class="skills-matrix mt-3">
+        <article class="s-card holo">
+          <h3><i class="fa-solid fa-robot"></i> AI / ML</h3>
+          <ul class="s-list">
+            <li>PyTorch, TensorFlow, ONNX, TFLite Micro</li>
+            <li>Quantization (INT8), pruning, distillation</li>
+            <li>OpenCV; data pipelines & augmentation</li>
+          </ul>
+          <div class="evidence">Proof: <a href="#grp-edge">JumpNet</a>, <a href="#grp-gen">VAE vs VQ‑VAE</a>, <a href="#grp-gen">cGAN</a></div>
+        </article>
+
+        <article class="s-card holo">
+          <h3><i class="fa-solid fa-microchip"></i> Embedded</h3>
+          <ul class="s-list">
+            <li>C/C++, HAL, DMA, low‑power</li>
+            <li>CMSIS‑NN, ESP‑NN; SPI/I²C</li>
+            <li>Zephyr / FreeRTOS</li>
+          </ul>
+          <div class="evidence">Proof: <a href="#grp-edge">Edge & Vision</a>, <a href="#p-shell">Shell in C</a></div>
+        </article>
+
+        <article class="s-card holo">
+          <h3><i class="fa-solid fa-gears"></i> DevOps</h3>
+          <ul class="s-list">
+            <li>GitHub Actions, CMake / PlatformIO</li>
+            <li>pytest, pre‑commit</li>
+            <li>CI for training & firmware</li>
+          </ul>
+          <div class="evidence">Proof: <a href="#grp-tools">Dataset Viewer</a>, <a href="#grp-ml">ML Projects</a></div>
+        </article>
+
+        <article class="s-card holo">
+          <h3><i class="fa-solid fa-wave-square"></i> Tools</h3>
+          <ul class="s-list">
+            <li>Logic analyzer & oscilloscope</li>
+            <li>Latency / power validation</li>
+            <li>Profiling & instrumentation</li>
+          </ul>
+          <div class="evidence">Proof: <a href="#grp-edge">Edge projects</a></div>
+        </article>
+      </div>
+    </section>
+  </main>
+      <!-- ===== REFERENCES / FEEDBACK ===== -->
+    <section class="section container" id="references">
+      <h2>References & Feedback</h2>
+
+      <div class="ref-wrap">
+        <article class="ref-card ref-holo" aria-label="Recommendation by Barış Ünver">
+          <div class="ref-star" aria-hidden="true">
+            <span class="ray r0"></span>
+            <span class="ray r1"></span>
+            <span class="ray r2"></span>
+            <span class="ray r3"></span>
+            <span class="ray r4"></span>
+            <span class="ray r5"></span>
+            <span class="ray r6"></span>
+            <span class="ray r7"></span>
+          </div>
+          <header class="ref-meta">
+            <div class="who">
+              <div class="name">Barış Ünver</div>
+              <div class="role">Founder (AI companies) · Direct manager</div>
+            </div>
+            <div class="pill">Recommendation · Sep 1, 2022 · TURK AI</div>
+          </header>
+
+          <blockquote class="q holo-quote" style="padding-left: 1.5rem;">
+            <span class="qmark" aria-hidden="true">“</span>
+            I worked closely and advised Ertuğrul. During his volunteer experience in our company, TURK AI, I had the opportunity of knowing him. He is a gifted person but beside his skills he is eager to learn and discover. I was surprised how he could adapt and start to create and develop hard tasks. He gained good knowledge and hands on experience on edge computing devices like OpenMV and ESP32 both hardware and software sides. I trust him that he can bring positive impact and joy to his future colleagues. I strongly recommend him!
+          </blockquote>
+
+          <footer class="ref-foot">
+            <a class="btn sm" target="_blank" rel="noopener" href="https://www.linkedin.com/in/ertu%C4%9Frul-mutlu/"><i class="fa-brands fa-linkedin"></i> View on LinkedIn</a>
+          </footer>
+        </article>
+      </div>
+    </section>
+  </main>
+    <!-- ===== CONTACT ===== -->
+    <section class="section container" id="contact">
+      <h2>Contact</h2>
+      <p class="muted">Based in Aachen, Germany. Open to remote/hybrid.</p>
+      <div class="socials mt-2">
+        <a class="btn sm" href="mailto:ertugrulmutlu@gmail.com"><i class="fa-regular fa-envelope"></i> Email</a>
+        <a class="btn sm" target="_blank" rel="noopener" href="https://www.linkedin.com/in/ertu%C4%9Frul-mutlu/"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu"><i class="fa-brands fa-github"></i> GitHub</a>
+        <a class="btn sm pink" target="_blank" rel="noopener" href="docs/cv.pdf"><i class="fa-regular fa-file-pdf"></i> CV (PDF)</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    Based in Aachen, Germany · Open to remote/hybrid.
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
