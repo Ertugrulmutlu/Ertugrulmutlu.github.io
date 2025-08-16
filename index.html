@@ -121,7 +121,6 @@
         </div>
       </div>
     </section>
-  <!-- ===== PROJECTS ===== -->
 <!-- ===== PROJECTS ===== -->
 <section class="section container" id="projects">
   <h2>Projects</h2>
@@ -133,6 +132,7 @@
     <a class="p-chip" href="#grp-gen">Generative Models</a>
     <a class="p-chip" href="#grp-tools">Tools & Apps (Data)</a>
     <a class="p-chip" href="#grp-ml">Applied ML & RL</a>
+    <a class="p-chip" href="#grp-algo">Competitive Programming / Algorithms</a>
     <a class="p-chip" href="#grp-systems">Systems & Web</a>
   </nav>
 
@@ -315,7 +315,26 @@
       </article>
     </div>
   </section>
-
+ <!-- ===== Group: Competitive Programming / Algorithms ===== -->
+  <section class="group" id="grp-algo">
+      <h3 class="group-title">Competitive Programming / Algorithms</h3>
+      <div class="projects-grid mt-3">
+        <article class="card p-card">
+          <h3>Daily LeetCode Progress</h3>
+          <p>Ongoing series of algorithm & data structure challenges — daily solutions + 5-day recaps.</p>
+          <div class="techbar">
+            <span class="tech">Python</span>
+            <span class="tech">C++</span>
+            <span class="tech">Algorithms</span>
+            <span class="tech">Problem Solving</span>
+          </div>
+          <div class="links" style="padding-top: 1rem;">
+            <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/leetcode-series"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/daily-leetcode-progress-day-1-3d0a">Blog</a>
+          </div>
+        </article>
+      </div>
+    </section>
   <!-- ===== Group: Systems & Web ===== -->
   <section class="group" id="grp-systems">
     <h3 class="group-title">Systems & Web</h3>
@@ -340,76 +359,84 @@
   </section>
 </section>
 
-<!-- ===== SKILLS MATRIX ===== -->
-<section class="section container" id="skills" data-visible="3">
-  <h2>Skills Matrix</h2>
-  <div class="skills-matrix mt-3">
-    <article class="s-card holo">
-      <h3><i class="fa-solid fa-brain"></i> AI / ML</h3>
-      <ul class="s-list">
-        <li><i class="fa-solid fa-square-root-variable"></i> PyTorch, torchvision, torchmetrics, NumPy, pandas, scikit-learn</li>
-        <li><i class="fa-solid fa-chart-line"></i> Metrics & logging: TensorBoard, matplotlib</li>
-      </ul>
-      <div class="evidence">Proof: <a href="#grp-edge">JumpNet</a>, <a href="#grp-gen">VAE vs VQ-VAE</a>, <a href="#grp-ml">ML Algorithms</a></div>
-    </article>
+  <!-- ===== SKILLS MATRIX ===== -->
+  <section class="section container" id="skills" data-visible="3">
+    <h2>Skills Matrix</h2>
+    <div class="skills-matrix mt-3">
+      <article class="s-card holo">
+        <h3><i class="fa-solid fa-brain"></i> AI / ML</h3>
+        <ul class="s-list">
+          <li><i class="fa-solid fa-square-root-variable"></i> PyTorch, torchvision, torchmetrics, NumPy, pandas, scikit-learn</li>
+          <li><i class="fa-solid fa-chart-line"></i> Metrics & logging: TensorBoard, matplotlib</li>
+        </ul>
+        <div class="evidence">Proof: <a href="#grp-edge">JumpNet</a>, <a href="#grp-gen">VAE vs VQ-VAE</a>, <a href="#grp-ml">ML Algorithms</a></div>
+      </article>
 
-    <article class="s-card holo">
-      <h3><i class="fa-solid fa-wand-magic-sparkles"></i> Generative Models</h3>
-      <ul class="s-list">
-        <li><i class="fa-solid fa-cubes"></i> VAE, VQ-VAE (vector quantization)</li>
-        <li><i class="fa-solid fa-wand-magic-sparkles"></i> cGAN</li>
-        <li><i class="fa-solid fa-sliders"></i> Losses: MSE / KL / BCE</li>
-      </ul>
-      <div class="evidence">Proof: <a href="#grp-gen">VAE vs VQ-VAE</a>, <a href="#grp-gen">cGAN – Sketch Generation</a></div>
-    </article>
+      <article class="s-card holo">
+        <h3><i class="fa-solid fa-wand-magic-sparkles"></i> Generative Models</h3>
+        <ul class="s-list">
+          <li><i class="fa-solid fa-cubes"></i> VAE, VQ-VAE (vector quantization)</li>
+          <li><i class="fa-solid fa-wand-magic-sparkles"></i> cGAN</li>
+          <li><i class="fa-solid fa-sliders"></i> Losses: MSE / KL / BCE</li>
+        </ul>
+        <div class="evidence">Proof: <a href="#grp-gen">VAE vs VQ-VAE</a>, <a href="#grp-gen">cGAN – Sketch Generation</a></div>
+      </article>
 
-    <article class="s-card holo">
-      <h3><i class="fa-solid fa-camera"></i> Vision & Data</h3>
-      <ul class="s-list">
-        <li><i class="fa-solid fa-image"></i> OpenCV, Albumentations, Pillow; loaders & balancing</li>
-        <li><i class="fa-solid fa-table"></i> Dataset tools & exports: pandas / CSV / JSON, Plotly</li>
-        <li><i class="fa-solid fa-palette"></i> Color science: CIE LAB, ΔE2000</li>
-      </ul>
-      <div class="evidence">Proof: <a href="#grp-tools">Dataset Viewer</a>, <a href="#grp-tools">Real-Time Color Palette Extractor</a>, <a href="#grp-edge">JumpNet</a>, <a href="#grp-gen">cGAN</a></div>
-    </article>
+      <article class="s-card holo">
+        <h3><i class="fa-solid fa-camera"></i> Vision & Data</h3>
+        <ul class="s-list">
+          <li><i class="fa-solid fa-image"></i> OpenCV, Albumentations, Pillow; loaders & balancing</li>
+          <li><i class="fa-solid fa-table"></i> Dataset tools & exports: pandas / CSV / JSON, Plotly</li>
+          <li><i class="fa-solid fa-palette"></i> Color science: CIE LAB, ΔE2000</li>
+        </ul>
+        <div class="evidence">Proof: <a href="#grp-tools">Dataset Viewer</a>, <a href="#grp-tools">Real-Time Color Palette Extractor</a>, <a href="#grp-edge">JumpNet</a>, <a href="#grp-gen">cGAN</a></div>
+      </article>
 
-    <article class="s-card holo">
-      <h3><i class="fa-solid fa-microchip"></i> Embedded</h3>
-      <ul class="s-list">
-        <li><i class="fa-solid fa-terminal"></i> CLI / syscalls in C</li>
-      </ul>
-      <div class="evidence">Proof: <a href="#grp-systems">Simple Shell in C</a></div>
-    </article>
+      <article class="s-card holo">
+        <h3><i class="fa-solid fa-microchip"></i> Embedded</h3>
+        <ul class="s-list">
+          <li><i class="fa-solid fa-terminal"></i> CLI / syscalls in C</li>
+        </ul>
+        <div class="evidence">Proof: <a href="#grp-systems">Simple Shell in C</a></div>
+      </article>
 
-    <article class="s-card holo">
-      <h3><i class="fa-solid fa-gears"></i> DevOps & Quality</h3>
-      <ul class="s-list">
-        <li><i class="fa-brands fa-github"></i> Git / GitHub</li>
-      </ul>
-      <div class="evidence">Proof: <a href="#projects">All Projects</a></div>
-    </article>
+      <article class="s-card holo">
+        <h3><i class="fa-solid fa-gears"></i> DevOps & Quality</h3>
+        <ul class="s-list">
+          <li><i class="fa-brands fa-github"></i> Git / GitHub</li>
+        </ul>
+        <div class="evidence">Proof: <a href="#projects">All Projects</a></div>
+      </article>
 
+      <article class="s-card holo">
+        <h3><i class="fa-solid fa-window-restore"></i> Apps, UI & Viz</h3>
+        <ul class="s-list">
+          <li><i class="fa-solid fa-window-maximize"></i> Streamlit, Tkinter (local-first UIs)</li>
+          <li><i class="fa-solid fa-globe"></i> Flask / HTML / CSS / JS (lightweight demos)</li>
+          <li><i class="fa-solid fa-palette"></i> Color extraction & visualization tools</li>
+        </ul>
+        <div class="evidence">Proof: <a href="#grp-tools">Dataset Viewer</a>, <a href="#grp-tools">Real-Time Color Palette Extractor</a>, <a href="/index.html">Website</a></div>
+      </article>
 
-    <article class="s-card holo">
-      <h3><i class="fa-solid fa-window-restore"></i> Apps, UI & Viz</h3>
-      <ul class="s-list">
-        <li><i class="fa-solid fa-window-maximize"></i> Streamlit, Tkinter (local-first UIs)</li>
-        <li><i class="fa-solid fa-globe"></i> Flask / HTML / CSS / JS (lightweight demos)</li>
-        <li><i class="fa-solid fa-palette"></i> Color extraction & visualization tools</li>
-      </ul>
-      <div class="evidence">Proof: <a href="#grp-tools">Dataset Viewer</a>, <a href="#grp-tools">Real-Time Color Palette Extractor</a>, <a href="/index.html">Website</a></div>
-    </article>
+      <article class="s-card holo">
+        <h3><i class="fa-solid fa-layer-group"></i> Extras</h3>
+        <ul class="s-list">
+          <li><i class="fa-solid fa-chess-knight"></i> RL basics: tabular Q-Learning</li>
+          <li><i class="fa-solid fa-wave-square"></i> Signals & clustering: PyWavelets, k-means</li>
+        </ul>
+        <div class="evidence">Proof: <a href="#grp-ml">Sentence Prediction with Q-Learning</a>, <a href="#grp-ml">Wavelets & Clustering Parity</a></div>
+      </article>
 
-    <article class="s-card holo">
-      <h3><i class="fa-solid fa-layer-group"></i> Extras</h3>
-      <ul class="s-list">
-        <li><i class="fa-solid fa-chess-knight"></i> RL basics: tabular Q-Learning</li>
-        <li><i class="fa-solid fa-wave-square"></i> Signals & clustering: PyWavelets, k-means</li>
-      </ul>
-      <div class="evidence">Proof: <a href="#grp-ml">Sentence Prediction with Q-Learning</a>, <a href="#grp-ml">Wavelets & Clustering Parity</a></div>
-    </article>
-  </div>
-</section>
+      <article class="s-card holo">
+        <h3><i class="fa-solid fa-code"></i> Competitive Programming</h3>
+        <ul class="s-list">
+          <li><i class="fa-solid fa-list-ol"></i> Data Structures & Algorithms (Python, C++)</li>
+          <li><i class="fa-solid fa-puzzle-piece"></i> Problem-solving, coding patterns</li>
+        </ul>
+        <div class="evidence">Proof: <a href="#grp-algo">Daily LeetCode Progress</a></div>
+      </article>
+    </div>
+  </section>
       <!-- ===== REFERENCES / FEEDBACK ===== -->
     <section class="section container" id="references">
       <h2>References & Feedback</h2>
