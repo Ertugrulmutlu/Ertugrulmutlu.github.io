@@ -65,6 +65,8 @@
             <a class="btn" href="#skills"><i class="fa-solid fa-sliders"></i> Skills</a>
             <a class="btn" href="#contact"><i class="fa-regular fa-envelope"></i> Contact</a>
             <a class="btn pink" href="docs/cv.pdf" target="_blank" rel="noopener"><i class="fa-regular fa-file-pdf"></i> CV (PDF)</a>
+            <a class="btn neon" href="https://real-time-image-color-palette-extractor-apps.streamlit.app" 
+               target="_blank" rel="noopener"><i class="fa-solid fa-palette"></i>NEW Live Color App</a>
           </div>
         </div>
 
@@ -158,8 +160,26 @@
           <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/jumpnet-part-3-real-time-inference-watching-jumpnet-come-alive-21b2">Part 3</a>
         </div>
       </article>
+      <!-- Face Landmarks Detection -->
+      <article class="card p-card">
+        <h3>Face Landmarks Detection (OpenCV DNN + Facemark)</h3>
+        <p>Real-time 68-point facial landmark tracker with EMA smoothing and CSV logging.</p>
+        <div class="techbar">
+          <span class="tech">Python</span>
+          <span class="tech">OpenCV (DNN)</span>
+          <span class="tech">Facemark LBF</span>
+          <span class="tech">EMA</span>
+          <span class="tech">CSV</span>
+        </div>
+        <div class="links" style="padding-top: 1rem;">
+          <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/-Face-Landmark-Tracker"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/-face-landmarks-detection-opencv-dnn-facemark-440d">Blog</a>
+          <a class="btn sm" target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=jQmMLPD_EUw"><i class="fa-solid fa-play"></i> Demo</a>
+        </div>
+      </article>
     </div>
   </section>
+
 
   <!-- ===== Group: Generative Models ===== -->
   <section class="group" id="grp-gen">
@@ -385,11 +405,12 @@
       <article class="s-card holo">
         <h3><i class="fa-solid fa-camera"></i> Vision & Data</h3>
         <ul class="s-list">
-          <li><i class="fa-solid fa-image"></i> OpenCV, Albumentations, Pillow; loaders & balancing</li>
+          <li><i class="fa-solid fa-image"></i> OpenCV (incl. <strong>DNN SSD-ResNet</strong>), <strong>Facemark LBF</strong>, Albumentations, Pillow; loaders & balancing</li>
           <li><i class="fa-solid fa-table"></i> Dataset tools & exports: pandas / CSV / JSON, Plotly</li>
-          <li><i class="fa-solid fa-palette"></i> Color science: CIE LAB, ΔE2000</li>
+          <li><i class="fa-solid fa-wave-square"></i> Temporal smoothing (EMA), frame-wise landmark logging</li>
+          <li><i class="fa-solid fa-film"></i> Video I/O, annotated overlays, per-frame pipelines</li>
         </ul>
-        <div class="evidence">Proof: <a href="#grp-tools">Dataset Viewer</a>, <a href="#grp-tools">Real-Time Color Palette Extractor</a>, <a href="#grp-edge">JumpNet</a>, <a href="#grp-gen">cGAN</a></div>
+        <div class="evidence">Proof: <a href="#grp-tools">Dataset Viewer</a>, <a href="#grp-tools">Real-Time Color Palette Extractor</a>, <a href="#grp-edge">JumpNet</a>, <a href="#grp-edge">Face Landmarks Detection</a>, <a href="#grp-gen">cGAN</a></div>
       </article>
 
       <article class="s-card holo">
@@ -437,6 +458,7 @@
       </article>
     </div>
   </section>
+
       <!-- ===== REFERENCES / FEEDBACK ===== -->
     <section class="section container" id="references">
       <h2>References & Feedback</h2>
