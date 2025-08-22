@@ -135,7 +135,7 @@
     <a class="p-chip" href="#grp-tools">Tools & Apps (Data)</a>
     <a class="p-chip" href="#grp-ml">Applied ML & RL</a>
     <a class="p-chip" href="#grp-algo">Competitive Programming / Algorithms</a>
-    <a class="p-chip" href="#grp-systems">Systems & Web</a>
+    <a class="p-chip" href="#grp-systems">Systems & Embedded</a>
   </nav>
 
   <!-- ===== Group: Edge AI & Vision ===== -->
@@ -355,10 +355,29 @@
         </article>
       </div>
     </section>
-  <!-- ===== Group: Systems & Web ===== -->
+  <!-- ===== Group: Systems & Embedded ===== -->
   <section class="group" id="grp-systems">
-    <h3 class="group-title">Systems & Web</h3>
+    <h3 class="group-title">Systems & Embedded</h3>
     <div class="projects-grid mt-3">
+      <!-- Mini SCADA Console -->
+      <article class="card p-card">
+        <h3>Mini SCADA Console (Raspberry Pi Pico, C++)</h3>
+        <p>
+          USB-CDC command console simulating an industrial field device: telemetry 
+          (internal temp via ADC4), logging, and LED control. PuTTY @115200 for interaction.
+        </p>
+        <div class="techbar">
+          <span class="tech">C++</span>
+          <span class="tech">Pico SDK</span>
+          <span class="tech">USB-CDC</span>
+          <span class="tech">ADC</span>
+          <span class="tech">CMake/Ninja</span>
+        </div>
+        <div class="links" style="padding-top: 1rem;">
+          <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/mini_scada"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/building-a-mini-scada-console-on-raspberry-pi-pico-c-50bg">Blog</a>
+        </div>
+      </article>
       <!-- Simple Shell in C -->
       <article class="card p-card">
         <h3>Simple Shell in C</h3>
@@ -416,9 +435,15 @@
       <article class="s-card holo">
         <h3><i class="fa-solid fa-microchip"></i> Embedded</h3>
         <ul class="s-list">
-          <li><i class="fa-solid fa-terminal"></i> CLI / syscalls in C</li>
+          <li><i class="fa-solid fa-microchip"></i> Raspberry Pi Pico · Pico SDK (C/C++)</li>
+          <li><i class="fa-solid fa-usb"></i> USB-CDC stdio · Serial I/O (PuTTY @115200)</li>
+          <li><i class="fa-solid fa-temperature-three-quarters"></i> ADC4 (internal temperature sensor)</li>
+          <li><i class="fa-solid fa-screwdriver-wrench"></i> CMake / Ninja · arm-none-eabi-gcc</li>
+          <li><i class="fa-solid fa-diagram-project"></i> Command/response console design (SCADA-style)</li>
         </ul>
-        <div class="evidence">Proof: <a href="#grp-systems">Simple Shell in C</a></div>
+        <div class="evidence">
+          Proof: <a href="#grp-systems">Mini SCADA Console</a> 
+        </div>
       </article>
 
       <article class="s-card holo">
@@ -458,6 +483,7 @@
       </article>
     </div>
   </section>
+
 
       <!-- ===== REFERENCES / FEEDBACK ===== -->
     <section class="section container" id="references">
