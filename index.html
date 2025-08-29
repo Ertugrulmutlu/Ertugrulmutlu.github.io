@@ -130,7 +130,8 @@
 
   <!-- Quick index (no JS) -->
   <nav class="projects-index" aria-label="Project categories">
-    <a class="p-chip" href="#grp-edge">Edge AI & Vision</a>
+    <a class="p-chip" href="#grp-vision">Machine Vision</a>
+    <a class="p-chip" href="#grp-edge">Edge AI & Embedded</a>
     <a class="p-chip" href="#grp-gen">Generative Models</a>
     <a class="p-chip" href="#grp-tools">Tools & Apps (Data)</a>
     <a class="p-chip" href="#grp-ml">Applied ML & RL</a>
@@ -138,9 +139,9 @@
     <a class="p-chip" href="#grp-systems">Systems & Embedded</a>
   </nav>
 
-  <!-- ===== Group: Edge AI & Vision ===== -->
-  <section class="group" id="grp-edge">
-    <h3 class="group-title">Edge AI & Vision</h3>
+  <!-- ===== Group: Machine Vision ===== -->
+  <section class="group" id="grp-vision">
+    <h3 class="group-title">Machine Vision</h3>
     <div class="projects-grid mt-3">
       <!-- JumpNet -->
       <article class="card p-card">
@@ -151,7 +152,6 @@
           <span class="tech">Behavior Cloning</span>
           <span class="tech">OpenCV</span>
           <span class="tech">Latency: 18 ms</span>
-          <span class="tech">Acc: ~87%</span>
         </div>
         <div class="links" style="padding-top: 1rem;">
           <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/JumpNet"><i class="fa-brands fa-github"></i> GitHub</a>
@@ -180,6 +180,62 @@
     </div>
   </section>
 
+<section class="group" id="grp-edge">
+  <h3 class="group-title">Edge AI & Embedded</h3>
+  <div class="projects-grid mt-3">
+
+  <!-- Edge AI Sound Classifier -->
+  <article class="card p-card">
+    <h3>Edge AI Sound Classifier on Raspberry Pi Pico</h3>
+    <p>
+      End-to-end TinyML pipeline on RP2040 that classifies short audio into
+      <em>baby cry, doorbell, smoke alarm, and background</em>. 33-dim lightweight features
+      (Goertzel bands + spectral stats), multinomial Logistic Regression (~87% accuracy),
+      and C++ firmware with real-time z-score, softmax, and hysteresis FSM.
+    </p>
+    <div class="techbar">
+      <span class="tech">Python</span>
+      <span class="tech">scikit-learn</span>
+      <span class="tech">C++</span>
+      <span class="tech">USB-CDC</span>
+      <span class="tech">TinyML</span>
+    </div>
+    <div class="links" style="padding-top: 1rem;">
+      <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/building-an-edge-ai-sound-classifier-part-1-collecting-and-preparing-the-dataset-moo">Part 1</a>
+      <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/building-an-edge-ai-sound-classifier-part-2-feature-extraction-training-4bli">Part 2</a>
+      <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/building-an-edge-ai-sound-classifier-part-3-pico-firmware-live-demo-571g">Part 3</a>
+      <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/Edge-AI-Sound-Classifier-on-Raspberry-Pi-Pico">
+        <i class="fa-brands fa-github"></i> GitHub
+      </a>
+    </div>
+  </article>
+
+  <!-- Pico Edge Trend Alarm -->
+  <article class="card p-card">
+    <h3>Pico Edge Trend Alarm (RP2040)</h3>
+    <p>
+      Edge AI pipeline for detecting workload-induced heating trends on the Pico:
+      data logging firmware + Python logger, rolling OLS slope features, Logistic Regression,
+      and C++ inference with oversampled ADC, slope buffering, and hysteresis/hold FSM.
+    </p>
+    <div class="techbar">
+      <span class="tech">Python</span>
+      <span class="tech">Logistic Regression</span>      
+      <span class="tech">C++</span>
+      <span class="tech">Pico SDK</span>
+      <span class="tech">TinyML</span>
+    </div>
+    <div class="links" style="padding-top: 1rem;">
+      <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/part-1-data-gathering-on-raspberry-pi-pico-for-edge-ai-trend-alarm-1ca">Part 1</a>
+      <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/part-2-training-model-on-raspberry-pi-pico-for-edge-ai-trend-alarm-9gf">Part 2</a>
+      <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/part-3-real-time-inference-on-pico-firmware-integration-3ga6">Part 3</a>
+      <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/trend-alarm-pico">
+        <i class="fa-brands fa-github"></i> GitHub
+      </a>
+    </div>
+  </article>
+  </div>
+</section>
 
   <!-- ===== Group: Generative Models ===== -->
   <section class="group" id="grp-gen">
@@ -398,102 +454,115 @@
   </section>
 </section>
 
-  <!-- ===== SKILLS MATRIX ===== -->
-  <section class="section container" id="skills" data-visible="3">
-    <h2>Skills Matrix</h2>
-    <div class="skills-matrix mt-3">
-      <article class="s-card holo">
-        <h3><i class="fa-solid fa-brain"></i> AI / ML</h3>
-        <ul class="s-list">
-          <li><i class="fa-solid fa-square-root-variable"></i> PyTorch, torchvision, torchmetrics, NumPy, pandas, scikit-learn</li>
-          <li><i class="fa-solid fa-chart-line"></i> Metrics & logging: TensorBoard, matplotlib</li>
-        </ul>
-        <div class="evidence">Proof: <a href="#grp-edge">JumpNet</a>, <a href="#grp-gen">VAE vs VQ-VAE</a>, <a href="#grp-ml">ML Algorithms</a></div>
-      </article>
+<!-- ===== SKILLS MATRIX ===== -->
+<section class="section container" id="skills" data-visible="3">
+  <h2>Skills Matrix</h2>
+  <div class="skills-matrix mt-3">
 
-      <article class="s-card holo">
-        <h3><i class="fa-solid fa-wand-magic-sparkles"></i> Generative Models</h3>
-        <ul class="s-list">
-          <li><i class="fa-solid fa-cubes"></i> VAE, VQ-VAE (vector quantization)</li>
-          <li><i class="fa-solid fa-wand-magic-sparkles"></i> cGAN</li>
-          <li><i class="fa-solid fa-sliders"></i> Losses: MSE / KL / BCE</li>
-        </ul>
-        <div class="evidence">Proof: <a href="#grp-gen">VAE vs VQ-VAE</a>, <a href="#grp-gen">cGAN – Sketch Generation</a></div>
-      </article>
+    <article class="s-card holo">
+      <h3><i class="fa-solid fa-brain"></i> AI / ML</h3>
+      <ul class="s-list">
+        <li><i class="fa-solid fa-square-root-variable"></i> PyTorch, torchvision, torchmetrics · NumPy, pandas, scikit-learn</li>
+        <li><i class="fa-solid fa-diagram-project"></i> Supervised learning (classification & regression), behavior cloning</li>
+        <li><i class="fa-solid fa-chart-line"></i> Metrics & logging: Accuracy / F1 / MAE, TensorBoard, matplotlib</li>
+        <li><i class="fa-solid fa-layer-group"></i> Data pipelines: loaders, balancing/negatives, augmentations</li>
+      </ul>
+      <div class="evidence">Proof: <a href="#grp-vision">JumpNet</a>, <a href="#grp-ml">ML Algorithms Comparison</a>, <a href="#grp-ml">Applied Linear Regression (x5)</a></div>
+    </article>
 
-      <article class="s-card holo">
-        <h3><i class="fa-solid fa-camera"></i> Vision & Data</h3>
-        <ul class="s-list">
-          <li><i class="fa-solid fa-image"></i> OpenCV (incl. <strong>DNN SSD-ResNet</strong>), <strong>Facemark LBF</strong>, Albumentations, Pillow; loaders & balancing</li>
-          <li><i class="fa-solid fa-table"></i> Dataset tools & exports: pandas / CSV / JSON, Plotly</li>
-          <li><i class="fa-solid fa-wave-square"></i> Temporal smoothing (EMA), frame-wise landmark logging</li>
-          <li><i class="fa-solid fa-film"></i> Video I/O, annotated overlays, per-frame pipelines</li>
-        </ul>
-        <div class="evidence">Proof: <a href="#grp-tools">Dataset Viewer</a>, <a href="#grp-tools">Real-Time Color Palette Extractor</a>, <a href="#grp-edge">JumpNet</a>, <a href="#grp-edge">Face Landmarks Detection</a>, <a href="#grp-gen">cGAN</a></div>
-      </article>
+    <article class="s-card holo">
+      <h3><i class="fa-solid fa-wand-magic-sparkles"></i> Generative Models</h3>
+      <ul class="s-list">
+        <li><i class="fa-solid fa-cubes"></i> VAE & VQ-VAE (vector-quantized codebooks, commitment loss)</li>
+        <li><i class="fa-solid fa-wand-magic-sparkles"></i> Conditional GAN (projection discriminator experiments)</li>
+        <li><i class="fa-solid fa-sliders"></i> Losses: MSE · KL · BCE / adversarial</li>
+        <li><i class="fa-solid fa-file-export"></i> Checkpointing, sample logging, reproducible runs</li>
+      </ul>
+      <div class="evidence">Proof: <a href="#grp-gen">VAE vs VQ-VAE</a>, <a href="#grp-gen">cGAN — Sketch Generation</a></div>
+    </article>
 
-      <article class="s-card holo">
-        <h3><i class="fa-solid fa-microchip"></i> Embedded</h3>
-        <ul class="s-list">
-          <li><i class="fa-solid fa-microchip"></i> Raspberry Pi Pico · Pico SDK (C/C++)</li>
-          <li><i class="fa-solid fa-usb"></i> USB-CDC stdio · Serial I/O (PuTTY @115200)</li>
-          <li><i class="fa-solid fa-temperature-three-quarters"></i> ADC4 (internal temperature sensor)</li>
-          <li><i class="fa-solid fa-screwdriver-wrench"></i> CMake / Ninja · arm-none-eabi-gcc</li>
-          <li><i class="fa-solid fa-diagram-project"></i> Command/response console design (SCADA-style)</li>
-        </ul>
-        <div class="evidence">
-          Proof: <a href="#grp-systems">Mini SCADA Console</a> 
-        </div>
-      </article>
-      <article class="s-card holo">
-        <h3><i class="fa-solid fa-terminal"></i> Systems Programming</h3>
-        <ul class="s-list">
-          <li><i class="fa-solid fa-code"></i> POSIX syscalls: fork, exec, wait</li>
-          <li><i class="fa-solid fa-folder"></i> File & process management in C</li>
-          <li><i class="fa-solid fa-gears"></i> Basic CLI parsing & commands</li>
-        </ul>
-        <div class="evidence">
-          Proof: <a href="#grp-systems">Simple Shell in C</a>
-        </div>
-      </article>
+    <article class="s-card holo">
+      <h3><i class="fa-solid fa-camera"></i> Computer Vision & Data</h3>
+      <ul class="s-list">
+        <li><i class="fa-solid fa-image"></i> OpenCV (incl. <strong>DNN SSD-ResNet</strong>), <strong>Facemark LBF</strong>, Pillow, Albumentations</li>
+        <li><i class="fa-solid fa-wave-square"></i> Temporal smoothing (EMA), per-frame landmark logging</li>
+        <li><i class="fa-solid fa-film"></i> Video I/O, annotated overlays, real-time per-frame pipelines</li>
+        <li><i class="fa-solid fa-table"></i> Data tooling & exports: pandas / CSV / JSON, Plotly</li>
+      </ul>
+      <div class="evidence">Proof: <a href="#grp-vision">Face Landmarks Detection</a>, <a href="#grp-vision">JumpNet</a>, <a href="#grp-tools">Dataset Viewer</a>, <a href="#grp-tools">Real-Time Color Palette Extractor</a></div>
+    </article>
 
-      <article class="s-card holo">
-        <h3><i class="fa-solid fa-window-restore"></i> Apps, UI & Viz</h3>
-        <ul class="s-list">
-          <li><i class="fa-solid fa-window-maximize"></i> Streamlit, Tkinter (local-first UIs)</li>
-          <li><i class="fa-solid fa-globe"></i> Flask / HTML / CSS / JS (lightweight demos)</li>
-          <li><i class="fa-solid fa-palette"></i> Color extraction & visualization tools</li>
-        </ul>
-        <div class="evidence">Proof: <a href="#grp-tools">Dataset Viewer</a>, <a href="#grp-tools">Real-Time Color Palette Extractor</a>, <a href="/index.html">Website</a></div>
-      </article>
+    <article class="s-card holo">
+      <h3><i class="fa-solid fa-microchip"></i> Edge AI & TinyML</h3>
+      <ul class="s-list">
+        <li><i class="fa-solid fa-headphones"></i> Audio features: Goertzel band energies, spectral stats (33-dim)</li>
+        <li><i class="fa-solid fa-square-poll-vertical"></i> Classical ML on-device: multinomial / binary Logistic Regression</li>
+        <li><i class="fa-solid fa-gauge-high"></i> Real-time inference budgets (≤ ~20 ms), z-score, softmax</li>
+        <li><i class="fa-solid fa-network-wired"></i> Hysteresis & hold FSM; rolling OLS slope features</li>
+      </ul>
+      <div class="evidence">Proof: <a href="#grp-edge">Edge AI Sound Classifier</a>, <a href="#grp-edge">Pico Edge Trend Alarm</a>, <a href="#grp-vision">JumpNet</a></div>
+    </article>
 
-      <article class="s-card holo">
-        <h3><i class="fa-solid fa-gears"></i> DevOps & Quality</h3>
-        <ul class="s-list">
-          <li><i class="fa-brands fa-github"></i> Git / GitHub</li>
-        </ul>
-        <div class="evidence">Proof: <a href="#projects">All Projects</a></div>
-      </article>
-      
-      <article class="s-card holo">
-        <h3><i class="fa-solid fa-layer-group"></i> Extras</h3>
-        <ul class="s-list">
-          <li><i class="fa-solid fa-chess-knight"></i> RL basics: tabular Q-Learning</li>
-          <li><i class="fa-solid fa-wave-square"></i> Signals & clustering: PyWavelets, k-means</li>
-        </ul>
-        <div class="evidence">Proof: <a href="#grp-ml">Sentence Prediction with Q-Learning</a>, <a href="#grp-ml">Wavelets & Clustering Parity</a></div>
-      </article>
+    <article class="s-card holo">
+      <h3><i class="fa-solid fa-microchip"></i> Embedded (RP2040 / Pico)</h3>
+      <ul class="s-list">
+        <li><i class="fa-solid fa-code"></i> C/C++ · Pico SDK · CMake/Ninja · arm-none-eabi-gcc</li>
+        <li><i class="fa-solid fa-usb"></i> USB-CDC stdio, serial I/O (PuTTY @115200)</li>
+        <li><i class="fa-solid fa-temperature-three-quarters"></i> ADC4 (internal temperature), oversampling & buffering</li>
+        <li><i class="fa-solid fa-diagram-project"></i> SCADA-style command/response console design</li>
+      </ul>
+      <div class="evidence">Proof: <a href="#grp-systems">Mini SCADA Console</a>, <a href="#grp-edge">Pico Edge Trend Alarm</a></div>
+    </article>
 
-      <article class="s-card holo">
-        <h3><i class="fa-solid fa-code"></i> Competitive Programming</h3>
-        <ul class="s-list">
-          <li><i class="fa-solid fa-list-ol"></i> Data Structures & Algorithms (Python, C++)</li>
-          <li><i class="fa-solid fa-puzzle-piece"></i> Problem-solving, coding patterns</li>
-        </ul>
-        <div class="evidence">Proof: <a href="#grp-algo">Daily LeetCode Progress</a></div>
-      </article>
-    </div>
-  </section>
+    <article class="s-card holo">
+      <h3><i class="fa-solid fa-terminal"></i> Systems Programming</h3>
+      <ul class="s-list">
+        <li><i class="fa-solid fa-gears"></i> POSIX syscalls: fork, exec, wait; basic CLI parsing</li>
+        <li><i class="fa-solid fa-folder"></i> Files/process management in C; minimal shell architecture</li>
+      </ul>
+      <div class="evidence">Proof: <a href="#grp-systems">Simple Shell in C</a></div>
+    </article>
+
+    <article class="s-card holo">
+      <h3><i class="fa-solid fa-window-restore"></i> Apps, UI & Visualization</h3>
+      <ul class="s-list">
+        <li><i class="fa-solid fa-window-maximize"></i> Streamlit & Tkinter (local-first UIs), lightweight Flask/HTML/CSS/JS</li>
+        <li><i class="fa-solid fa-chart-simple"></i> Plotting with matplotlib & interactive Plotly dashboards</li>
+        <li><i class="fa-solid fa-cloud"></i> Streamlit Cloud deployments, live demo packaging</li>
+      </ul>
+      <div class="evidence">Proof: <a href="#grp-tools">Dataset Viewer</a>, <a href="#grp-tools">Real-Time Color Palette Extractor</a>, <a href="#grp-tools">PDF Summary Chatbot</a></div>
+    </article>
+
+    <article class="s-card holo">
+      <h3><i class="fa-solid fa-gears"></i> DevOps & Project Quality</h3>
+      <ul class="s-list">
+        <li><i class="fa-brands fa-github"></i> Git/GitHub workflows, structured READMEs, issue-driven iteration</li>
+        <li><i class="fa-solid fa-list-check"></i> Reproducible environments & clear repo organization</li>
+      </ul>
+      <div class="evidence">Proof: <a href="#projects">All Projects</a></div>
+    </article>
+
+    <article class="s-card holo">
+      <h3><i class="fa-solid fa-layer-group"></i> Extras</h3>
+      <ul class="s-list">
+        <li><i class="fa-solid fa-chess-knight"></i> RL basics: tabular Q-Learning</li>
+        <li><i class="fa-solid fa-wave-square"></i> Signals & clustering: PyWavelets, k-means</li>
+      </ul>
+      <div class="evidence">Proof: <a href="#grp-ml">Sentence Prediction with Q-Learning</a>, <a href="#grp-ml">Wavelets & Clustering Parity</a></div>
+    </article>
+
+    <article class="s-card holo">
+      <h3><i class="fa-solid fa-code"></i> Competitive Programming</h3>
+      <ul class="s-list">
+        <li><i class="fa-solid fa-list-ol"></i> Data Structures & Algorithms (Python, C++)</li>
+        <li><i class="fa-solid fa-puzzle-piece"></i> Problem-solving, coding patterns, daily practice</li>
+      </ul>
+      <div class="evidence">Proof: <a href="#grp-algo">Daily LeetCode Progress</a></div>
+    </article>
+
+  </div>
+</section>
+
 
 
       <!-- ===== REFERENCES / FEEDBACK ===== -->
