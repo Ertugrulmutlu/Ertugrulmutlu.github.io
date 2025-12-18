@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About — Ertuğrul Mutlu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="About Ertuğrul Mutlu — RWTH CE, Werkstudent @ Fraunhofer IAIS, ML & Edge AI." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <div class="nav-logo">Ertuğrul&nbsp;Mutlu</div>
+        <div class="nav-badge">ML &amp; Edge AI</div>
+      </div>
+
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="misc.html" class="nav-link">Misc</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-wrapper">
+    <div class="container">
+      <section class="section">
+        <div class="section-header">
+          <h1 class="section-title">About</h1>
+          <div class="section-subtitle">
+            Short bio, research focus, and a bit of personal context.
+          </div>
+        </div>
+
+        <div class="about-layout">
+          <div class="about-main">
+            <!-- SOL TARAF AYNEN KALDI -->
+            <article class="about-card">
+              <h2 class="about-title">Short Bio</h2>
+              <p class="about-text">
+                I&apos;m a Computer Engineering student at RWTH Aachen University and a
+                Werkstudent Researcher at the Enterprise Information Systems (EIS)
+                department of Fraunhofer IAIS. My work sits at the intersection of
+                machine learning systems, agentic workflows, and embedded/edge AI.
+              </p>
+              <ul class="about-list">
+                <li>RWTH CE student, focusing on ML systems and signal processing.</li>
+                <li>Werkstudent Researcher @ Fraunhofer IAIS (EIS).</li>
+                <li>Interested in making ML agents robust enough for real-world use.</li>
+              </ul>
+              <div class="about-badge-row">
+                <span class="about-badge">RWTH Aachen</span>
+                <span class="about-badge">Fraunhofer IAIS</span>
+                <span class="about-badge">ML Systems</span>
+              </div>
+            </article>
+
+            <article class="about-card">
+              <h2 class="about-title">Research &amp; Interests</h2>
+              <p class="about-text">
+                I like approaching ML problems with a signal-theoretic mindset:
+                treating logits, activations and time series as signals that can be
+                analysed, regularized and clustered.
+              </p>
+              <p class="about-text">
+                My first preprint, <em>&ldquo;Wavelet-Based Feature Extraction and
+                Unsupervised Clustering for Parity Detection: A Feature Engineering
+                Perspective&rdquo;</em>, explores how wavelet features and clustering
+                can recover symbolic structure (odd vs. even) from purely numerical
+                signals.
+              </p>
+              <p class="about-text">
+                Current interests include:
+              </p>
+              <ul class="about-list">
+                <li>Signal-theoretic metrics for LLM logit stability.</li>
+                <li>Wavelet-based feature extraction for structured signals.</li>
+                <li>Agentic systems and evaluation, especially agent-in-the-loop setups.</li>
+                <li>Edge and embedded ML deployments.</li>
+              </ul>
+            </article>
+
+            <article class="about-card">
+              <h2 class="about-title">Talks</h2>
+              <p class="about-text">
+                <strong>DataTalks.Club webinar (Dec 16, 2025)</strong><br />
+                <em>&ldquo;From Human-in-the-Loop to Agent-in-the-Loop: How ML Workflows
+                Evolve into Agentic Feedback Systems&rdquo;</em>
+              </p>
+              <p class="about-text">
+                A practical overview of how human feedback loops in ML pipelines turn
+                into agent-in-the-loop systems: what changes in planning, tool use,
+                evaluation, and how to keep systems debuggable as automation increases.
+              </p>
+            </article>
+
+            <article class="about-card">
+              <h2 class="about-title">Personal</h2>
+              <p class="about-text">
+                Outside of research and coursework, I enjoy working with electronics,
+                microcontrollers and embedded systems&mdash;often building small tools
+                that support my ML experiments. I also like documenting projects in
+                public through blog posts and talks.
+              </p>
+              <p class="about-text">
+                I&apos;m especially motivated by projects where algorithms meet hardware
+                and where &ldquo;nice-in-theory&rdquo; ideas have to survive noisy,
+                real-world inputs.
+              </p>
+            </article>
+          </div>
+
+          <!-- SAĞ TARAF: GÜÇLENDİRİLDİ -->
+          <aside class="about-card">
+            <div class="avatar-wrapper">
+              <img
+                src="profil_photo.png"
+                alt="Portrait of Ertuğrul Mutlu"
+                class="hero-avatar-img"
+                style="margin: 0 auto;"
+              />
+            </div>
+            <p class="about-text" style="text-align:center; opacity:0.8;">
+              ML systems • agentic workflows • edge AI
+            </p>
+            <hr style="border:none;border-top:1px solid rgba(31,41,55,0.9);margin:0.9rem 0;" />
+
+            <!-- NEW: QUICK FACTS -->
+            <p class="about-text">
+              <strong>Quick facts</strong><br />
+              <span style="color:var(--text-muted);">
+                Aachen, Germany<br />
+                RWTH Computer Engineering<br />
+                Werkstudent @ Fraunhofer IAIS (EIS)<br />
+                Focus: ML Systems &amp; Agentic AI
+              </span>
+            </p>
+
+            <!-- ACADEMIC -->
+            <p class="about-text" >
+              <strong>Academic</strong><br />
+              <div style="margin-top:1rem;">
+              <a class="card-link" href="https://arxiv.org/abs/2511.00071" target="_blank" rel="noopener noreferrer">
+                arXiv Preprint
+              </a>
+            </p>
+
+            <!-- NEW: PUBLIC LINKS -->
+            <p class="about-text ">
+              <strong>Public links</strong><br />
+              <div style="margin-top:1rem;">
+
+              <a class="card-link" href="https://github.com/Ertugrulmutlu" target="_blank" rel="noopener noreferrer">
+                GitHub
+              </a>
+              <span style="display:block;height:0.4rem;"></span>
+              <a class="card-link" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                LinkedIn
+              </a>
+              <span style="display:block;height:0.4rem;"></span>
+              <a class="card-link" href="https://www.youtube.com/watch?v=HwCR59VuYn4&t=1888s" target="_blank" rel="noopener noreferrer">
+                DataTalks.Club Talk
+              </a>
+            </p>
+
+            <!-- CONTACT -->
+            <p class="about-text">
+              <strong>Contact</strong><br />
+              <div style="margin-top:1rem;">
+              <a class="card-link" href="mailto:ertugrulmutlu004@gmail.com">
+                Email
+              </a>
+            </p>
+          </aside>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>© <span id="year"></span> Ertuğrul Mutlu.</div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html">Blog</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -2,623 +2,311 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <title>Ertuğrul Mutlu — ML & Edge AI Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ertuğrul Mutlu — Cyberpunk Portfolio</title>
-  <meta name="description" content="Edge AI & Embedded — real‑time vision and low‑latency optimization." />
-
-  <!-- Fonts & Icons -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Share+Tech+Mono&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <meta name="description" content="Developer portfolio of Ertuğrul Mutlu — ML Systems & Edge AI, Agentic AI, RWTH & Fraunhofer IAIS." />
   <link rel="stylesheet" href="styles.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
 </head>
 <body>
-  <div class="bg" aria-hidden="true"></div>
-
-  <!-- ===== NAVBAR ===== -->
-  <nav class="nav">
+  <header class="navbar">
     <div class="nav-inner">
-      <a class="brand" href="#top" aria-label="Go to top">
-        <div class="logo" aria-hidden="true"></div>
-        <span>ERTUĞRUL&nbsp;MUTLU</span>
-      </a>
+      <div class="nav-left">
+        <div class="nav-logo">Ertuğrul&nbsp;Mutlu</div>
+        <div class="nav-badge">ML &amp; Edge AI</div>
+      </div>
 
-      <!-- single toggle (duplicate removed) -->
-      <button class="menu-toggle" aria-label="Open menu" aria-controls="primary-menu" aria-expanded="false">
-        <i class="fa-solid fa-bars"></i>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
       </button>
 
-      <div id="primary-menu" class="menu" role="navigation" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#references">References</a>
-        <a href="#contact" class="cta-btn">Contact</a>
-      </div>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="misc.html" class="nav-link">Misc</a>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <main id="top">
-    <!-- ===== HERO ===== -->
-    <section class="section container" id="hero">
-      <div class="hero">
-        <div>
-          <div class="kicker">AI • Computer Vision • Embedded</div>
-          <h1 class="value-prop">
-            <span class="glitch" data-text="Edge AI & Computer Vision — real-time agents and local LLM tools.">Edge AI & Computer Vision — real-time agents and local LLM tools.</span>
-          </h1>
-          <p class="mt-1 muted">From ESP32/OpenMV prototypes to offline RAG apps — practical, reproducible, open-source.</p>
-
-          <!-- Quick bullets (3) -->
-          <ul class="features" aria-label="Key highlights">
-            <li><i class="fa-solid fa-bolt"></i> JumpNet: frame-to-action agent + real-time GUI</li>
-            <li><i class="fa-solid fa-sliders"></i> Edge prototyping on <strong>ESP32 / OpenMV</strong></li>
-            <li><i class="fa-solid fa-microchip"></i>VQ-VAE @128×128→ sharper than VAE, up to 60× smaller</li>
-          </ul>
-
-          <!-- CTAs (no Live Demo now) -->
-          <div class="links ctas">
-            <a class="btn" href="#about"><i class="fa-solid fa-user"></i> About me</a>
-            <a class="btn" href="#projects"><i class="fa-solid fa-diagram-project"></i> Projects</a>
-            <a class="btn" href="#skills"><i class="fa-solid fa-sliders"></i> Skills</a>
-            <a class="btn" href="#contact"><i class="fa-regular fa-envelope"></i> Contact</a>
-            <a class="btn pink" href="docs/cv.pdf" target="_blank" rel="noopener"><i class="fa-regular fa-file-pdf"></i> CV (PDF)</a>
-            <a class="btn neon" href="https://real-time-image-color-palette-extractor-apps.streamlit.app" 
-               target="_blank" rel="noopener"><i class="fa-solid fa-palette"></i>NEW Live Color App</a>
-          </div>
-        </div>
-
-        <!-- Mini showcase: 2 projects with videos -->
-        <div class="mini-grid">
-          <article class="showcase-card holo">
-            <div class="badge" style="color: rgb(165, 165, 165);">JumpNet</div>
-            <div class="mediaframe">
-              <!-- Put your actual poster at assets/posters/jumpnet.jpg -->
-              <video autoplay class="media" preload="metadata" muted playsinline loop controls poster="assets/posters/jumpnet.jpg">
-                <!-- change to your final path if needed -->
-                <source src="assets/videos/jumpnet.mp4" type="video/mp4" />
-              </video>
+  <main class="main-wrapper">
+    <div class="container">
+      <!-- HERO -->
+      <section class="hero">
+        <!-- Sol: Ana blok -->
+        <div class="hero-main">
+          <div class="hero-intro">
+            <div class="hero-eyebrow">~ertugrul.</div>
+            <h1 class="hero-title">Building ML Systems &amp; Agentic Workflows.</h1>
+            <p class="hero-subtitle">
+              Machine Learning &amp; Edge AI engineer focusing on signal-theoretic
+              metrics, real-world deployments and agent-in-the-loop systems.
+            </p>
+            <div class="hero-meta">
+              <div><strong>Werkstudent Researcher @ Fraunhofer IAIS (EIS)</strong></div>
+              <div>RWTH Computer Engineering &mdash; ML Systems, Embedded/Edge AI</div>
+              <div>Location: Aachen, Germany</div>
             </div>
-            <p class="mb-0">Real‑time visual decision system for a one‑button platformer</p>
-          </article>
-
-          <article class="showcase-card holo">
-            <div class="badge" style="color: rgb(0, 55, 138);">Image‑to‑Image</div>
-            <div class="mediaframe">
-              <!-- Put your actual poster at assets/posters/image2image.jpg -->
-              <video autoplay class="media" preload="metadata" muted playsinline loop controls poster="assets/posters/image2image.jpg">
-                <source  src="assets/videos/image2image.mp4" type="video/mp4" />
-              </video>
+            <div class="hero-meta-pill">
+              <span class="hero-meta-dot"></span>
+              <span><strong>Latest:</strong> DataTalks.Club Webinar &mdash; Dec 16, 2025</span>
             </div>
-            <p class="mb-0">Lightweight image‑to‑image pipeline </p>
-          </article>
-        </div>
-      </div>
-    </section>
-  </main>
- <!-- ===== ABOUT ===== -->
-    <section class="section container" id="about">
-      <div class="about holo">
-        <div class="about-grid">
-          <div class="about-copy">
-            <h2>About</h2>
-            <p class="mb-1">I’m a developer focused on <strong>Edge AI</strong>, <strong>computer vision</strong>, and <strong>embedded systems</strong>.</p>
-            <p class="mb-1">I’ve been coding since I was 12. Today I study Computer Engineering at <strong>RWTH Aachen University</strong>, exploring how software and hardware come together to solve real‑world problems.</p>
-            <p class="mb-1">I build lightweight AI pipelines and deploy them on microcontrollers and SoCs, with a focus on <strong>measurable latency</strong> and <strong>small memory</strong>. I also co‑founded <strong>Qgen</strong>, an EdTech startup making learning more interactive and impactful.</p>
-            <ul class="facts">
-              <li class="tech">RWTH Aachen University</li>
-              <li class="tech">Coding since 12</li>
-            </ul>
-            <div class="links mt-2" style="padding-top: 1.25rem;">
-          <a class="btn" target="_blank" rel="noopener" href="https://www.linkedin.com/in/ertu%C4%9Frul-mutlu/"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-          <a class="btn pink" target="_blank" rel="noopener" href="docs/cv.pdf"><i class="fa-regular fa-file-pdf"></i> CV (PDF)</a>
-        </div>
-            <div class="availability mt-2"><i class="fa-regular fa-circle-dot"></i> Open to Werkstudent / Internship / Part‑time in AI, Computer Vision, or Embedded Systems.</div>
           </div>
-          <figure class="about-photo" aria-label="Portrait">
-            <img class="avatar" src="assets/img/image.png" alt="Portrait of Ertuğrul Mutlu" loading="lazy" decoding="async" width="320" height="320" />
-          </figure>
-        </div>
-      </div>
-    </section>
-<!-- ===== PROJECTS ===== -->
-<section class="section container" id="projects">
-  <h2>Projects</h2>
-  <p class="muted mt-1">Organized by category. Short descriptions, tech badges, and quick links only.</p>
 
-  <!-- Quick index (no JS) -->
-  <nav class="projects-index" aria-label="Project categories">
-    <a class="p-chip" href="#grp-vision">Machine Vision</a>
-    <a class="p-chip" href="#grp-edge">Edge AI & Embedded</a>
-    <a class="p-chip" href="#grp-gen">Generative Models</a>
-    <a class="p-chip" href="#grp-tools">Tools & Apps (Data)</a>
-    <a class="p-chip" href="#grp-ml">Applied ML & RL</a>
-    <a class="p-chip" href="#grp-algo">Competitive Programming / Algorithms</a>
-    <a class="p-chip" href="#grp-systems">Systems & Embedded</a>
-  </nav>
-
-  <!-- ===== Group: Machine Vision ===== -->
-  <section class="group" id="grp-vision">
-    <h3 class="group-title">Machine Vision</h3>
-    <div class="projects-grid mt-3">
-      <!-- JumpNet -->
-      <article class="card p-card">
-        <h3>JumpNet — Vision-Based AI Agent</h3>
-        <p>Real-time visual decision system for a one-button platformer (~18 ms, ~87% accuracy).</p>
-        <div class="techbar">
-          <span class="tech">PyTorch</span>
-          <span class="tech">Behavior Cloning</span>
-          <span class="tech">OpenCV</span>
-          <span class="tech">Latency: 18 ms</span>
-        </div>
-        <div class="links" style="padding-top: 1rem;">
-          <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/JumpNet"><i class="fa-brands fa-github"></i> GitHub</a>
-          <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/jumpnet-part-1-from-raw-gameplay-to-labeled-intelligence-building-the-data-foundation-for-2e2f">Part 1</a>
-          <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/jumpnet-part-2-from-pixels-to-policy-training-jumpnet-to-make-the-right-move-1eoi">Part 2</a>
-          <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/jumpnet-part-3-real-time-inference-watching-jumpnet-come-alive-21b2">Part 3</a>
-        </div>
-      </article>
-      <!-- Face Landmarks Detection -->
-      <article class="card p-card">
-        <h3>Face Landmarks Detection (OpenCV DNN + Facemark)</h3>
-        <p>Real-time 68-point facial landmark tracker with EMA smoothing and CSV logging.</p>
-        <div class="techbar">
-          <span class="tech">Python</span>
-          <span class="tech">OpenCV (DNN)</span>
-          <span class="tech">Facemark LBF</span>
-          <span class="tech">EMA</span>
-          <span class="tech">CSV</span>
-        </div>
-        <div class="links" style="padding-top: 1rem;">
-          <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/-Face-Landmark-Tracker"><i class="fa-brands fa-github"></i> GitHub</a>
-          <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/-face-landmarks-detection-opencv-dnn-facemark-440d">Blog</a>
-          <a class="btn sm" target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=jQmMLPD_EUw"><i class="fa-solid fa-play"></i> Demo</a>
-        </div>
-      </article>
-    </div>
-  </section>
-
-<section class="group" id="grp-edge">
-  <h3 class="group-title">Edge AI & Embedded</h3>
-  <div class="projects-grid mt-3">
-
-  <!-- Edge AI Sound Classifier -->
-  <article class="card p-card">
-    <h3>Edge AI Sound Classifier on Raspberry Pi Pico</h3>
-    <p>
-      End-to-end TinyML pipeline on RP2040 that classifies short audio into
-      <em>baby cry, doorbell, smoke alarm, and background</em>. 33-dim lightweight features
-      (Goertzel bands + spectral stats), multinomial Logistic Regression (~87% accuracy),
-      and C++ firmware with real-time z-score, softmax, and hysteresis FSM.
-    </p>
-    <div class="techbar">
-      <span class="tech">Python</span>
-      <span class="tech">scikit-learn</span>
-      <span class="tech">C++</span>
-      <span class="tech">USB-CDC</span>
-      <span class="tech">TinyML</span>
-    </div>
-    <div class="links" style="padding-top: 1rem;">
-      <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/building-an-edge-ai-sound-classifier-part-1-collecting-and-preparing-the-dataset-moo">Part 1</a>
-      <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/building-an-edge-ai-sound-classifier-part-2-feature-extraction-training-4bli">Part 2</a>
-      <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/building-an-edge-ai-sound-classifier-part-3-pico-firmware-live-demo-571g">Part 3</a>
-      <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/Edge-AI-Sound-Classifier-on-Raspberry-Pi-Pico">
-        <i class="fa-brands fa-github"></i> GitHub
-      </a>
-    </div>
-  </article>
-
-  <!-- Pico Edge Trend Alarm -->
-  <article class="card p-card">
-    <h3>Pico Edge Trend Alarm (RP2040)</h3>
-    <p>
-      Edge AI pipeline for detecting workload-induced heating trends on the Pico:
-      data logging firmware + Python logger, rolling OLS slope features, Logistic Regression,
-      and C++ inference with oversampled ADC, slope buffering, and hysteresis/hold FSM.
-    </p>
-    <div class="techbar">
-      <span class="tech">Python</span>
-      <span class="tech">Logistic Regression</span>      
-      <span class="tech">C++</span>
-      <span class="tech">Pico SDK</span>
-      <span class="tech">TinyML</span>
-    </div>
-    <div class="links" style="padding-top: 1rem;">
-      <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/part-1-data-gathering-on-raspberry-pi-pico-for-edge-ai-trend-alarm-1ca">Part 1</a>
-      <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/part-2-training-model-on-raspberry-pi-pico-for-edge-ai-trend-alarm-9gf">Part 2</a>
-      <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/part-3-real-time-inference-on-pico-firmware-integration-3ga6">Part 3</a>
-      <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/trend-alarm-pico">
-        <i class="fa-brands fa-github"></i> GitHub
-      </a>
-    </div>
-  </article>
-  </div>
-</section>
-
-  <!-- ===== Group: Generative Models ===== -->
-  <section class="group" id="grp-gen">
-    <h3 class="group-title">Generative Models</h3>
-    <div class="projects-grid mt-3">
-      <!-- VAE vs VQ-VAE -->
-      <article class="card p-card">
-        <h3>Compressing Faces — VAE vs VQ-VAE</h3>
-        <p>Identity retention vs compression — continuous latents vs codebooks.</p>
-        <div class="techbar">
-          <span class="tech">PyTorch</span>
-          <span class="tech">VAE</span>
-          <span class="tech">VQ-VAE</span>
-        </div>
-        <div class="links" style="padding-top: 1rem;">
-          <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/VQVAE-and-VAE"><i class="fa-brands fa-github"></i> GitHub</a>
-          <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/compressing-human-faces-with-vae-vs-vq-vae-a-deep-dive-into-autoencoder-design-j59">Part 1</a>
-        </div>
-      </article>
-
-      <!-- cGAN Sketch -->
-      <article class="card p-card">
-        <h3>Conditional GAN — Sketch Generation</h3>
-        <p>Class-conditioned B/W sketch synthesis; projection discriminator experiments.</p>
-        <div class="techbar">
-          <span class="tech">PyTorch</span>
-          <span class="tech">cGAN</span>
-          <span class="tech">Computer Vision</span>
-        </div>
-        <div class="links" style="padding-top: 1rem;">
-          <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/ConditionalGAN-SketchGeneration"><i class="fa-brands fa-github"></i> GitHub</a>
-          <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/a-cgan-story-three-attempts-and-an-incomplete-ending-2a1b">Part 1</a>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- ===== Group: Tools & Apps (Data) ===== -->
-  <section class="group" id="grp-tools">
-    <h3 class="group-title">Tools & Apps (Data)</h3>
-    <div class="projects-grid mt-3">
-      <!-- Dataset Viewer -->
-      <article class="card p-card">
-        <h3>Advanced Dataset Viewer & Collector</h3>
-        <p>Record screen+keypress, browse entries, and analyze behavior-cloning datasets.</p>
-        <div class="techbar">
-          <span class="tech">Python</span>
-          <span class="tech">Streamlit</span>
-          <span class="tech">OpenCV</span>
-        </div>
-        <div class="links" style="padding-top: 1rem;">
-          <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/-Data-Scrap-Tool-Advanced-Dataset-Viewer"><i class="fa-brands fa-github"></i> GitHub</a>
-          <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/modular-snip-recorder-a-data-collection-tool-for-behavior-cloning-12-5di8">Part 1</a>
-          <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/modular-snip-recorder-a-data-collection-tool-for-behavior-cloning-22-1lgl">Part 2</a>
-        </div>
-      </article>
-
-      <!-- PDF Summary Chatbot -->
-      <article class="card p-card">
-        <h3>PDF Summary Chatbot (Local)</h3>
-        <p>Offline PDF summarizer with page-range selection and export.</p>
-        <div class="techbar">
-          <span class="tech">Python</span>
-          <span class="tech">Streamlit</span>
-          <span class="tech">Local LLM</span>
-        </div>
-        <div class="links" style="padding-top: 1rem;">
-          <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/PDF-Summary"><i class="fa-brands fa-github"></i> GitHub</a>
-          <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/building-a-local-pdf-summarizer-with-llms-in-under-24-hours-2ijn">Part 1</a>
-        </div>
-      </article>
-      <!-- Real-Time Image Color Palette Extractor -->
-      <article class="card p-card">
-        <h3>Real-Time Image Color Palette Extractor</h3>
-        <p>Streamlit app extracting dominant colors from images in real-time using k-means, CIE LAB, and ΔE2000.</p>
-        <div class="techbar">
-          <span class="tech">Python</span>
-          <span class="tech">OpenCV</span>
-          <span class="tech">k-means</span>
-          <span class="tech">CIE LAB</span>
-          <span class="tech">ΔE2000</span>
-        </div>
-        <div class="links" style="padding-top: 1rem;">
-          <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/Real-time-Image-Color-Palette-Extractor"><i class="fa-brands fa-github"></i> GitHub</a>
-          <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/real-time-image-color-palette-extractor-a-deep-dive-into-k-means-lab-and-de2000-4eoi">Blog</a>
-          <a class="btn sm" target="_blank" rel="noopener" href="https://real-time-image-color-palette-extractor-apps.streamlit.app"><i class="fa-solid fa-play"></i> Live Demo</a>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- ===== Group: Applied ML & RL ===== -->
-  <section class="group" id="grp-ml" data-visible="3">
-    <h3 class="group-title">Applied ML & RL</h3>
-    <div class="projects-grid mt-3">
-      <!-- 5 Linear Regression -->
-      <article class="card p-card">
-        <h3>Applied Linear Regression (x5)</h3>
-        <p>Five scikit-learn regressors on real datasets (salary, cars, wine, insurance, trips).</p>
-        <div class="techbar">
-          <span class="tech">Python</span>
-          <span class="tech">scikit-learn</span>
-          <span class="tech">Pandas</span>
-        </div>
-        <div class="links" style="padding-top: 1rem;">
-          <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/5-Linear-Regression-Projects"><i class="fa-brands fa-github"></i> GitHub</a>
-          <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/real-time-regression-projects-in-python-with-full-code-p5g">Part 1</a>
-        </div>
-      </article>
-
-      <!-- ML Algorithms Comparison -->
-      <article class="card p-card">
-        <h3>Machine Learning Algorithms Comparison</h3>
-        <p>Decision Tree, SVM, and KNN evaluated with Accuracy, Precision, Recall, F1.</p>
-        <div class="techbar">
-          <span class="tech">Python</span>
-          <span class="tech">scikit-learn</span>
-          <span class="tech">Metrics</span>
-        </div>
-        <div class="links" style="padding-top: 1rem;">
-          <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/Machine_Learning_Alg_Comp"><i class="fa-brands fa-github"></i> GitHub</a>
-          <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/comparison-of-machine-learning-algorithms-2ag4">Part 1</a>
-        </div>
-      </article>
-
-      <!-- Q-Learning Sentence Prediction -->
-      <article class="card p-card">
-        <h3>Sentence Prediction with Q-Learning</h3>
-        <p>Character-level RL to reach target sentences; simple RL/NLP crossover.</p>
-        <div class="techbar">
-          <span class="tech">Python</span>
-          <span class="tech">Q-Learning</span>
-          <span class="tech">NLP</span>
-        </div>
-        <div class="links" style="padding-top: 1rem;">
-          <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/Q_learning_Sentence_prediction_with"><i class="fa-brands fa-github"></i> GitHub</a>
-          <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/text-generation-with-artificial-intelligence-generation-of-target-sentences-with-q-learning-algorithm-12m0">Part 1</a>
-        </div>
-      </article>
-
-      <!-- Wavelets & Clustering -->
-      <article class="card p-card">
-        <h3>Wavelets & Clustering Parity</h3>
-        <p>Odd/even classification with wavelet features and clustering — a playful study.</p>
-        <div class="techbar">
-          <span class="tech">PyWavelets</span>
-          <span class="tech">Clustering</span>
-          <span class="tech">NumPy</span>
-        </div>
-        <div class="links" style="padding-top: 1rem;">
-          <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/using-wavelets-and-clustering-to-predict-odd-or-even-numbers-an-overengineered-approach-with-3ld4">Part 1</a>
-        </div>
-      </article>
-    </div>
-  </section>
- <!-- ===== Group: Competitive Programming / Algorithms ===== -->
-  <section class="group" id="grp-algo">
-      <h3 class="group-title">Competitive Programming / Algorithms</h3>
-      <div class="projects-grid mt-3">
-        <article class="card p-card">
-          <h3>Daily LeetCode Progress</h3>
-          <p>Ongoing series of algorithm & data structure challenges — daily solutions + 5-day recaps.</p>
-          <div class="techbar">
-            <span class="tech">Python</span>
-            <span class="tech">C++</span>
-            <span class="tech">Algorithms</span>
-            <span class="tech">Problem Solving</span>
-          </div>
-          <div class="links" style="padding-top: 1rem;">
-            <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/leetcode-series"><i class="fa-brands fa-github"></i> GitHub</a>
-            <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/daily-leetcode-progress-day-1-3d0a">Blog</a>
-          </div>
-        </article>
-      </div>
-    </section>
-  <!-- ===== Group: Systems & Embedded ===== -->
-  <section class="group" id="grp-systems">
-    <h3 class="group-title">Systems & Embedded</h3>
-    <div class="projects-grid mt-3">
-      <!-- Mini SCADA Console -->
-      <article class="card p-card">
-        <h3>Mini SCADA Console (Raspberry Pi Pico, C++)</h3>
-        <p>
-          USB-CDC command console simulating an industrial field device: telemetry 
-          (internal temp via ADC4), logging, and LED control. PuTTY @115200 for interaction.
-        </p>
-        <div class="techbar">
-          <span class="tech">C++</span>
-          <span class="tech">Pico SDK</span>
-          <span class="tech">USB-CDC</span>
-          <span class="tech">ADC</span>
-          <span class="tech">CMake/Ninja</span>
-        </div>
-        <div class="links" style="padding-top: 1rem;">
-          <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/mini_scada"><i class="fa-brands fa-github"></i> GitHub</a>
-          <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/building-a-mini-scada-console-on-raspberry-pi-pico-c-50bg">Blog</a>
-        </div>
-      </article>
-      <!-- Simple Shell in C -->
-      <article class="card p-card">
-        <h3>Simple Shell in C</h3>
-        <p>Minimal CLI to explore processes, files, and basic system calls.</p>
-        <div class="techbar">
-          <span class="tech">C</span>
-          <span class="tech">POSIX</span>
-          <span class="tech">Processes</span>
-        </div>
-        <div class="links" style="padding-top: 1rem;">
-          <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu/Shell_of_mine"><i class="fa-brands fa-github"></i> GitHub</a>
-          <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-13-238e">Part 1</a>
-          <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-23-3m2i">Part 2</a>
-          <a class="btn sm pink" target="_blank" rel="noopener" href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-33-eah">Part 3</a>
-        </div>
-      </article>
-    </div>
-  </section>
-</section>
-
-<!-- ===== SKILLS MATRIX ===== -->
-<section class="section container" id="skills" data-visible="3">
-  <h2>Skills Matrix</h2>
-  <div class="skills-matrix mt-3">
-
-    <article class="s-card holo">
-      <h3><i class="fa-solid fa-brain"></i> AI / ML</h3>
-      <ul class="s-list">
-        <li><i class="fa-solid fa-square-root-variable"></i> PyTorch, torchvision, torchmetrics · NumPy, pandas, scikit-learn</li>
-        <li><i class="fa-solid fa-diagram-project"></i> Supervised learning (classification & regression), behavior cloning</li>
-        <li><i class="fa-solid fa-chart-line"></i> Metrics & logging: Accuracy / F1 / MAE, TensorBoard, matplotlib</li>
-        <li><i class="fa-solid fa-layer-group"></i> Data pipelines: loaders, balancing/negatives, augmentations</li>
-      </ul>
-      <div class="evidence">Proof: <a href="#grp-vision">JumpNet</a>, <a href="#grp-ml">ML Algorithms Comparison</a>, <a href="#grp-ml">Applied Linear Regression (x5)</a></div>
-    </article>
-
-    <article class="s-card holo">
-      <h3><i class="fa-solid fa-wand-magic-sparkles"></i> Generative Models</h3>
-      <ul class="s-list">
-        <li><i class="fa-solid fa-cubes"></i> VAE & VQ-VAE (vector-quantized codebooks, commitment loss)</li>
-        <li><i class="fa-solid fa-wand-magic-sparkles"></i> Conditional GAN (projection discriminator experiments)</li>
-        <li><i class="fa-solid fa-sliders"></i> Losses: MSE · KL · BCE / adversarial</li>
-        <li><i class="fa-solid fa-file-export"></i> Checkpointing, sample logging, reproducible runs</li>
-      </ul>
-      <div class="evidence">Proof: <a href="#grp-gen">VAE vs VQ-VAE</a>, <a href="#grp-gen">cGAN — Sketch Generation</a></div>
-    </article>
-
-    <article class="s-card holo">
-      <h3><i class="fa-solid fa-camera"></i> Computer Vision & Data</h3>
-      <ul class="s-list">
-        <li><i class="fa-solid fa-image"></i> OpenCV (incl. <strong>DNN SSD-ResNet</strong>), <strong>Facemark LBF</strong>, Pillow, Albumentations</li>
-        <li><i class="fa-solid fa-wave-square"></i> Temporal smoothing (EMA), per-frame landmark logging</li>
-        <li><i class="fa-solid fa-film"></i> Video I/O, annotated overlays, real-time per-frame pipelines</li>
-        <li><i class="fa-solid fa-table"></i> Data tooling & exports: pandas / CSV / JSON, Plotly</li>
-      </ul>
-      <div class="evidence">Proof: <a href="#grp-vision">Face Landmarks Detection</a>, <a href="#grp-vision">JumpNet</a>, <a href="#grp-tools">Dataset Viewer</a>, <a href="#grp-tools">Real-Time Color Palette Extractor</a></div>
-    </article>
-
-    <article class="s-card holo">
-      <h3><i class="fa-solid fa-microchip"></i> Edge AI & TinyML</h3>
-      <ul class="s-list">
-        <li><i class="fa-solid fa-headphones"></i> Audio features: Goertzel band energies, spectral stats (33-dim)</li>
-        <li><i class="fa-solid fa-square-poll-vertical"></i> Classical ML on-device: multinomial / binary Logistic Regression</li>
-        <li><i class="fa-solid fa-gauge-high"></i> Real-time inference budgets (≤ ~20 ms), z-score, softmax</li>
-        <li><i class="fa-solid fa-network-wired"></i> Hysteresis & hold FSM; rolling OLS slope features</li>
-      </ul>
-      <div class="evidence">Proof: <a href="#grp-edge">Edge AI Sound Classifier</a>, <a href="#grp-edge">Pico Edge Trend Alarm</a>, <a href="#grp-vision">JumpNet</a></div>
-    </article>
-
-    <article class="s-card holo">
-      <h3><i class="fa-solid fa-microchip"></i> Embedded (RP2040 / Pico)</h3>
-      <ul class="s-list">
-        <li><i class="fa-solid fa-code"></i> C/C++ · Pico SDK · CMake/Ninja · arm-none-eabi-gcc</li>
-        <li><i class="fa-solid fa-usb"></i> USB-CDC stdio, serial I/O (PuTTY @115200)</li>
-        <li><i class="fa-solid fa-temperature-three-quarters"></i> ADC4 (internal temperature), oversampling & buffering</li>
-        <li><i class="fa-solid fa-diagram-project"></i> SCADA-style command/response console design</li>
-      </ul>
-      <div class="evidence">Proof: <a href="#grp-systems">Mini SCADA Console</a>, <a href="#grp-edge">Pico Edge Trend Alarm</a></div>
-    </article>
-
-    <article class="s-card holo">
-      <h3><i class="fa-solid fa-terminal"></i> Systems Programming</h3>
-      <ul class="s-list">
-        <li><i class="fa-solid fa-gears"></i> POSIX syscalls: fork, exec, wait; basic CLI parsing</li>
-        <li><i class="fa-solid fa-folder"></i> Files/process management in C; minimal shell architecture</li>
-      </ul>
-      <div class="evidence">Proof: <a href="#grp-systems">Simple Shell in C</a></div>
-    </article>
-
-    <article class="s-card holo">
-      <h3><i class="fa-solid fa-window-restore"></i> Apps, UI & Visualization</h3>
-      <ul class="s-list">
-        <li><i class="fa-solid fa-window-maximize"></i> Streamlit & Tkinter (local-first UIs), lightweight Flask/HTML/CSS/JS</li>
-        <li><i class="fa-solid fa-chart-simple"></i> Plotting with matplotlib & interactive Plotly dashboards</li>
-        <li><i class="fa-solid fa-cloud"></i> Streamlit Cloud deployments, live demo packaging</li>
-      </ul>
-      <div class="evidence">Proof: <a href="#grp-tools">Dataset Viewer</a>, <a href="#grp-tools">Real-Time Color Palette Extractor</a>, <a href="#grp-tools">PDF Summary Chatbot</a></div>
-    </article>
-
-    <article class="s-card holo">
-      <h3><i class="fa-solid fa-gears"></i> DevOps & Project Quality</h3>
-      <ul class="s-list">
-        <li><i class="fa-brands fa-github"></i> Git/GitHub workflows, structured READMEs, issue-driven iteration</li>
-        <li><i class="fa-solid fa-list-check"></i> Reproducible environments & clear repo organization</li>
-      </ul>
-      <div class="evidence">Proof: <a href="#projects">All Projects</a></div>
-    </article>
-
-    <article class="s-card holo">
-      <h3><i class="fa-solid fa-layer-group"></i> Extras</h3>
-      <ul class="s-list">
-        <li><i class="fa-solid fa-chess-knight"></i> RL basics: tabular Q-Learning</li>
-        <li><i class="fa-solid fa-wave-square"></i> Signals & clustering: PyWavelets, k-means</li>
-      </ul>
-      <div class="evidence">Proof: <a href="#grp-ml">Sentence Prediction with Q-Learning</a>, <a href="#grp-ml">Wavelets & Clustering Parity</a></div>
-    </article>
-
-    <article class="s-card holo">
-      <h3><i class="fa-solid fa-code"></i> Competitive Programming</h3>
-      <ul class="s-list">
-        <li><i class="fa-solid fa-list-ol"></i> Data Structures & Algorithms (Python, C++)</li>
-        <li><i class="fa-solid fa-puzzle-piece"></i> Problem-solving, coding patterns, daily practice</li>
-      </ul>
-      <div class="evidence">Proof: <a href="#grp-algo">Daily LeetCode Progress</a></div>
-    </article>
-
-  </div>
-</section>
-
-
-
-      <!-- ===== REFERENCES / FEEDBACK ===== -->
-    <section class="section container" id="references">
-      <h2>References & Feedback</h2>
-
-      <div class="ref-wrap">
-        <article class="ref-card ref-holo" aria-label="Recommendation by Barış Ünver">
-          <div class="ref-star" aria-hidden="true">
-            <span class="ray r0"></span>
-            <span class="ray r1"></span>
-            <span class="ray r2"></span>
-            <span class="ray r3"></span>
-            <span class="ray r4"></span>
-            <span class="ray r5"></span>
-            <span class="ray r6"></span>
-            <span class="ray r7"></span>
-          </div>
-          <header class="ref-meta">
-            <div class="who">
-              <div class="name">Barış Ünver</div>
-              <div class="role">Founder (AI companies) · Direct manager</div>
+          <!-- Timeline ayrı blok -->
+          <div class="hero-timeline-block">
+            <div class="hero-timeline-header">
+              <span class="hero-timeline-label">Timeline</span>
+              <span class="hero-timeline-hint">scroll →</span>
             </div>
-            <div class="pill">Recommendation · Sep 1, 2022 · TURK AI</div>
-          </header>
+            <div class="hero-timeline">
+              <div class="hero-timeline-item">
+                <span class="hero-timeline-year">2018–2019</span>
+                High school robotics & contests
+              </div>
+              <div class="hero-timeline-item">
+                <span class="hero-timeline-year">2021</span>
+                Started Computer Engineering @ RWTH
+              </div>
+              <div class="hero-timeline-item">
+                <span class="hero-timeline-year">2023–2024</span>
+                ML & Edge AI side projects
+              </div>
+              <div class="hero-timeline-item">
+                <span class="hero-timeline-year">2025</span>
+                Wavelet-based parity preprint (arXiv)
+              </div>
+              <div class="hero-timeline-item">
+                <span class="hero-timeline-year">Dec 1, 2025</span>
+                Werkstudent @ Fraunhofer IAIS
+              </div>
+              <div class="hero-timeline-item">
+                <span class="hero-timeline-year">Dec 16, 2025</span>
+                DataTalks.Club webinar
+              </div>
+            </div>
+          </div>
+        </div>
 
-          <blockquote class="q holo-quote" style="padding-left: 1.5rem;">
-            <span class="qmark" aria-hidden="true">“</span>
-            I worked closely and advised Ertuğrul. During his volunteer experience in our company, TURK AI, I had the opportunity of knowing him. He is a gifted person but beside his skills he is eager to learn and discover. I was surprised how he could adapt and start to create and develop hard tasks. He gained good knowledge and hands on experience on edge computing devices like OpenMV and ESP32 both hardware and software sides. I trust him that he can bring positive impact and joy to his future colleagues. I strongly recommend him!
-          </blockquote>
+        <!-- Sağ: Avatar + Currently working on -->
+        <div class="hero-side">
+          <!-- Avatar kartı -->
+          <div class="card hero-avatar-card">
+            <div class="hero-avatar-wrapper">
+              <img
+                src="profil_photo.png"
+                alt="Portrait of Ertuğrul Mutlu"
+                class="hero-avatar-img"
+              />
+            </div>
+            <p class="card-desc" style="text-align:center; margin-bottom:0;">
+              ML &amp; Edge AI engineer working on agentic workflows, robustness, and
+              real-world systems.
+            </p>
+          </div>
 
-          <footer class="ref-foot">
-            <a class="btn sm" target="_blank" rel="noopener" href="https://www.linkedin.com/in/ertu%C4%9Frul-mutlu/"><i class="fa-brands fa-linkedin"></i> View on LinkedIn</a>
-          </footer>
-        </article>
-      </div>
-    </section>
-  </main>
-    <!-- ===== CONTACT ===== -->
-    <section class="section container" id="contact">
-      <h2>Contact</h2>
-      <p class="muted">Based in Aachen, Germany. Open to remote/hybrid.</p>
-      <div class="socials mt-2">
-        <a class="btn sm" href="mailto:ertugrulmutlu@gmail.com"><i class="fa-regular fa-envelope"></i> Email</a>
-        <a class="btn sm" target="_blank" rel="noopener" href="https://www.linkedin.com/in/ertu%C4%9Frul-mutlu/"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-        <a class="btn sm" target="_blank" rel="noopener" href="https://github.com/Ertugrulmutlu"><i class="fa-brands fa-github"></i> GitHub</a>
-        <a class="btn sm pink" target="_blank" rel="noopener" href="docs/cv.pdf"><i class="fa-regular fa-file-pdf"></i> CV (PDF)</a>
-      </div>
-    </section>
+          <!-- Currently working on kartı -->
+          <div class="card hero-current-card">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Currently working on</div>
+                <div class="card-meta">
+                  Agentic evaluation pipelines, logit stability metrics, and edge deployment.
+                </div>
+              </div>
+            </div>
+            <div class="tag-row" style="margin-top: 0.3rem;">
+              <span class="tag">Agentic AI</span>
+              <span class="tag">LLM Reliability</span>
+              <span class="tag">Wavelets</span>
+              <span class="tag">Embedded / Edge</span>
+            </div>
+            <p class="card-desc" style="margin-top: 0.8rem;">
+              Combining classical signal processing with deep learning to make agents and
+              LLM systems stable enough for messy real-world inputs.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURED PROJECT -->
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">Featured Project</h2>
+          <div class="section-subtitle">
+            A quick snapshot of what I&apos;ve been building recently.
+          </div>
+        </div>
+
+        <div class="card featured-card">
+          <div class="featured-main">
+            <div>
+              <h3 class="featured-title">JumpNet &mdash; Vision-based Game Agent</h3>
+              <p class="featured-meta">
+                Computer Vision · Imitation Learning · Python · PyTorch
+              </p>
+            </div>
+            <p class="featured-desc">
+              A one-button game agent that learns when and how long to jump from raw
+              gameplay frames. JumpNet uses a CNN backbone with a dual-head output
+              (classification + regression) trained on recorded play sessions, and is
+              deployed in a small, GUI-driven simulator.
+            </p>
+            <div class="tag-row" style="margin-top:0.4rem;">
+              <span class="tag">CNN</span>
+              <span class="tag">Imitation Learning</span>
+              <span class="tag">Game AI</span>
+              <span class="tag">Experiment Logging</span>
+            </div>
+          </div>
+          <div class="featured-links">
+            <a
+              class="card-link"
+              href="https://github.com/Ertugrulmutlu/JumpNet"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-github"></i>
+              GitHub
+            </a>
+            <a
+              class="card-link"
+              href="https://dev.to/ertugrulmutlu/jumpnet-part-1-from-raw-gameplay-to-labeled-intelligence-building-the-data-foundation-for-2e2f"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-solid fa-book-open"></i>
+              Read blog post
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- LINKS -->
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">Links</h2>
+          <div class="section-subtitle">Places where I build, write, and share work.</div>
+        </div>
+
+        <div class="card-grid card-grid-2">
+          <!-- GitHub -->
+          <a class="card" href="https://github.com/Ertugrulmutlu" target="_blank" rel="noopener noreferrer">
+            <div class="card-header">
+              <div>
+                <div class="card-title">GitHub</div>
+                <div class="card-meta">Projects, experiments, and research code.</div>
+              </div>
+              <div class="icon-pill"><i class="fa-brands fa-github"></i></div>
+            </div>
+            <p class="card-desc">
+              Active repositories for ML agents, edge deployments, and small tools that I use
+              in day-to-day workflows.
+            </p>
+            <span class="card-link">Open profile</span>
+          </a>
+
+          <!-- LinkedIn -->
+          <a class="card" href="https://www.linkedin.com/in/ertugrul-mutlu/" target="_blank" rel="noopener noreferrer">
+            <div class="card-header">
+              <div>
+                <div class="card-title">LinkedIn</div>
+                <div class="card-meta">Professional profile &amp; updates.</div>
+              </div>
+              <div class="icon-pill"><i class="fa-brands fa-linkedin-in"></i></div>
+            </div>
+            <p class="card-desc">
+              Career timeline, talks, and short posts about ML systems, edge AI and agentic workflows.
+            </p>
+            <span class="card-link">Connect</span>
+          </a>
+
+          <!-- Blog / dev.to -->
+          <a class="card" href="https://dev.to/ertugrulmutlu" target="_blank" rel="noopener noreferrer">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Blog on dev.to</div>
+                <div class="card-meta">Long-form write-ups of projects.</div>
+              </div>
+              <div class="icon-pill"><i class="fa-brands fa-dev"></i></div>
+            </div>
+            <p class="card-desc">
+              Deep dives into ML experiments, debugging stories, and end-to-end project
+              breakdowns.
+            </p>
+            <span class="card-link">Read posts</span>
+          </a>
+
+          <!-- arXiv -->
+          <a class="card" href="https://arxiv.org/search/?query=Ertugrul+Mutlu&searchtype=author" target="_blank" rel="noopener noreferrer">
+            <div class="card-header">
+              <div>
+                <div class="card-title">arXiv</div>
+                <div class="card-meta">Research preprints &amp; experiments.</div>
+              </div>
+              <div class="icon-pill"><i class="fa-solid fa-flask"></i></div>
+            </div>
+            <p class="card-desc">
+              Wavelet-based feature engineering, clustering for parity detection, and future
+              work on logit stability metrics.
+            </p>
+            <span class="card-link">View papers</span>
+          </a>
+
+          <!-- Email -->
+          <a class="card" href="mailto:ertugrulmutlu004@gmail.com">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Email</div>
+                <div class="card-meta">Get in touch for collaborations or questions.</div>
+              </div>
+              <div class="icon-pill"><i class="fa-regular fa-envelope"></i></div>
+            </div>
+            <p class="card-desc">
+              I&apos;m happy to talk about ML systems, edge deployments, or potential
+              collaborations.
+            </p>
+            <span class="card-link">Send email</span>
+          </a>
+
+          <!-- DataTalks.Club -->
+          <a class="card" href="https://www.youtube.com/watch?v=HwCR59VuYn4&t=0s" target="_blank" rel="noopener noreferrer">
+            <div class="card-header">
+              <div>
+                <div class="card-title">DataTalks.Club Webinar</div>
+                <div class="card-meta">Dec 16, 2025</div>
+              </div>
+              <div class="icon-pill"><i class="fa-solid fa-podcast"></i></div>
+            </div>
+            <p class="card-desc">
+              &ldquo;From Human-in-the-Loop to Agent-in-the-Loop&rdquo; &mdash; a
+              practical look at evolving ML workflows.
+            </p>
+            <span class="card-link">Go Webinar</span>
+          </a>
+        </div>
+      </section>
+    </div>
   </main>
 
-  <footer class="site-footer container">
-    Based in Aachen, Germany · Open to remote/hybrid.
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>© <span id="year"></span> Ertuğrul Mutlu. Built as a lightweight static site.</div>
+      <div class="footer-links">
+        <a href="projects.html">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-

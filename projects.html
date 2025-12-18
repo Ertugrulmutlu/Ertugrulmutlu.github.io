@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projects — Ertuğrul Mutlu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Selected ML & Edge AI projects by Ertuğrul Mutlu." />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Icons (same as index.html) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <div class="nav-logo">Ertuğrul&nbsp;Mutlu</div>
+        <div class="nav-badge">ML &amp; Edge AI</div>
+      </div>
+
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="projects.html" class="nav-link active">Projects</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="misc.html" class="nav-link">Misc</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-wrapper">
+    <div class="container">
+      <section class="section">
+        <div class="section-header">
+          <h1 class="section-title">Projects</h1>
+          <div class="section-subtitle">
+            A curated selection of ML systems, agents, and edge deployments.
+          </div>
+        </div>
+
+        <!-- FILTER BAR (kategori bazlı) -->
+        <div class="tag-row project-filters" style="margin-bottom: 1.25rem;">
+          <button class="tag active" data-filter="all">All</button>
+          <button class="tag" data-filter="vision">Machine Vision</button>
+          <button class="tag" data-filter="edge">Edge AI &amp; Embedded</button>
+          <button class="tag" data-filter="gen">Generative Models</button>
+          <button class="tag" data-filter="tools">Tools &amp; Apps (Data)</button>
+          <button class="tag" data-filter="ml">Applied ML &amp; RL</button>
+          <button class="tag" data-filter="algo">Competitive Programming / Algorithms</button>
+          <button class="tag" data-filter="systems">Systems &amp; Embedded</button>
+        </div>
+
+        <div class="card-grid card-grid-2 card-grid-2-desktop">
+          <!-- ======================= Machine Vision ======================= -->
+
+          <!-- JumpNet -->
+          <div class="card" data-category="vision">
+            <div class="card-header">
+              <div>
+                <div class="card-title">JumpNet &mdash; Vision-Based Game Agent</div>
+                <div class="project-meta">
+                  Computer Vision · Imitation Learning · Python · PyTorch
+                </div>
+              </div>
+            </div>
+            <p class="card-desc">
+              Real-time visual decision system for a one-button platformer (~18 ms, ~87% accuracy).
+              Combines a CNN backbone with dual heads for jump classification and press-duration regression.
+            </p>
+            <div class="tag-row">
+              <span class="tag">CNN</span>
+              <span class="tag">Imitation Learning</span>
+              <span class="tag">Game AI</span>
+              <span class="tag">Python</span>
+            </div>
+            <div class="card-footer-links" style="margin-top:0.7rem;">
+              <a
+                class="card-link"
+                href="https://github.com/Ertugrulmutlu/JumpNet"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-github"></i>
+                Code
+              </a>
+              <a
+                class="card-link"
+                href="https://dev.to/ertugrulmutlu/jumpnet-part-1-from-raw-gameplay-to-labeled-intelligence-building-the-data-foundation-for-2e2f"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-dev"></i>
+                Blog
+              </a>
+            </div>
+          </div>
+
+          <!-- Face Landmarks Detection -->
+          <div class="card" data-category="vision">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Face Landmarks Detection (OpenCV DNN + Facemark)</div>
+                <div class="project-meta">
+                  Computer Vision · Landmarks · Python · OpenCV
+                </div>
+              </div>
+            </div>
+            <p class="card-desc">
+              Real-time 68-point facial landmark tracker built with OpenCV DNN face detection and
+              Facemark LBF, extended with EMA smoothing and per-frame CSV logging for analysis.
+            </p>
+            <div class="tag-row">
+              <span class="tag">OpenCV</span>
+              <span class="tag">Facemark</span>
+              <span class="tag">EMA</span>
+              <span class="tag">CSV</span>
+            </div>
+            <div class="card-footer-links" style="margin-top:0.7rem;">
+              <a
+                class="card-link"
+                href="https://github.com/Ertugrulmutlu/-Face-Landmark-Tracker"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-github"></i>
+                Code
+              </a>
+              <a
+                class="card-link"
+                href="https://dev.to/ertugrulmutlu/-face-landmarks-detection-opencv-dnn-facemark-440d"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-dev"></i>
+                Blog
+              </a>
+              <a
+                class="card-link"
+                href="https://www.youtube.com/watch?v=jQmMLPD_EUw"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-solid fa-play"></i>
+                Demo
+              </a>
+            </div>
+          </div>
+
+          <!-- ======================= Edge AI & Embedded ======================= -->
+
+          <!-- Edge AI Sound Classifier -->
+          <div class="card" data-category="edge">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Edge AI Sound Classifier on Raspberry Pi Pico</div>
+                <div class="project-meta">
+                  Edge AI · TinyML · Audio · C++ / Python
+                </div>
+              </div>
+            </div>
+            <p class="card-desc">
+              End-to-end TinyML pipeline on RP2040 that classifies short audio into
+              <em>baby cry, doorbell, smoke alarm, background</em>. 33-dim features
+              (Goertzel bands + spectral stats), multinomial Logistic Regression (~87%),
+              and C++ firmware with real-time z-score, softmax, and hysteresis FSM.
+            </p>
+            <div class="tag-row">
+              <span class="tag">TinyML</span>
+              <span class="tag">Audio</span>
+              <span class="tag">Raspberry Pi Pico</span>
+              <span class="tag">Logistic Regression</span>
+            </div>
+            <div class="card-footer-links" style="margin-top:0.7rem;">
+              <a
+                class="card-link"
+                href="https://github.com/Ertugrulmutlu/Edge-AI-Sound-Classifier-on-Raspberry-Pi-Pico"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-github"></i>
+                Code
+              </a>
+              <a
+                class="card-link"
+                href="https://dev.to/ertugrulmutlu/building-an-edge-ai-sound-classifier-part-1-collecting-and-preparing-the-dataset-moo"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-dev"></i>
+                Blog
+              </a>
+            </div>
+          </div>
+
+          <!-- Pico Trend Alarm -->
+          <div class="card" data-category="edge">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Pico Edge Trend Alarm (RP2040)</div>
+                <div class="project-meta">
+                  Time Series · On-device Inference · C++ / Python
+                </div>
+              </div>
+            </div>
+            <p class="card-desc">
+              Edge AI pipeline for detecting workload-induced heating trends on the Pico:
+              data logging firmware, Python logger, rolling OLS slope features, Logistic Regression,
+              and C++ inference with oversampled ADC, slope buffering, and hysteresis/hold FSM.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Time Series</span>
+              <span class="tag">Edge AI</span>
+              <span class="tag">Pico SDK</span>
+              <span class="tag">TinyML</span>
+            </div>
+            <div class="card-footer-links" style="margin-top:0.7rem;">
+              <a
+                class="card-link"
+                href="https://github.com/Ertugrulmutlu/trend-alarm-pico"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-github"></i>
+                Code
+              </a>
+              <a
+                class="card-link"
+                href="https://dev.to/ertugrulmutlu/part-1-data-gathering-on-raspberry-pi-pico-for-edge-ai-trend-alarm-1ca"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-dev"></i>
+                Blog
+              </a>
+
+            </div>
+          </div>
+
+          <!-- Mini SCADA Console -->
+          <div class="card" data-category="systems">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Mini SCADA Console (Raspberry Pi Pico, C++)</div>
+                <div class="project-meta">
+                  Embedded · RP2040 · USB-CDC · C++
+                </div>
+              </div>
+            </div>
+            <p class="card-desc">
+              USB-CDC command console simulating an industrial field device: internal temperature
+              telemetry via ADC4, logging, and LED control. Designed to mimic SCADA-style interaction
+              via a serial terminal (PuTTY @115200).
+            </p>
+            <div class="tag-row">
+              <span class="tag">Pico SDK</span>
+              <span class="tag">USB-CDC</span>
+              <span class="tag">ADC</span>
+              <span class="tag">CMake/Ninja</span>
+            </div>
+            <div class="card-footer-links" style="margin-top:0.7rem;">
+              <a
+                class="card-link"
+                href="https://github.com/Ertugrulmutlu/mini_scada"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-github"></i>
+                Code
+              </a>
+              <a
+                class="card-link"
+                href="https://dev.to/ertugrulmutlu/building-a-mini-scada-console-on-raspberry-pi-pico-c-50bg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-dev"></i>
+                Blog
+              </a>
+            </div>
+          </div>
+
+          <!-- ======================= Generative Models ======================= -->
+
+          <!-- VAE vs VQ-VAE -->
+          <div class="card" data-category="gen">
+            <div class="card-header">
+              <div>
+                <div class="card-title">VAE vs VQ-VAE Face Compression</div>
+                <div class="project-meta">
+                  Representation Learning · Image Compression · PyTorch
+                </div>
+              </div>
+            </div>
+            <p class="card-desc">
+              A side-by-side comparison between continuous and discrete latent spaces for
+              compressing face images. Evaluates reconstruction quality, latent structure,
+              and failure modes of VAE vs VQ-VAE architectures on the same dataset.
+            </p>
+            <div class="tag-row">
+              <span class="tag">VAE</span>
+              <span class="tag">VQ-VAE</span>
+              <span class="tag">Face Dataset</span>
+              <span class="tag">PyTorch</span>
+            </div>
+            <div class="card-footer-links" style="margin-top:0.7rem;">
+              <a
+                class="card-link"
+                href="https://github.com/Ertugrulmutlu/VQVAE-and-VAE"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-github"></i>
+                Code
+              </a>
+              <a
+                class="card-link"
+                href="https://dev.to/ertugrulmutlu/compressing-human-faces-with-vae-vs-vq-vae-a-deep-dive-into-autoencoder-design-j59"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-dev"></i>
+                Blog
+              </a>
+            </div>
+          </div>
+
+          <!-- Conditional GAN -->
+          <div class="card" data-category="gen">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Conditional GAN &mdash; Sketch Generator</div>
+                <div class="project-meta">
+                  Generative Models · cGAN · PyTorch
+                </div>
+              </div>
+            </div>
+            <p class="card-desc">
+              A conditional GAN trained on Berlin sketch drawings, generating class-specific
+              sketches from a discrete label input. Includes improved training tricks,
+              loss tracking, checkpointing and a small GUI for interactive sampling.
+            </p>
+            <div class="tag-row">
+              <span class="tag">cGAN</span>
+              <span class="tag">Computer Vision</span>
+              <span class="tag">Generative</span>
+            </div>
+            <div class="card-footer-links" style="margin-top:0.7rem;">
+              <a
+                class="card-link"
+                href="https://github.com/Ertugrulmutlu/ConditionalGAN-SketchGeneration"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-github"></i>
+                Code
+              </a>
+              <a
+                class="card-link"
+                href="https://dev.to/ertugrulmutlu/a-cgan-story-three-attempts-and-an-incomplete-ending-2a1b"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-dev"></i>
+                Blog
+              </a>
+            </div>
+          </div>
+
+          <!-- ======================= Tools & Apps (Data) ======================= -->
+
+          <!-- PDF Summary Chatbot -->
+          <div class="card" data-category="tools">
+            <div class="card-header">
+              <div>
+                <div class="card-title">PDF Summary Chatbot (Local LLM)</div>
+                <div class="project-meta">
+                  Local LLM · RAG · Tools
+                </div>
+              </div>
+            </div>
+            <p class="card-desc">
+              A local, privacy-friendly assistant that indexes PDFs, extracts key sections,
+              and lets you query documents using a lightweight LLM. Includes chunking,
+              similarity search and answer attribution with references to the source pages.
+            </p>
+            <div class="tag-row">
+              <span class="tag">RAG</span>
+              <span class="tag">Local Inference</span>
+              <span class="tag">Python</span>
+            </div>
+            <div class="card-footer-links" style="margin-top:0.7rem;">
+              <a
+                class="card-link"
+                href="https://github.com/Ertugrulmutlu/PDF-Summary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-github"></i>
+                Code
+              </a>
+              <a
+                class="card-link"
+                href="https://dev.to/ertugrulmutlu/building-a-local-pdf-summarizer-with-llms-in-under-24-hours-2ijn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-dev"></i>
+                Blog
+              </a>
+            </div>
+          </div>
+
+          <!-- Advanced Dataset Viewer -->
+          <div class="card" data-category="tools">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Advanced Dataset Viewer / Data Recorder</div>
+                <div class="project-meta">
+                  Tooling · Visualization · Python / GUI
+                </div>
+              </div>
+            </div>
+            <p class="card-desc">
+              A GUI-based tool for inspecting large datasets, recording new examples, and
+              visualizing labels or metadata. Designed for debugging ML agents and
+              understanding real-world data distributions before training.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Data Tooling</span>
+              <span class="tag">Visualization</span>
+              <span class="tag">Python</span>
+            </div>
+            <div class="card-footer-links" style="margin-top:0.7rem;">
+              <a
+                class="card-link"
+                href="https://github.com/Ertugrulmutlu/-Data-Scrap-Tool-Advanced-Dataset-Viewer"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-github"></i>
+                Code
+              </a>
+              <a
+                class="card-link"
+                href="https://dev.to/ertugrulmutlu/modular-snip-recorder-a-data-collection-tool-for-behavior-cloning-12-5di8"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-dev"></i>
+                Blog
+              </a>
+            </div>
+          </div>
+
+          <!-- Real-Time Color Palette Extractor -->
+          <div class="card" data-category="tools">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Real-Time Image Color Palette Extractor</div>
+                <div class="project-meta">
+                  Streamlit · OpenCV · k-means · Color Science
+                </div>
+              </div>
+            </div>
+            <p class="card-desc">
+              Streamlit app extracting dominant colors from images in real-time using k-means,
+              CIE LAB space, and ΔE2000 distance. Designed for designers and ML preprocessing workflows.
+            </p>
+            <div class="tag-row">
+              <span class="tag">OpenCV</span>
+              <span class="tag">k-means</span>
+              <span class="tag">CIE LAB</span>
+              <span class="tag">ΔE2000</span>
+            </div>
+            <div class="card-footer-links" style="margin-top:0.7rem;">
+              <a
+                class="card-link"
+                href="https://github.com/Ertugrulmutlu/Real-time-Image-Color-Palette-Extractor"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-github"></i>
+                Code
+              </a>
+              <a
+                class="card-link"
+                href="https://dev.to/ertugrulmutlu/real-time-image-color-palette-extractor-a-deep-dive-into-k-means-lab-and-de2000-4eoi"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-dev"></i>
+                Blog
+              </a>
+              <a
+                class="card-link"
+                href="https://real-time-image-color-palette-extractor-apps.streamlit.app"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-solid fa-play"></i>
+                Live Demo
+              </a>
+            </div>
+          </div>
+
+
+          <!-- ======================= Applied ML & RL ======================= -->
+
+          <!-- Applied Linear Regression (x5) -->
+          <div class="card" data-category="ml">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Applied Linear Regression (x5)</div>
+                <div class="project-meta">
+                  Regression · scikit-learn · Real Datasets
+                </div>
+              </div>
+            </div>
+            <p class="card-desc">
+              Five hands-on regression projects on real-world datasets (salary, cars, wine,
+              insurance, trips) using scikit-learn, focusing on feature engineering and metrics.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Python</span>
+              <span class="tag">scikit-learn</span>
+              <span class="tag">Pandas</span>
+            </div>
+            <div class="card-footer-links" style="margin-top:0.7rem;">
+              <a
+                class="card-link"
+                href="https://github.com/Ertugrulmutlu/5-Linear-Regression-Projects"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-github"></i>
+                Code
+              </a>
+              <a
+                class="card-link"
+                href="https://dev.to/ertugrulmutlu/real-time-regression-projects-in-python-with-full-code-p5g"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-dev"></i>
+                Blog
+              </a>
+            </div>
+          </div>
+
+          <!-- ML Algorithms Comparison -->
+          <div class="card" data-category="ml">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Machine Learning Algorithms Comparison</div>
+                <div class="project-meta">
+                  Classification · Metrics · scikit-learn
+                </div>
+              </div>
+            </div>
+            <p class="card-desc">
+              Compares Decision Tree, SVM, and KNN classifiers using Accuracy, Precision, Recall,
+              and F1-score on the same dataset. Includes clear plots and metric tables.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Decision Tree</span>
+              <span class="tag">SVM</span>
+              <span class="tag">KNN</span>
+              <span class="tag">Metrics</span>
+            </div>
+            <div class="card-footer-links" style="margin-top:0.7rem;">
+              <a
+                class="card-link"
+                href="https://github.com/Ertugrulmutlu/Machine_Learning_Alg_Comp"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-github"></i>
+                Code
+              </a>
+              <a
+                class="card-link"
+                href="https://dev.to/ertugrulmutlu/comparison-of-machine-learning-algorithms-2ag4"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-dev"></i>
+                Blog
+              </a>
+            </div>
+          </div>
+
+          <!-- Sentence Prediction with Q-Learning -->
+          <div class="card" data-category="ml">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Sentence Prediction with Q-Learning</div>
+                <div class="project-meta">
+                  Reinforcement Learning · NLP · Python
+                </div>
+              </div>
+            </div>
+            <p class="card-desc">
+              Character-level Q-Learning agent that tries to reach target sentences.
+              A playful RL/NLP crossover exploring reward design and state spaces.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Q-Learning</span>
+              <span class="tag">Text</span>
+              <span class="tag">Exploration</span>
+            </div>
+            <div class="card-footer-links" style="margin-top:0.7rem;">
+              <a
+                class="card-link"
+                href="https://github.com/Ertugrulmutlu/Q_learning_Sentence_prediction_with"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-github"></i>
+                Code
+              </a>
+              <a
+                class="card-link"
+                href="https://dev.to/ertugrulmutlu/text-generation-with-artificial-intelligence-generation-of-target-sentences-with-q-learning-algorithm-12m0"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-dev"></i>
+                Blog
+              </a>
+            </div>
+          </div>
+
+          <!-- Wavelets & Clustering Parity -->
+          <div class="card" data-category="ml">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Wavelets &amp; Clustering Parity</div>
+                <div class="project-meta">
+                  Signal Processing · Clustering · PyWavelets
+                </div>
+              </div>
+            </div>
+            <p class="card-desc">
+              Odd/even classification with wavelet features and unsupervised clustering —
+              an intentionally over-engineered toy problem to highlight feature engineering.
+            </p>
+            <div class="tag-row">
+              <span class="tag">PyWavelets</span>
+              <span class="tag">k-means</span>
+              <span class="tag">NumPy</span>
+            </div>
+            <div class="card-footer-links" style="margin-top:0.7rem;">
+              <a
+                class="card-link"
+                href="https://dev.to/ertugrulmutlu/using-wavelets-and-clustering-to-predict-odd-or-even-numbers-an-overengineered-approach-with-3ld4"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-dev"></i>
+                Blog
+              </a>
+            </div>
+          </div>
+
+          <!-- ======================= Competitive Programming / Algo ======================= -->
+
+          <!-- Daily LeetCode -->
+          <div class="card" data-category="algo">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Daily LeetCode Progress</div>
+                <div class="project-meta">
+                  Algorithms · Data Structures · Python &amp; C++
+                </div>
+              </div>
+            </div>
+            <p class="card-desc">
+              Ongoing series of algorithm &amp; data structure challenges — daily solutions
+              and 5-day recap posts. Focus on patterns and reusable problem-solving techniques.
+            </p>
+            <div class="tag-row">
+              <span class="tag">LeetCode</span>
+              <span class="tag">DS &amp; Algo</span>
+              <span class="tag">Python</span>
+              <span class="tag">C++</span>
+            </div>
+            <div class="card-footer-links" style="margin-top:0.7rem;">
+              <a
+                class="card-link"
+                href="https://github.com/Ertugrulmutlu/leetcode-series"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-github"></i>
+                Code
+              </a>
+              <a
+                class="card-link"
+                href="https://dev.to/ertugrulmutlu/daily-leetcode-progress-day-1-3d0a"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-dev"></i>
+                Blog
+              </a>
+            </div>
+          </div>
+
+          <!-- ======================= Systems & Embedded (OS-level) ======================= -->
+
+          <!-- Simple Shell in C -->
+          <div class="card" data-category="systems">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Simple Shell in C</div>
+                <div class="project-meta">
+                  Systems Programming · POSIX · Processes
+                </div>
+              </div>
+            </div>
+            <p class="card-desc">
+              Minimal CLI shell to explore processes, files, and basic syscalls. Implements command
+              parsing, forking, exec, and process waiting in pure C on POSIX systems.
+            </p>
+            <div class="tag-row">
+              <span class="tag">C</span>
+              <span class="tag">POSIX</span>
+              <span class="tag">fork/exec</span>
+            </div>
+            <div class="card-footer-links" style="margin-top:0.7rem;">
+              <a
+                class="card-link"
+                href="https://github.com/Ertugrulmutlu/Shell_of_mine"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-github"></i>
+                Code
+              </a>
+              <a
+                class="card-link"
+                href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-13-238e"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-dev"></i>
+                Blog
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>© <span id="year"></span> Ertuğrul Mutlu.</div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // === Simple category filter ===
+    (function () {
+      const filterBar = document.querySelector('.project-filters');
+      if (!filterBar) return;
+
+      const buttons = filterBar.querySelectorAll('.tag');
+      const cards = document.querySelectorAll('.card-grid .card');
+
+      if (!buttons.length || !cards.length) return;
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+
+          // active state
+          buttons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const filter = btn.getAttribute('data-filter') || 'all';
+
+          cards.forEach(card => {
+            const cat = card.getAttribute('data-category');
+            if (filter === 'all' || cat === filter) {
+              card.style.display = '';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

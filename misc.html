@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Misc — Ertuğrul Mutlu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Misc tools, experiments and demos by Ertuğrul Mutlu." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <div class="nav-logo">Ertuğrul&nbsp;Mutlu</div>
+        <div class="nav-badge">ML &amp; Edge AI</div>
+      </div>
+
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="misc.html" class="nav-link active">Misc</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-wrapper">
+    <div class="container">
+      <section class="section">
+        <div class="section-header">
+          <h1 class="section-title">Misc</h1>
+          <div class="section-subtitle">
+            Small tools, experiments and demo links that don&apos;t quite fit elsewhere.
+          </div>
+        </div>
+
+        <div class="misc-grid">
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Color Palette Extractor</div>
+                <div class="card-meta">Streamlit · Computer Vision</div>
+              </div>
+            </div>
+            <p class="card-desc">
+              Upload an image and get a clean, quantized color palette. Handy for designing
+              dashboards, plots and small UIs around ML tools.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Streamlit</span>
+              <span class="tag">Image Processing</span>
+            </div>
+            <div class="card-footer-links" style="margin-top:0.7rem;">
+              <a class="card-link" href="https://real-time-image-color-palette-extractor-apps.streamlit.app" target="_blank" rel="noopener noreferrer">
+                View Demo
+              </a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Dataset Snipping &amp; Recorder GUI</div>
+                <div class="card-meta">Python · Desktop GUI</div>
+              </div>
+            </div>
+            <p class="card-desc">
+              A small desktop app where you can select a screen region, record frames and
+              attach metadata in real time. Built to collect training data for game
+              agents and similar systems.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Data Collection</span>
+              <span class="tag">GUI</span>
+            </div>
+            <div class="card-footer-links" style="margin-top:0.7rem;">
+              <a class="card-link" href="https://github.com/Ertugrulmutlu/-Data-Scrap-Tool-Advanced-Dataset-Viewer" target="_blank" rel="noopener noreferrer">
+                Demo (local only)
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>© <span id="year"></span> Ertuğrul Mutlu.</div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html">Blog</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

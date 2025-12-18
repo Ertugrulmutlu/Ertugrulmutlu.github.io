@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Blog — Ertuğrul Mutlu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Blog posts and external articles by Ertuğrul Mutlu (dev.to, etc.)." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <div class="nav-logo">Ertuğrul&nbsp;Mutlu</div>
+        <div class="nav-badge">ML &amp; Edge AI</div>
+      </div>
+
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="blog.html" class="nav-link active">Blog</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="misc.html" class="nav-link">Misc</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-wrapper">
+    <div class="container">
+      <section class="section">
+        <div class="section-header">
+          <h1 class="section-title">Blog</h1>
+          <div class="section-subtitle">
+            I publish most of my write-ups on dev.to. You can filter by topic below.
+          </div>
+        </div>
+
+        <!-- ==== FILTER BAR ==== -->
+        <div class="blog-filters" style="margin: 0.8rem 0 1.4rem; display:flex; flex-wrap:wrap; gap:0.5rem;">
+          <button class="tag blog-filter active" data-filter="all">All</button>
+          <button class="tag blog-filter" data-filter="talks">Talks &amp; Agentic AI</button>
+          <button class="tag blog-filter" data-filter="edge">Edge AI &amp; Embedded</button>
+          <button class="tag blog-filter" data-filter="vision">Computer Vision</button>
+          <button class="tag blog-filter" data-filter="gen">Generative Models</button>
+          <button class="tag blog-filter" data-filter="rag">LLMs, RAG &amp; Tools</button>
+          <button class="tag blog-filter" data-filter="ml-core">Classical ML &amp; Theory</button>
+          <button class="tag blog-filter" data-filter="systems">Systems &amp; Shell</button>
+          <button class="tag blog-filter" data-filter="leetcode">LeetCode &amp; Bash</button>
+        </div>
+
+        <div class="blog-list">
+          <!-- ==== ML / THEORY ==== -->
+          <article class="card" data-category="ml-core">
+            <h2 class="blog-item-title">
+              Wavelets &amp; Clustering to Detect Odd vs. Even Numbers
+            </h2>
+            <div class="blog-item-meta">
+              dev.to · Feature engineering, signal processing, unsupervised learning.
+            </div>
+            <p class="card-desc">
+              A deep dive into how wavelet transforms and clustering can uncover symbolic
+              structure (parity) from raw numerical sequences. Includes visualizations,
+              failure cases, and thoughts on feature engineering in the LLM era.
+            </p>
+            <a
+              class="card-link"
+              href="https://dev.to/ertugrulmutlu/using-wavelets-and-clustering-to-predict-odd-or-even-numbers-an-overengineered-approach-with-3ld4"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read on dev.to
+            </a>
+          </article>
+
+          <article class="card" data-category="ml-core">
+            <h2 class="blog-item-title">
+              Applied Linear Regression Projects (x5)
+            </h2>
+            <div class="blog-item-meta">
+              dev.to · Classical ML, regression, real datasets.
+            </div>
+            <p class="card-desc">
+              Five different regression projects in Python (salary, cars, wine,
+              insurance, trips). Focus on data prep, model selection, evaluation
+              metrics, and practical trade-offs rather than pure theory.
+            </p>
+            <a
+              class="card-link"
+              href="https://dev.to/ertugrulmutlu/real-time-regression-projects-in-python-with-full-code-p5g"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read on dev.to
+            </a>
+          </article>
+
+          <article class="card" data-category="ml-core">
+            <h2 class="blog-item-title">
+              Comparing ML Algorithms: KNN vs SVM vs Decision Tree
+            </h2>
+            <div class="blog-item-meta">
+              dev.to · Model comparison, metrics, experimentation.
+            </div>
+            <p class="card-desc">
+              Decision Tree, SVM, and KNN on the same dataset, compared with accuracy,
+              precision, recall, and F1. Shows how each model behaves, where it fails,
+              and how to interpret metric trade-offs.
+            </p>
+            <a
+              class="card-link"
+              href="https://dev.to/ertugrulmutlu/comparison-of-machine-learning-algorithms-2ag4"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read on dev.to
+            </a>
+          </article>
+
+          <article class="card" data-category="ml-core">
+            <h2 class="blog-item-title">
+              Text Generation with Q-Learning
+            </h2>
+            <div class="blog-item-meta">
+              dev.to · Reinforcement learning, simple NLP, educational.
+            </div>
+            <p class="card-desc">
+              A character-level Q-Learning setup that tries to reach target sentences.
+              Explains states, actions, rewards and how RL can be used for toy NLP
+              tasks without any deep learning.
+            </p>
+            <a
+              class="card-link"
+              href="https://dev.to/ertugrulmutlu/text-generation-with-artificial-intelligence-generation-of-target-sentences-with-q-learning-algorithm-12m0"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read on dev.to
+            </a>
+          </article>
+
+          <!-- ==== COMPUTER VISION ==== -->
+          <article class="card" data-category="vision">
+            <h2 class="blog-item-title">
+              Building JumpNet — A Vision-based Agent for a One-Button Game
+            </h2>
+            <div class="blog-item-meta">
+              dev.to · Computer vision, imitation learning, deployment.
+            </div>
+            <p class="card-desc">
+              How I recorded gameplay data, designed the training pipeline, and
+              evaluated a CNN-based agent that decides when (and how long) to jump.
+              Covers data collection pitfalls, modeling strategy and real-time GUI.
+            </p>
+            <p class="card-desc" style="margin-top:0.4rem;">
+              Series (3 parts):
+            </p>
+            <ul class="card-desc" style="margin-top:0.2rem; padding-left:0; list-style:none; display:flex; flex-wrap:wrap; gap:0.45rem;">
+              <li>
+                <a
+                  class="card-link"
+                  href="https://dev.to/ertugrulmutlu/jumpnet-part-1-from-raw-gameplay-to-labeled-intelligence-building-the-data-foundation-for-2e2f"
+                  target="_blank" rel="noopener noreferrer"
+                >Part 1 — Data foundation</a>
+              </li>
+              <li>
+                <a
+                  class="card-link"
+                  href="https://dev.to/ertugrulmutlu/jumpnet-part-2-from-pixels-to-policy-training-jumpnet-to-make-the-right-move-1eoi"
+                  target="_blank" rel="noopener noreferrer"
+                >Part 2 — Training the policy</a>
+              </li>
+              <li>
+                <a
+                  class="card-link"
+                  href="https://dev.to/ertugrulmutlu/jumpnet-part-3-real-time-inference-watching-jumpnet-come-alive-21b2"
+                  target="_blank" rel="noopener noreferrer"
+                >Part 3 — Real-time inference</a>
+              </li>
+            </ul>
+          </article>
+
+          <article class="card" data-category="vision">
+            <h2 class="blog-item-title">
+              Face Landmarks Detection with OpenCV DNN + Facemark
+            </h2>
+            <div class="blog-item-meta">
+              dev.to · Real-time vision, tracking, logging.
+            </div>
+            <p class="card-desc">
+              Real-time 68-point facial landmark tracker with EMA smoothing and CSV
+              logging. Uses OpenCV DNN for detection and Facemark LBF for landmark
+              prediction, plus temporal smoothing for stable overlays.
+            </p>
+            <a
+              class="card-link"
+              href="https://dev.to/ertugrulmutlu/-face-landmarks-detection-opencv-dnn-facemark-440d"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read on dev.to
+            </a>
+          </article>
+
+          <article class="card" data-category="vision">
+            <h2 class="blog-item-title">
+              Modular Snip Recorder / Advanced Dataset Viewer
+            </h2>
+            <div class="blog-item-meta">
+              dev.to · Data tooling, behavior cloning.
+            </div>
+            <p class="card-desc">
+              A modular data collection tool that records screen + keypresses and lets
+              you browse and inspect behavior cloning datasets afterwards. Designed to
+              debug agents like JumpNet before training.
+            </p>
+            <p class="card-desc" style="margin-top:0.4rem;">
+              Series (2 parts):
+            </p>
+            <ul class="card-desc" style="margin-top:0.2rem; padding-left:0; list-style:none; display:flex; flex-wrap:wrap; gap:0.45rem;">
+              <li>
+                <a
+                  class="card-link"
+                  href="https://dev.to/ertugrulmutlu/modular-snip-recorder-a-data-collection-tool-for-behavior-cloning-12-5di8"
+                  target="_blank" rel="noopener noreferrer"
+                >Part 1 — Tool design</a>
+              </li>
+              <li>
+                <a
+                  class="card-link"
+                  href="https://dev.to/ertugrulmutlu/modular-snip-recorder-a-data-collection-tool-for-behavior-cloning-22-1lgl"
+                  target="_blank" rel="noopener noreferrer"
+                >Part 2 — Viewer &amp; insights</a>
+              </li>
+            </ul>
+          </article>Agentic Evaluation Sandbox (Agent-in-the-Loop)
+
+
+          <article class="card" data-category="vision">
+            <h2 class="blog-item-title">
+              Real-Time Image Color Palette Extractor
+            </h2>
+            <div class="blog-item-meta">
+              dev.to · Computer vision, color science, Streamlit.
+            </div>
+            <p class="card-desc">
+              A Streamlit app that extracts dominant colors from images in real time
+              using k-means, CIE LAB, and ΔE2000. Includes details on color distance,
+              clustering stability and UX choices.
+            </p>
+            <a
+              class="card-link"
+              href="https://dev.to/ertugrulmutlu/real-time-image-color-palette-extractor-a-deep-dive-into-k-means-lab-and-de2000-4eoi"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read on dev.to
+            </a>
+                        <a
+              class="card-link"
+              href= "https://real-time-image-color-palette-extractor-apps.streamlit.app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+             Live Demo
+            </a>
+          </article>
+
+          <!-- ==== GENERATIVE MODELS ==== -->
+          <article class="card" data-category="gen">
+            <h2 class="blog-item-title">
+              VAE vs VQ-VAE for Compact Face Representations
+            </h2>
+            <div class="blog-item-meta">
+              dev.to · Representation learning, generative models.
+            </div>
+            <p class="card-desc">
+              An experiment-heavy comparison between continuous and discrete latent
+              spaces for compressing faces. Architecture details, training curves, and
+              case studies where each method succeeds or fails.
+            </p>
+            <a
+              class="card-link"
+              href="https://dev.to/ertugrulmutlu/compressing-human-faces-with-vae-vs-vq-vae-a-deep-dive-into-autoencoder-design-j59"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read on dev.to
+            </a>
+          </article>
+
+          <article class="card" data-category="gen">
+            <h2 class="blog-item-title">
+              Conditional GAN — Sketch Generation (Berlin Sketches)
+            </h2>
+            <div class="blog-item-meta">
+              dev.to · cGAN, computer vision, experiments.
+            </div>
+            <p class="card-desc">
+              A conditional GAN trained on black-and-white Berlin sketches, generating
+              class-specific images from labels. Walkthrough of training tricks, failure
+              modes, and what made convergence hard in practice.
+            </p>
+            <a
+              class="card-link"
+              href="https://dev.to/ertugrulmutlu/a-cgan-story-three-attempts-and-an-incomplete-ending-2a1b"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read on dev.to
+            </a>
+          </article>
+
+          <!-- ==== EDGE AI & EMBEDDED ==== -->
+          <article class="card" data-category="edge">
+            <h2 class="blog-item-title">
+              Building an Edge AI Sound Classifier on Raspberry Pi Pico
+            </h2>
+            <div class="blog-item-meta">
+              dev.to · TinyML, audio, embedded C++.
+            </div>
+            <p class="card-desc">
+              End-to-end TinyML pipeline on RP2040 classifying audio into baby cry,
+              doorbell, smoke alarm, and background. From dataset collection to feature
+              extraction and C++ firmware with Logistic Regression on-device.
+            </p>
+            <p class="card-desc" style="margin-top:0.4rem;">
+              Series (3 parts):
+            </p>
+            <ul class="card-desc" style="margin-top:0.2rem; padding-left:0; list-style:none; display:flex; flex-wrap:wrap; gap:0.45rem;">
+              <li>
+                <a
+                  class="card-link"
+                  href="https://dev.to/ertugrulmutlu/building-an-edge-ai-sound-classifier-part-1-collecting-and-preparing-the-dataset-moo"
+                  target="_blank" rel="noopener noreferrer"
+                >Part 1 — Data collection</a>
+              </li>
+              <li>
+                <a
+                  class="card-link"
+                  href="https://dev.to/ertugrulmutlu/building-an-edge-ai-sound-classifier-part-2-feature-extraction-training-4bli"
+                  target="_blank" rel="noopener noreferrer"
+                >Part 2 — Features &amp; training</a>
+              </li>
+              <li>
+                <a
+                  class="card-link"
+                  href="https://dev.to/ertugrulmutlu/building-an-edge-ai-sound-classifier-part-3-pico-firmware-live-demo-571g"
+                  target="_blank" rel="noopener noreferrer"
+                >Part 3 — Firmware &amp; demo</a>
+              </li>
+            </ul>
+          </article>
+
+          <article class="card" data-category="edge">
+            <h2 class="blog-item-title">
+              Edge AI Trend Alarm on Raspberry Pi Pico
+            </h2>
+            <div class="blog-item-meta">
+              dev.to · Time series, TinyML, embedded C++.
+            </div>
+            <p class="card-desc">
+              Edge AI pipeline detecting workload-induced heating trends on the Pico.
+              Data logging, rolling OLS slopes, Logistic Regression, and real-time
+              inference in C++ with oversampled ADC and hysteresis FSM.
+            </p>
+            <p class="card-desc" style="margin-top:0.4rem;">
+              Series (3 parts):
+            </p>
+            <ul class="card-desc" style="margin-top:0.2rem; padding-left:0; list-style:none; display:flex; flex-wrap:wrap; gap:0.45rem;">
+              <li>
+                <a
+                  class="card-link"
+                  href="https://dev.to/ertugrulmutlu/part-1-data-gathering-on-raspberry-pi-pico-for-edge-ai-trend-alarm-1ca"
+                  target="_blank" rel="noopener noreferrer"
+                >Part 1 — Data gathering</a>
+              </li>
+              <li>
+                <a
+                  class="card-link"
+                  href="https://dev.to/ertugrulmutlu/part-2-training-model-on-raspberry-pi-pico-for-edge-ai-trend-alarm-9gf"
+                  target="_blank" rel="noopener noreferrer"
+                >Part 2 — Training</a>
+              </li>
+              <li>
+                <a
+                  class="card-link"
+                  href="https://dev.to/ertugrulmutlu/part-3-real-time-inference-on-pico-firmware-integration-3ga6"
+                  target="_blank" rel="noopener noreferrer"
+                >Part 3 — Firmware integration</a>
+              </li>
+            </ul>
+          </article>
+
+          <article class="card" data-category="edge">
+            <h2 class="blog-item-title">
+              Building a Mini SCADA Console on Raspberry Pi Pico (C++)
+            </h2>
+            <div class="blog-item-meta">
+              dev.to · Embedded systems, SCADA, serial CLI.
+            </div>
+            <p class="card-desc">
+              USB-CDC based command console simulating an industrial field device:
+              telemetry (internal temp via ADC4), logging and LED control. Shows how to
+              structure firmware for simple SCADA-style interactions.
+            </p>
+            <a
+              class="card-link"
+              href="https://dev.to/ertugrulmutlu/building-a-mini-scada-console-on-raspberry-pi-pico-c-50bg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read on dev.to
+            </a>
+          </article>
+
+          <!-- ==== LLMs / RAG / TOOLS ==== -->
+          <article class="card" data-category="rag">
+            <h2 class="blog-item-title">
+              Local PDF QA with Lightweight LLMs
+            </h2>
+            <div class="blog-item-meta">
+              dev.to · RAG, local inference, tooling.
+            </div>
+            <p class="card-desc">
+              Building a small, local-first PDF summarizer and QA system. Focus on
+              chunking strategies, retrieval quality, speed, and keeping everything
+              private on a normal laptop.
+            </p>
+            <a
+              class="card-link"
+              href="https://dev.to/ertugrulmutlu/building-a-local-pdf-summarizer-with-llms-in-under-24-hours-2ijn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read on dev.to
+            </a>
+          </article>
+
+
+          <!-- ==== TALKS / AGENTIC AI ==== -->
+          <article class="card" data-category="talks">
+            <h2 class="blog-item-title">
+              How Do You Actually Optimize Agents?
+            </h2>
+            <div class="blog-item-meta">
+              dev.to · Agentic AI, workflows, Optimization.
+            </div>
+            <p class="card-desc">
+A systems-level look at agent optimization beyond prompt tuning.
+Why most agent failures are task design failures — and how constraints, feedback loops, and human supervision shape reliable agent-in-the-loop systems.
+            </p>
+            <a
+              class="card-link"
+              href="https://dev.to/ertugrulmutlu/how-do-you-actually-optimize-agents-it-depends-on-the-task-2h0o"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read related post(s) on dev.to
+            </a>
+          </article>
+          <article class="card" data-category="talks">
+            <h2 class="blog-item-title">
+              My First Public ML Talk: Human-in-the-Loop → Agent-in-the-Loop
+            </h2>
+            <div class="blog-item-meta">
+              dev.to · Talk recap, lessons learned.
+            </div>
+            <p class="card-desc">
+              A short recap of preparing and delivering my first public ML talk, focused
+              on transitioning from human-in-the-loop systems to agent-in-the-loop
+              architectures. Includes reflections, structure, and what I’d improve next
+              time.
+            </p>
+            <a
+              class="card-link"
+              href="https://dev.to/ertugrulmutlu/my-first-public-ml-talk-human-in-the-loop-agent-in-the-loop-dec-16-datatalksclub-2lf1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read on dev.to
+            </a>
+          </article>
+
+          <!-- ==== SYSTEMS / SHELL ==== -->
+          <article class="card" data-category="systems">
+            <h2 class="blog-item-title">
+              How I Built a Simple Shell in C — System Programming (1/3–3/3)
+            </h2>
+            <div class="blog-item-meta">
+              dev.to · C, POSIX, processes.
+            </div>
+            <p class="card-desc">
+              A three-part series on implementing a tiny Unix-like shell in C, covering
+              parsing, forking processes, exec, pipes, and basic error handling.
+            </p>
+            <ul class="card-desc" style="margin-top:0.4rem; padding-left:0; list-style:none; display:flex; flex-wrap:wrap; gap:0.45rem;">
+              <li>
+                <a
+                  class="card-link"
+                  href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-13-238e"
+                  target="_blank" rel="noopener noreferrer"
+                >Part 1 — Core loop &amp; parsing</a>
+              </li>
+              <li>
+                <a
+                  class="card-link"
+                  href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-23-3m2i"
+                  target="_blank" rel="noopener noreferrer"
+                >Part 2 — Processes &amp; exec</a>
+              </li>
+              <li>
+                <a
+                  class="card-link"
+                  href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-33-eah"
+                  target="_blank" rel="noopener noreferrer"
+                >Part 3 — Memory &amp; polish</a>
+              </li>
+            </ul>
+          </article>
+
+          <!-- ==== LEETCODE / BASH ==== -->
+          <article class="card" data-category="leetcode">
+            <h2 class="blog-item-title">
+              Tackling LeetCode Bash Problems – A Practical Guide
+            </h2>
+            <div class="blog-item-meta">
+              dev.to · Bash, LeetCode, practical scripting.
+            </div>
+            <p class="card-desc">
+              Summary of how I completed the LeetCode Bash problem set: patterns,
+              useful Unix tools, and thinking in data streams. Includes example
+              one-liners and explanations.
+            </p>
+            <a
+              class="card-link"
+              href="https://dev.to/ertugrulmutlu/tackling-leetcode-bash-problems-a-practical-guide-6ob"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read on dev.to
+            </a>
+          </article>
+
+          <article class="card" data-category="leetcode">
+            <h2 class="blog-item-title">
+              Daily LeetCode Progress — Algorithm Practice Series
+            </h2>
+            <div class="blog-item-meta">
+              dev.to · Algorithms, data structures, practice logs.
+            </div>
+            <p class="card-desc">
+              A running series logging my daily LeetCode progress (Day 1, 2, 3, …),
+              focusing on patterns, mistakes, and what I learned from each batch of
+              problems in Python and C++.
+            </p>
+            <a
+              class="card-link"
+              href="https://dev.to/ertugrulmutlu/daily-leetcode-progress-day-1-3d0a"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Start at Day 1 on dev.to
+            </a>
+          </article>
+        </div>
+
+        <div class="section" style="margin-top:1.6rem;">
+          <p class="section-subtitle">
+            For the full list of posts (including future ones), visit my profile:
+          </p>
+          <a
+            class="card-link"
+            href="https://dev.to/ertugrulmutlu"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open dev.to profile
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>© <span id="year"></span> Ertuğrul Mutlu.</div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // === Blog category filter ===
+    (function () {
+      const filterContainer = document.querySelector(".blog-filters");
+      const cards = document.querySelectorAll(".blog-list .card");
+      if (!filterContainer || !cards.length) return;
+
+      const buttons = filterContainer.querySelectorAll(".blog-filter");
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const filter = btn.getAttribute("data-filter") || "all";
+
+          // active state
+          buttons.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          // show/hide cards
+          cards.forEach((card) => {
+            const cat = card.getAttribute("data-category");
+            if (filter === "all" || cat === filter) {
+              card.style.display = "";
+            } else {
+              card.style.display = "none";
+            }
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
