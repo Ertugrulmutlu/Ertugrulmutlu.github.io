@@ -4,8 +4,15 @@
   <meta charset="UTF-8" />
   <title>About — Ertuğrul Mutlu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="About Ertuğrul Mutlu — RWTH CE, Werkstudent @ Fraunhofer IAIS, ML & Edge AI." />
+  <meta
+    name="description"
+    content="The engineering philosophy behind Ertuğrul Mutlu's work on reliable AI systems, edge deployments, and developer tools."
+  />
   <link rel="stylesheet" href="styles.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
 </head>
 <body>
   <header class="navbar">
@@ -15,170 +22,375 @@
         <div class="nav-badge">ML &amp; Edge AI</div>
       </div>
 
-      <button class="nav-toggle" aria-label="Toggle navigation">
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="site-navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
 
-      <nav class="nav-links">
+      <nav class="nav-links" id="site-navigation" aria-label="Primary navigation">
         <a href="index.html" class="nav-link">Home</a>
         <a href="projects.html" class="nav-link">Projects</a>
-        <a href="blog.html" class="nav-link">Blog</a>
-        <a href="about.html" class="nav-link active">About</a>
-        <a href="misc.html" class="nav-link">Misc</a>
+        <a href="blog.html" class="nav-link">Writing</a>
+        <a href="about.html" class="nav-link active" aria-current="page">About</a>
+        <a href="misc.html" class="nav-link">Lab</a>
       </nav>
     </div>
   </header>
 
   <main class="main-wrapper">
     <div class="container">
-      <section class="section">
-        <div class="section-header">
-          <h1 class="section-title">About</h1>
-          <div class="section-subtitle">
-            Short bio, research focus, and a bit of personal context.
+      <section class="about-manifesto-intro">
+        <p class="about-manifesto-kicker">Engineering Philosophy</p>
+        <h1 class="about-manifesto-title">
+          Deterministic Decision Making in Non-Deterministic Environments
+        </h1>
+        <p class="about-manifesto-subtitle">
+          The real world is noisy, unstable, and full of hidden state. Most of my work
+          explores how decision-making systems can remain repeatable, explainable, and
+          auditable anyway.
+        </p>
+        <p class="about-manifesto-context">
+          My projects may look different on the surface &mdash; prompt tooling, LLM agents,
+          game agents, edge AI, data collectors, desktop tools &mdash; but I keep returning
+          to the same reliability problem: how to make decisions that can be inspected,
+          reproduced, and trusted under real-world uncertainty.
+        </p>
+      </section>
+
+      <section class="about-section">
+        <article class="about-thesis-card">
+          <p class="about-thesis-label">The central thesis</p>
+          <h2>The model can be correct. The system can still fail.</h2>
+          <div class="about-thesis-copy">
+            <p>
+              For a long time, I followed the standard recipe: more data, larger models,
+              better metrics. Real systems challenged that belief.
+            </p>
+            <p>
+              The root cause is often not the loss function, the optimizer, or the
+              architecture. It is hidden state, implicit dependencies, untracked changes,
+              weak observability, and timing effects.
+            </p>
+            <p>
+              That is why I treat decision-making as a systems problem, not only as a model
+              problem. I care more about understanding failure modes than showcasing demos.
+            </p>
+          </div>
+          <blockquote class="about-thesis-quote">
+            Determinism is not a property of the model alone. It is a property of the
+            surrounding system design.
+          </blockquote>
+        </article>
+      </section>
+
+      <section class="about-section">
+        <div class="about-section-header">
+          <div>
+            <h2>Same Problem, Different Layers</h2>
+            <p>Different projects, the same reliability question seen from different parts of the stack.</p>
           </div>
         </div>
 
-        <div class="about-layout">
-          <div class="about-main">
-            <!-- SOL TARAF AYNEN KALDI -->
-            <article class="about-card">
-              <h2 class="about-title">Short Bio</h2>
-              <p class="about-text">
-                I&apos;m a Computer Engineering student at RWTH Aachen University and a
-                Werkstudent Researcher at the Enterprise Information Systems (EIS)
-                department of Fraunhofer IAIS. My work sits at the intersection of
-                machine learning systems, agentic workflows, and embedded/edge AI.
-              </p>
-              <ul class="about-list">
-                <li>RWTH CE student, focusing on ML systems and signal processing.</li>
-                <li>Werkstudent Researcher @ Fraunhofer IAIS (EIS).</li>
-                <li>Interested in making ML agents robust enough for real-world use.</li>
-              </ul>
-              <div class="about-badge-row">
-                <span class="about-badge">RWTH Aachen</span>
-                <span class="about-badge">Fraunhofer IAIS</span>
-                <span class="about-badge">ML Systems</span>
+        <div class="about-layer-map">
+          <article class="about-layer-row">
+            <span class="about-layer-index">01</span>
+            <div class="about-layer-content">
+              <p class="about-layer-name">Prompt / Decision Logic</p>
+              <h3 class="about-layer-project">PromptLedger</h3>
+              <p class="about-layer-revealed">If prompts are not versioned like code, decision logic becomes unreliable.</p>
+            </div>
+          </article>
+
+          <article class="about-layer-row">
+            <span class="about-layer-index">02</span>
+            <div class="about-layer-content">
+              <p class="about-layer-name">AI Workflow Reliability</p>
+              <h3 class="about-layer-project">PromptLedger, Local LLM Tools, Debugging Utilities</h3>
+              <p class="about-layer-revealed">Before an AI workflow can be trusted, its prompts, inputs, outputs, and changes need to be inspectable.</p>
+            </div>
+          </article>
+
+          <article class="about-layer-row">
+            <span class="about-layer-index">03</span>
+            <div class="about-layer-content">
+              <p class="about-layer-name">Perception &rarr; Action</p>
+              <h3 class="about-layer-project">JumpNet</h3>
+              <p class="about-layer-revealed">A correct decision made at the wrong time is still wrong.</p>
+            </div>
+          </article>
+
+          <article class="about-layer-row">
+            <span class="about-layer-index">04</span>
+            <div class="about-layer-content">
+              <p class="about-layer-name">Hardware / Edge</p>
+              <h3 class="about-layer-project">Pico Trend Alarm, Sound Classifier, Mini SCADA</h3>
+              <p class="about-layer-revealed">Noisy sensors and limited resources force explicit state machines, hysteresis, and controlled behavior.</p>
+            </div>
+          </article>
+
+          <article class="about-layer-row">
+            <span class="about-layer-index">05</span>
+            <div class="about-layer-content">
+              <p class="about-layer-name">Data Control</p>
+              <h3 class="about-layer-project">Custom Collectors, Logging Tools, Dataset Viewers</h3>
+              <p class="about-layer-revealed">Uncontrolled data produces unstable system behavior.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <div class="about-section-header">
+          <div>
+            <h2>How I Work</h2>
+            <p>The practical habits behind the philosophy.</p>
+          </div>
+        </div>
+
+        <div class="about-principles-grid">
+          <article class="about-principle-card">
+            <span>01</span>
+            <h3>Make decision logic inspectable</h3>
+            <p>Prompts, rules, thresholds, workflow decisions, and fallback behavior should be traceable and versioned.</p>
+          </article>
+          <article class="about-principle-card">
+            <span>02</span>
+            <h3>Control the inputs</h3>
+            <p>Data collection, logging, and synchronization are part of the system, not side work.</p>
+          </article>
+          <article class="about-principle-card">
+            <span>03</span>
+            <h3>Measure timing</h3>
+            <p>In real systems, when a decision is made can matter as much as what decision is made.</p>
+          </article>
+          <article class="about-principle-card">
+            <span>04</span>
+            <h3>Prefer observable systems</h3>
+            <p>A system that cannot explain its behavior after failure is not reliable enough.</p>
+          </article>
+          <article class="about-principle-card">
+            <span>05</span>
+            <h3>Build under constraints</h3>
+            <p>Edge devices, latency budgets, and noisy inputs expose assumptions that clean notebooks hide.</p>
+          </article>
+          <article class="about-principle-card">
+            <span>06</span>
+            <h3>Document the process</h3>
+            <p>Mistakes, design decisions, and failure modes are part of the project, not things to hide.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <div class="about-section-header">
+          <div>
+            <h2>Background Snapshot</h2>
+            <p>Brief context, after the thinking that drives the work.</p>
+          </div>
+        </div>
+
+        <article class="about-background-card">
+          <img class="about-profile-mini" src="profil_photo.png" alt="Portrait of Ertuğrul Mutlu" />
+          <div class="about-background-grid">
+            <div class="about-background-item"><span>Academic</span><strong>Computer Engineering Student @ RWTH Aachen University</strong></div>
+            <div class="about-background-item"><span>Research</span><strong>Werkstudent Researcher @ Fraunhofer IAIS</strong></div>
+            <div class="about-background-item"><span>Location</span><strong>Aachen, Germany</strong></div>
+            <div class="about-background-item"><span>Focus</span><strong>AI workflow reliability, local AI, edge AI</strong></div>
+            <div class="about-background-item"><span>Public Tools</span><strong>OpenAnima, MediaRecorder Lite, PromptLedger</strong></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="about-section experience-credentials-section">
+        <div class="about-section-header">
+          <div>
+            <h2>Experience &amp; Credentials</h2>
+            <p>A compact view of the work, learning, and mentoring behind the projects.</p>
+          </div>
+        </div>
+
+        <div class="experience-layout">
+          <div class="experience-timeline">
+            <h3 class="experience-subheading">Experience Timeline</h3>
+
+            <article class="experience-item">
+              <div class="experience-item-header">
+                <div>
+                  <p class="experience-company">Fraunhofer IAIS</p>
+                  <h4 class="experience-role">Werkstudent Researcher</h4>
+                </div>
+                <div class="experience-meta">
+                  <span class="experience-date">Dec 2025 &ndash; Present</span>
+                  <span>Sankt Augustin, Germany &middot; Hybrid</span>
+                </div>
+              </div>
+              <p>Working on applied AI research and prototype development for intelligent enterprise workflows. My work includes refining research prototypes, frontend and UI work, experimentation, technical analysis, and turning research ideas into usable prototype systems.</p>
+              <div class="experience-tags">
+                <span>Applied AI</span><span>Research Prototypes</span><span>Frontend Refinement</span><span>Technical Analysis</span><span>Enterprise Workflows</span>
               </div>
             </article>
 
-            <article class="about-card">
-              <h2 class="about-title">Research &amp; Interests</h2>
-              <p class="about-text">
-                I like approaching ML problems with a signal-theoretic mindset:
-                treating logits, activations and time series as signals that can be
-                analysed, regularized and clustered.
-              </p>
-              <p class="about-text">
-                My first preprint, <em>&ldquo;Wavelet-Based Feature Extraction and
-                Unsupervised Clustering for Parity Detection: A Feature Engineering
-                Perspective&rdquo;</em>, explores how wavelet features and clustering
-                can recover symbolic structure (odd vs. even) from purely numerical
-                signals.
-              </p>
-              <p class="about-text">
-                Current interests include:
-              </p>
-              <ul class="about-list">
-                <li>Signal-theoretic metrics for LLM logit stability.</li>
-                <li>Wavelet-based feature extraction for structured signals.</li>
-                <li>Agentic systems and evaluation, especially agent-in-the-loop setups.</li>
-                <li>Edge and embedded ML deployments.</li>
-              </ul>
+            <article class="experience-item">
+              <div class="experience-item-header">
+                <div>
+                  <p class="experience-company">Q-GEN</p>
+                  <h4 class="experience-role">Co-Founder</h4>
+                </div>
+                <div class="experience-meta">
+                  <span class="experience-date">Mar 2023 &ndash; Dec 2023</span>
+                  <span>Ankara, T&uuml;rkiye &middot; Remote</span>
+                </div>
+              </div>
+              <p>Co-founded an EdTech project focused on AI-assisted learning tools and personalized education workflows. I led a team of five across product planning, prototype development, and early platform design. The experience clarified the gap between an idea and a usable learning platform.</p>
+              <div class="experience-tags">
+                <span>EdTech</span><span>Product Development</span><span>AI-assisted Learning</span><span>Team Coordination</span><span>Prototype Development</span>
+              </div>
             </article>
 
-            <article class="about-card">
-              <h2 class="about-title">Talks</h2>
-              <p class="about-text">
-                <strong>DataTalks.Club webinar (Dec 16, 2025)</strong><br />
-                <em>&ldquo;From Human-in-the-Loop to Agent-in-the-Loop: How ML Workflows
-                Evolve into Agentic Feedback Systems&rdquo;</em>
-              </p>
-              <p class="about-text">
-                A practical overview of how human feedback loops in ML pipelines turn
-                into agent-in-the-loop systems: what changes in planning, tool use,
-                evaluation, and how to keep systems debuggable as automation increases.
-              </p>
-            </article>
-
-            <article class="about-card">
-              <h2 class="about-title">Personal</h2>
-              <p class="about-text">
-                Outside of research and coursework, I enjoy working with electronics,
-                microcontrollers and embedded systems&mdash;often building small tools
-                that support my ML experiments. I also like documenting projects in
-                public through blog posts and talks.
-              </p>
-              <p class="about-text">
-                I&apos;m especially motivated by projects where algorithms meet hardware
-                and where &ldquo;nice-in-theory&rdquo; ideas have to survive noisy,
-                real-world inputs.
-              </p>
+            <article class="experience-item">
+              <div class="experience-item-header">
+                <div>
+                  <p class="experience-company">TURK AI</p>
+                  <h4 class="experience-role">Software Developer</h4>
+                </div>
+                <div class="experience-meta">
+                  <span class="experience-date">Jun 2022 &ndash; Aug 2022</span>
+                  <span>Ankara, T&uuml;rkiye &middot; On-site</span>
+                </div>
+              </div>
+              <p>Developed Edge AI and computer vision solutions using OpenMV, ESP32, and embedded systems, with a focus on constrained-hardware optimization, IoT integration, and real-time AI applications.</p>
+              <div class="experience-tags">
+                <span>Edge AI</span><span>Computer Vision</span><span>ESP32</span><span>OpenMV</span><span>Embedded Systems</span><span>IoT</span>
+              </div>
             </article>
           </div>
 
-          <!-- SAĞ TARAF: GÜÇLENDİRİLDİ -->
-          <aside class="about-card">
-            <div class="avatar-wrapper">
-              <img
-                src="profil_photo.png"
-                alt="Portrait of Ertuğrul Mutlu"
-                class="hero-avatar-img"
-                style="margin: 0 auto;"
-              />
+          <div class="experience-support-grid">
+            <div>
+              <h3 class="experience-subheading">Selected Certifications</h3>
+              <div class="credentials-grid">
+                <article class="credential-card">
+                  <div><p class="credential-issuer">MathWorks</p><h4>Machine Learning Onramp</h4></div>
+                  <div class="credential-footer"><span>Jul 2025</span><span class="credential-tag">ML</span></div>
+                </article>
+                <article class="credential-card">
+                  <div><p class="credential-issuer">MathWorks</p><h4>Deep Learning Onramp</h4></div>
+                  <div class="credential-footer"><span>Jul 2025</span><span class="credential-tag">DL</span></div>
+                </article>
+                <article class="credential-card">
+                  <div><p class="credential-issuer">IBM SkillsBuild</p><h4>Data Fundamentals</h4></div>
+                  <div class="credential-footer"><span>Aug 2025</span><span class="credential-tag">Data</span></div>
+                </article>
+                <article class="credential-card">
+                  <div><p class="credential-issuer">Saylor University</p><h4>CS107: C++ Programming</h4></div>
+                  <div class="credential-footer"><span>Aug 2021</span><span class="credential-tag">C++</span></div>
+                </article>
+              </div>
             </div>
-            <p class="about-text" style="text-align:center; opacity:0.8;">
-              ML systems • agentic workflows • edge AI
-            </p>
-            <hr style="border:none;border-top:1px solid rgba(31,41,55,0.9);margin:0.9rem 0;" />
 
-            <!-- NEW: QUICK FACTS -->
-            <p class="about-text">
-              <strong>Quick facts</strong><br />
-              <span style="color:var(--text-muted);">
-                Aachen, Germany<br />
-                RWTH Computer Engineering<br />
-                Werkstudent @ Fraunhofer IAIS (EIS)<br />
-                Focus: ML Systems &amp; Agentic AI
-              </span>
-            </p>
+            <div>
+              <h3 class="experience-subheading">Mentoring &amp; STEM Outreach</h3>
+              <article class="mentoring-card">
+                <div class="mentoring-card-header">
+                  <div>
+                    <p class="credential-issuer">Bilim Kahramanlar&#305; Derne&#287;i</p>
+                    <h4>STEM Mentoring &amp; Robotics Outreach</h4>
+                  </div>
+                  <span class="experience-date">2020 &ndash; 2022</span>
+                </div>
+                <p>Mentored high-school robotics teams in FIRST LEGO League and World Robot Olympiad contexts, supporting students with robotics, problem solving, teamwork, and early engineering thinking.</p>
+                <ul class="mentoring-team-list">
+                  <li>COSMOS <span>FIRST LEGO League</span></li>
+                  <li>SAV&#304;ORS <span>FIRST LEGO League</span></li>
+                  <li>PROCYON_50_2 <span>World Robot Olympiad</span></li>
+                </ul>
+                <div class="experience-tags">
+                  <span>STEM Mentoring</span><span>Robotics</span><span>FLL</span><span>WRO</span><span>Team Coaching</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            <!-- ACADEMIC -->
-            <p class="about-text" >
-              <strong>Academic</strong><br />
-              <div style="margin-top:1rem;">
-              <a class="card-link" href="https://arxiv.org/abs/2511.00071" target="_blank" rel="noopener noreferrer">
-                arXiv Preprint
-              </a>
-            </p>
+      <section class="about-section">
+        <div class="about-section-header">
+          <div>
+            <h2>Where This Shows Up</h2>
+            <p>The deeper implementations and notes behind the philosophy.</p>
+          </div>
+        </div>
 
-            <!-- NEW: PUBLIC LINKS -->
-            <p class="about-text ">
-              <strong>Public links</strong><br />
-              <div style="margin-top:1rem;">
+        <div class="about-link-grid">
+          <a class="about-link-panel" href="projects.html">
+            <span class="about-link-icon"><i class="fa-solid fa-diagram-project"></i></span>
+            <span>
+              <strong>Project Systems</strong>
+              <small>See PromptLedger, JumpNet, edge AI deployments, and public debugging utilities.</small>
+            </span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a class="about-link-panel" href="blog.html">
+            <span class="about-link-icon"><i class="fa-solid fa-pen-nib"></i></span>
+            <span>
+              <strong>Technical Writing</strong>
+              <small>Read the mistakes, design decisions, project write-ups, and failure modes.</small>
+            </span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a class="about-link-panel" href="misc.html">
+            <span class="about-link-icon"><i class="fa-solid fa-flask-vial"></i></span>
+            <span>
+              <strong>Lab Notes</strong>
+              <small>Explore smaller tools, prototypes, and experiments supporting the larger systems.</small>
+            </span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </section>
 
-              <a class="card-link" href="https://github.com/Ertugrulmutlu" target="_blank" rel="noopener noreferrer">
-                GitHub
-              </a>
-              <span style="display:block;height:0.4rem;"></span>
-              <a class="card-link" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-                LinkedIn
-              </a>
-              <span style="display:block;height:0.4rem;"></span>
-              <a class="card-link" href="https://www.youtube.com/watch?v=HwCR59VuYn4&t=1888s" target="_blank" rel="noopener noreferrer">
-                DataTalks.Club Talk
-              </a>
+      <section class="about-section">
+        <div class="about-section-header">
+          <div>
+            <h2>Outside the Main Work</h2>
+            <p>The same curiosity, just in less formal settings.</p>
+          </div>
+        </div>
+        <article class="about-personal-card about-personal-split">
+          <div>
+            <span class="about-personal-label">Building &amp; Experiments</span>
+            <p>
+              Outside of coursework and research, I still tend to orbit around systems:
+              small electronics projects, microcontrollers, desktop tools, and experiments
+              that start as rough ideas and slowly become usable. I like the moment where
+              software stops being abstract and has to deal with hardware, timing,
+              interfaces, or unpredictable human behavior.
             </p>
+          </div>
+          <div>
+            <span class="about-personal-label">Movement &amp; Timing</span>
+            <p>
+              Away from the keyboard, I enjoy football and volleyball. They are different
+              from engineering, but I like the same thing there too: fast decisions,
+              timing, feedback, and adapting to a changing environment.
+            </p>
+          </div>
+        </article>
+      </section>
 
-            <!-- CONTACT -->
-            <p class="about-text">
-              <strong>Contact</strong><br />
-              <div style="margin-top:1rem;">
-              <a class="card-link" href="mailto:ertugrulmutlu004@gmail.com">
-                Email
-              </a>
-            </p>
-          </aside>
+      <section class="about-section">
+        <div class="about-section-header">
+          <div>
+            <h2>Explore More</h2>
+            <p>Continue into the projects, notes, and public profiles.</p>
+          </div>
+        </div>
+
+        <div class="about-next-grid">
+          <a class="about-link-card" href="projects.html"><i class="fa-solid fa-diagram-project"></i><span><strong>Projects</strong><small>Curated systems and products</small></span></a>
+          <a class="about-link-card" href="blog.html"><i class="fa-solid fa-pen-nib"></i><span><strong>Writing</strong><small>Technical notes and project logs</small></span></a>
+          <a class="about-link-card" href="misc.html"><i class="fa-solid fa-flask-vial"></i><span><strong>Lab</strong><small>Experiments and prototypes</small></span></a>
+          <a class="about-link-card" href="https://github.com/Ertugrulmutlu" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i><span><strong>GitHub</strong><small>Source code and repositories</small></span></a>
+          <a class="about-link-card" href="https://www.linkedin.com/in/ertugrul-mutlu/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i><span><strong>LinkedIn</strong><small>Professional profile and updates</small></span></a>
         </div>
       </section>
     </div>
@@ -186,18 +398,15 @@
 
   <footer class="footer">
     <div class="footer-inner">
-      <div>© <span id="year"></span> Ertuğrul Mutlu.</div>
+      <div>&copy; <span id="year"></span> Ertuğrul Mutlu.</div>
       <div class="footer-links">
         <a href="index.html">Home</a>
         <a href="projects.html">Projects</a>
-        <a href="blog.html">Blog</a>
+        <a href="blog.html">Writing</a>
       </div>
     </div>
   </footer>
 
   <script src="script.js"></script>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>

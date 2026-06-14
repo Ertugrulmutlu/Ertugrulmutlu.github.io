@@ -2,113 +2,288 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Misc â€” ErtuÄŸrul Mutlu</title>
+  <title>Lab — Ertuğrul Mutlu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Misc tools, experiments and demos by ErtuÄŸrul Mutlu." />
+  <meta
+    name="description"
+    content="Small tools, experiments, and prototypes that support larger engineering systems."
+  />
   <link rel="stylesheet" href="styles.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
 </head>
 <body>
   <header class="navbar">
     <div class="nav-inner">
       <div class="nav-left">
-        <div class="nav-logo">ErtuÄŸrul&nbsp;Mutlu</div>
+        <div class="nav-logo">Ertuğrul&nbsp;Mutlu</div>
         <div class="nav-badge">ML &amp; Edge AI</div>
       </div>
 
-      <button class="nav-toggle" aria-label="Toggle navigation">
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="site-navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
 
-      <nav class="nav-links">
+      <nav class="nav-links" id="site-navigation" aria-label="Primary navigation">
         <a href="index.html" class="nav-link">Home</a>
         <a href="projects.html" class="nav-link">Projects</a>
-        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="blog.html" class="nav-link">Writing</a>
         <a href="about.html" class="nav-link">About</a>
-        <a href="misc.html" class="nav-link active">Misc</a>
+        <a href="misc.html" class="nav-link active" aria-current="page">Lab</a>
       </nav>
     </div>
   </header>
 
   <main class="main-wrapper">
     <div class="container">
-      <section class="section">
-        <div class="section-header">
-          <h1 class="section-title">Misc</h1>
-          <div class="section-subtitle">
-            Small tools, experiments and demo links that don&apos;t quite fit elsewhere.
+      <section class="lab-intro">
+        <p class="lab-intro-kicker">Experimental Workbench</p>
+        <h1 class="lab-page-title">Lab</h1>
+        <p class="lab-page-subtitle">Small tools, experiments, and prototypes that support larger systems.</p>
+        <div class="lab-intro-text">
+          <p>
+            Not every useful build becomes a full project. Some tools exist to collect
+            data, inspect datasets, debug behavior, test an idea quickly, or support a
+            larger system. This page is for those smaller experiments.
+          </p>
+          <p>The Lab is where rough ideas can stay rough, as long as they reveal something useful.</p>
+        </div>
+      </section>
+
+      <section class="lab-section">
+        <div class="lab-section-header">
+          <div>
+            <h2>Active Workbench</h2>
+            <p>Tools and experiments that are still useful in my current workflow.</p>
           </div>
         </div>
 
-        <div class="misc-grid">
-          <div class="card">
-            <div class="card-header">
-              <div>
-                <div class="card-title">Color Palette Extractor</div>
-                <div class="card-meta">Streamlit · Computer Vision</div>
-              </div>
+        <div class="lab-workbench-grid">
+          <article class="lab-tool-card">
+            <div class="lab-tool-top">
+              <span class="lab-tool-icon"><i class="fa-solid fa-crop-simple"></i></span>
+              <span class="lab-status-pill">In use</span>
             </div>
-            <p class="card-desc">
-              Upload an image and get a clean, quantized color palette. Handy for designing
-              dashboards, plots and small UIs around ML tools.
-            </p>
-            <div class="tag-row">
-              <span class="tag">Streamlit</span>
-              <span class="tag">Image Processing</span>
-            </div>
-            <div class="card-footer-links" style="margin-top:0.7rem;">
-              <a class="card-link" href="https://real-time-image-color-palette-extractor-apps.streamlit.app" target="_blank" rel="noopener noreferrer">
-                View Demo
-              </a>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-header">
-              <div>
-                <div class="card-title">PromptLedger</div>
-                <div class="card-meta">Python · CLI · SQLite</div>
-              </div>
-            </div>
-            <p class="card-desc">
-              Local-first prompt version control with Git-style history, metadata, labels,
-              and a read-only Streamlit viewer. Keeps everything in a single SQLite file.
-            </p>
-            <div class="tag-row">
-              <span class="tag">Prompt Ops</span>
-              <span class="tag">Versioning</span>
-              <span class="tag">Diffs</span>
-            </div>
-            <div class="card-footer-links" style="margin-top:0.7rem;">
-              <a class="card-link" href="https://github.com/Ertugrulmutlu/promptledger" target="_blank" rel="noopener noreferrer">
-                GitHub
-              </a>
-              <a class="card-link" href="https://pypi.org/project/promptledger/" target="_blank" rel="noopener noreferrer">
-                PyPI
-              </a>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header">
-              <div>
-                <div class="card-title">Dataset Snipping &amp; Recorder GUI</div>
-                <div class="card-meta">Python · Desktop GUI</div>
-              </div>
-            </div>
-            <p class="card-desc">
-              A small desktop app where you can select a screen region, record frames and
-              attach metadata in real time. Built to collect training data for game
-              agents and similar systems.
+            <h3>Dataset Snipping &amp; Recorder GUI</h3>
+            <p>
+              A desktop tool for selecting screen regions, recording frames, attaching
+              metadata, and building datasets for behavior cloning or game-agent experiments.
             </p>
             <div class="tag-row">
               <span class="tag">Data Collection</span>
               <span class="tag">GUI</span>
+              <span class="tag">Behavior Cloning</span>
+              <span class="tag">Debugging</span>
             </div>
-            <div class="card-footer-links" style="margin-top:0.7rem;">
+            <div class="card-footer-links">
               <a class="card-link" href="https://github.com/Ertugrulmutlu/-Data-Scrap-Tool-Advanced-Dataset-Viewer" target="_blank" rel="noopener noreferrer">
-                Demo (local only)
+                <i class="fa-brands fa-github"></i> GitHub
               </a>
             </div>
+          </article>
+
+          <article class="lab-tool-card">
+            <div class="lab-tool-top">
+              <span class="lab-tool-icon"><i class="fa-solid fa-code-compare"></i></span>
+              <span class="lab-status-pill">Public tool</span>
+            </div>
+            <h3>PromptLedger</h3>
+            <p>
+              A local-first prompt versioning tool that helps inspect and compare prompt
+              changes while building LLM workflows.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Prompt Ops</span>
+              <span class="tag">SQLite</span>
+              <span class="tag">Versioning</span>
+              <span class="tag">Local-first</span>
+            </div>
+            <div class="card-footer-links">
+              <a class="card-link" href="https://github.com/Ertugrulmutlu/promptledger" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+              <a class="card-link" href="https://pypi.org/project/promptledger/" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-python"></i> PyPI
+              </a>
+            </div>
+          </article>
+
+          <article class="lab-tool-card">
+            <div class="lab-tool-top">
+              <span class="lab-tool-icon"><i class="fa-solid fa-palette"></i></span>
+              <span class="lab-status-pill">Utility</span>
+            </div>
+            <h3>Color Palette Extractor</h3>
+            <p>
+              A small Streamlit app for extracting clean color palettes from images, useful
+              when designing dashboards, plots, and small ML interfaces.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Streamlit</span>
+              <span class="tag">Image Processing</span>
+              <span class="tag">UI Tooling</span>
+            </div>
+            <div class="card-footer-links">
+              <a class="card-link" href="https://real-time-image-color-palette-extractor-apps.streamlit.app" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="lab-section">
+        <div class="lab-section-header">
+          <div>
+            <h2>Released from the Lab</h2>
+            <p>Small experiments that grew into public tools.</p>
           </div>
+        </div>
+
+        <div class="lab-released-grid">
+          <article class="lab-released-card">
+            <div class="lab-tool-top">
+              <div>
+                <h3>OpenAnima</h3>
+                <p class="lab-release-category">Desktop visual companion</p>
+              </div>
+              <span class="lab-release-status">Public release</span>
+            </div>
+            <p>
+              A lightweight desktop visual companion and animated overlay system that
+              started as a small alternative experiment and grew into a public release.
+            </p>
+            <div class="lab-release-highlights">
+              <span>500+ downloads</span>
+              <span>Microsoft Store</span>
+              <span>Open source</span>
+            </div>
+            <div class="card-footer-links">
+              <a class="card-link" href="https://ertugrulmutlu.github.io/OpenAnima/" target="_blank" rel="noopener noreferrer">Website</a>
+              <a class="card-link" href="https://github.com/Ertugrulmutlu/OpenAnima" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a class="card-link" href="https://apps.microsoft.com/detail/9n3hp2wxkxlg?hl=en-us&amp;gl=DE&amp;ocid=pdpshare" target="_blank" rel="noopener noreferrer">Microsoft Store</a>
+            </div>
+          </article>
+
+          <article class="lab-released-card">
+            <div class="lab-tool-top">
+              <div>
+                <h3>MediaRecorder Lite</h3>
+                <p class="lab-release-category">Vertical screen recorder</p>
+              </div>
+              <span class="lab-release-status">Public release</span>
+            </div>
+            <p>
+              A focused vertical screen recorder for creators making short-form content.
+              It started as a small practical utility around fast capture-area selection
+              and 9:16 export.
+            </p>
+            <div class="lab-release-highlights">
+              <span>Microsoft Store</span>
+              <span>Creator tool</span>
+              <span>9:16 export</span>
+            </div>
+            <div class="card-footer-links">
+              <a class="card-link" href="https://apps.microsoft.com/detail/9nlb7l766q5m?hl=en-US&amp;gl=DE" target="_blank" rel="noopener noreferrer">Microsoft Store</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="lab-section">
+        <div class="lab-section-header">
+          <div>
+            <h2>Tools Behind the Projects</h2>
+            <p>Small utilities that make larger systems easier to build, inspect, or debug.</p>
+          </div>
+        </div>
+
+        <div class="lab-concept-grid">
+          <article class="lab-concept-card">
+            <span class="direction-icon"><i class="fa-solid fa-database"></i></span>
+            <h3>Data Collection</h3>
+            <p>Before a model can behave reliably, the data pipeline needs to be inspectable. Screen recorders, snipping tools, and dataset viewers help control what the model sees.</p>
+          </article>
+          <article class="lab-concept-card">
+            <span class="direction-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></span>
+            <h3>Debugging &amp; Observability</h3>
+            <p>Logs, visual viewers, metadata, and inspection tools make failures easier to understand after they happen.</p>
+          </article>
+          <article class="lab-concept-card">
+            <span class="direction-icon"><i class="fa-solid fa-laptop-code"></i></span>
+            <h3>Local-first Experimentation</h3>
+            <p>Small local tools are easier to iterate on, easier to inspect, and easier to connect to real workflows.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="lab-section">
+        <div class="lab-section-header">
+          <div>
+            <h2>Small Experiments</h2>
+            <p>Prototype areas that support the workbench without pretending to be finished products.</p>
+          </div>
+        </div>
+
+        <div class="lab-experiment-list">
+          <article class="lab-experiment-item">
+            <span class="lab-experiment-state">Prototype area</span>
+            <div>
+              <h3>Dataset Inspection Helpers</h3>
+              <p>Small views and checks for understanding labels, metadata, and collection quality before training.</p>
+            </div>
+          </article>
+          <article class="lab-experiment-item">
+            <span class="lab-experiment-state">Prototype area</span>
+            <div>
+              <h3>Local Prompt Workflow Utilities</h3>
+              <p>Focused helpers for comparing prompt behavior and making local experiments easier to reproduce.</p>
+            </div>
+          </article>
+          <article class="lab-experiment-item">
+            <span class="lab-experiment-state">Prototype area</span>
+            <div>
+              <h3>ML Debugging Helpers</h3>
+              <p>Quick tools for exposing weak logging, unclear interfaces, and missing inspection steps.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="lab-section">
+        <div class="lab-section-header">
+          <div>
+            <h2>Prototype Notes</h2>
+            <p>Why this page exists.</p>
+          </div>
+        </div>
+        <article class="lab-notes-card">
+          <p>
+            Some projects are too small for the main Projects page, but too useful to
+            disappear. I keep them here because small tools often reveal bottlenecks: bad
+            labels, weak logging, unclear interfaces, unstable prompts, or missing
+            inspection steps.
+          </p>
+          <blockquote class="lab-notes-quote">
+            A small tool is often the fastest way to understand a large system failure.
+          </blockquote>
+        </article>
+      </section>
+
+      <section class="lab-section">
+        <div class="lab-section-header">
+          <div>
+            <h2>Explore More</h2>
+            <p>Move from the workbench into complete systems, notes, and source code.</p>
+          </div>
+        </div>
+        <div class="lab-next-grid">
+          <a class="lab-link-card" href="projects.html"><i class="fa-solid fa-diagram-project"></i><span><strong>Projects</strong><small>Complete systems and products</small></span></a>
+          <a class="lab-link-card" href="blog.html"><i class="fa-solid fa-pen-nib"></i><span><strong>Writing</strong><small>Build logs and technical notes</small></span></a>
+          <a class="lab-link-card" href="about.html"><i class="fa-solid fa-compass-drafting"></i><span><strong>About</strong><small>The philosophy behind the work</small></span></a>
+          <a class="lab-link-card" href="https://github.com/Ertugrulmutlu" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i><span><strong>GitHub</strong><small>Repositories and source code</small></span></a>
         </div>
       </section>
     </div>
@@ -116,19 +291,15 @@
 
   <footer class="footer">
     <div class="footer-inner">
-      <div>Â© <span id="year"></span> ErtuÄŸrul Mutlu.</div>
+      <div>&copy; <span id="year"></span> Ertuğrul Mutlu.</div>
       <div class="footer-links">
         <a href="index.html">Home</a>
         <a href="projects.html">Projects</a>
-        <a href="blog.html">Blog</a>
+        <a href="blog.html">Writing</a>
       </div>
     </div>
   </footer>
 
   <script src="script.js"></script>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
-

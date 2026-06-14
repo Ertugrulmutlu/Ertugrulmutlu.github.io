@@ -4,9 +4,11 @@
   <meta charset="UTF-8" />
   <title>Projects — Ertuğrul Mutlu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Selected ML & Edge AI projects by Ertuğrul Mutlu." />
+  <meta
+    name="description"
+    content="Selected products, AI systems, research prototypes, and engineering experiments by Ertuğrul Mutlu."
+  />
   <link rel="stylesheet" href="styles.css" />
-  <!-- Icons (same as index.html) -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -20,792 +22,487 @@
         <div class="nav-badge">ML &amp; Edge AI</div>
       </div>
 
-      <button class="nav-toggle" aria-label="Toggle navigation">
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="site-navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
 
-      <nav class="nav-links">
+      <nav class="nav-links" id="site-navigation" aria-label="Primary navigation">
         <a href="index.html" class="nav-link">Home</a>
-        <a href="projects.html" class="nav-link active">Projects</a>
-        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="projects.html" class="nav-link active" aria-current="page">Projects</a>
+        <a href="blog.html" class="nav-link">Writing</a>
         <a href="about.html" class="nav-link">About</a>
-        <a href="misc.html" class="nav-link">Misc</a>
+        <a href="misc.html" class="nav-link">Lab</a>
       </nav>
     </div>
   </header>
 
-  <main class="main-wrapper">
+  <main class="main-wrapper" id="top">
     <div class="container">
-      <section class="section">
-        <div class="section-header">
-          <h1 class="section-title">Projects</h1>
-          <div class="section-subtitle">
-            A curated selection of ML systems, agents, and edge deployments.
+      <section class="projects-intro">
+        <div>
+          <h1 class="projects-page-title">Projects</h1>
+          <p class="projects-page-subtitle">
+            Selected products, AI systems, research prototypes, and experiments &mdash;
+            organized by what they are meant to show.
+          </p>
+        </div>
+        <p class="projects-intro-text">
+          I build across practical AI systems, desktop tools, edge deployments, and
+          experimental machine learning. This page highlights the projects that best
+          represent those directions, then keeps smaller experiments in a compact archive.
+        </p>
+      </section>
+
+      <nav class="project-nav" aria-label="Project sections">
+        <a href="#top">All</a>
+        <a href="#selected-work">Selected</a>
+        <a href="#public-products">Products</a>
+        <a href="#ai-systems">AI Systems</a>
+        <a href="#experiments-tools">Experiments</a>
+        <a href="#archive">Archive</a>
+      </nav>
+
+      <section class="project-section" id="selected-work">
+        <div class="project-section-header">
+          <div>
+            <h2>Selected Work</h2>
+            <p>The few projects that best represent my current direction.</p>
           </div>
+          <a class="project-section-back" href="#top">Back to top</a>
         </div>
 
-        <!-- FILTER BAR (kategori bazlı) -->
-        <div class="tag-row project-filters" style="margin-bottom: 1.25rem;">
-          <button class="tag active" data-filter="all">All</button>
-          <button class="tag" data-filter="vision">Machine Vision</button>
-          <button class="tag" data-filter="edge">Edge AI &amp; Embedded</button>
-          <button class="tag" data-filter="gen">Generative Models</button>
-          <button class="tag" data-filter="tools">Tools &amp; Apps (Data)</button>
-          <button class="tag" data-filter="ml">Applied ML &amp; RL</button>
-          <button class="tag" data-filter="algo">Competitive Programming / Algorithms</button>
-          <button class="tag" data-filter="systems">Systems &amp; Embedded</button>
-        </div>
-
-        <div class="card-grid card-grid-2 card-grid-2-desktop">
-          <!-- ======================= Machine Vision ======================= -->
-
-          <!-- JumpNet -->
-          <div class="card" data-category="vision">
-            <div class="card-header">
+        <div class="showcase-grid">
+          <article class="showcase-card showcase-card-large">
+            <div class="showcase-card-top">
               <div>
-                <div class="card-title">JumpNet &mdash; Vision-Based Game Agent</div>
-                <div class="project-meta">
-                  Computer Vision · Imitation Learning · Python · PyTorch
-                </div>
+                <h3 class="showcase-title">OpenAnima</h3>
+                <p class="showcase-meta">Desktop App &middot; Creative Tool &middot; Local-first</p>
               </div>
+              <span class="project-status-pill">Public Product</span>
             </div>
-            <p class="card-desc">
-              Real-time visual decision system for a one-button platformer (~18 ms, ~87% accuracy).
-              Combines a CNN backbone with dual heads for jump classification and press-duration regression.
+            <p class="showcase-desc">
+              A lightweight desktop visual companion and local-first animated overlay system.
             </p>
+            <div class="project-highlights">
+              <span class="project-highlight">500+ downloads</span>
+              <span class="project-highlight">Microsoft Store</span>
+              <span class="project-highlight">Open source</span>
+            </div>
             <div class="tag-row">
-              <span class="tag">CNN</span>
+              <span class="tag">Desktop App</span>
+              <span class="tag">Creative Tool</span>
+              <span class="tag">Local-first</span>
+            </div>
+            <div class="project-impact-row">
+              <a class="card-link" href="https://github.com/Ertugrulmutlu/OpenAnima" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+              <a class="card-link" href="https://ertugrulmutlu.github.io/OpenAnima/" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Website
+              </a>
+              <a class="card-link" href="https://apps.microsoft.com/detail/9n3hp2wxkxlg?hl=en-us&amp;gl=DE&amp;ocid=pdpshare" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-microsoft"></i> Store
+              </a>
+            </div>
+          </article>
+
+          <article class="showcase-card">
+            <div class="showcase-card-top">
+              <div>
+                <h3 class="showcase-title">JumpNet &mdash; Vision-Based Game Agent</h3>
+                <p class="showcase-meta">Computer Vision &middot; Real-time Inference &middot; PyTorch</p>
+              </div>
+              <span class="project-status-pill">Computer Vision</span>
+            </div>
+            <p class="showcase-desc">
+              A real-time visual agent where timing, data collection, and deployment
+              behavior mattered as much as offline model metrics.
+            </p>
+            <div class="project-highlights">
+              <span class="project-highlight">Real-time inference</span>
+              <span class="project-highlight">Timing</span>
+              <span class="project-highlight">Data tooling</span>
+            </div>
+            <div class="tag-row">
+              <span class="tag">Computer Vision</span>
               <span class="tag">Imitation Learning</span>
               <span class="tag">Game AI</span>
-              <span class="tag">Python</span>
             </div>
-            <div class="card-footer-links" style="margin-top:0.7rem;">
-              <a
-                class="card-link"
-                href="https://github.com/Ertugrulmutlu/JumpNet"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-github"></i>
-                Code
+            <div class="project-impact-row">
+              <a class="card-link" href="https://github.com/Ertugrulmutlu/JumpNet" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i> GitHub
               </a>
-              <a
-                class="card-link"
-                href="https://dev.to/ertugrulmutlu/jumpnet-part-1-from-raw-gameplay-to-labeled-intelligence-building-the-data-foundation-for-2e2f"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-dev"></i>
-                Blog
+              <a class="card-link" href="https://dev.to/ertugrulmutlu/jumpnet-part-1-from-raw-gameplay-to-labeled-intelligence-building-the-data-foundation-for-2e2f" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Write-up
               </a>
             </div>
-          </div>
+          </article>
 
-          <!-- Face Landmarks Detection -->
-          <div class="card" data-category="vision">
-            <div class="card-header">
+          <article class="showcase-card">
+            <div class="showcase-card-top">
               <div>
-                <div class="card-title">Face Landmarks Detection (OpenCV DNN + Facemark)</div>
-                <div class="project-meta">
-                  Computer Vision · Landmarks · Python · OpenCV
-                </div>
+                <h3 class="showcase-title">PromptLedger</h3>
+                <p class="showcase-meta">Python &middot; CLI &middot; SQLite &middot; Streamlit</p>
               </div>
+              <span class="project-status-pill">Developer Tool</span>
             </div>
-            <p class="card-desc">
-              Real-time 68-point facial landmark tracker built with OpenCV DNN face detection and
-              Facemark LBF, extended with EMA smoothing and per-frame CSV logging for analysis.
+            <p class="showcase-desc">
+              Local-first prompt version control with Git-style diffs, labels, metadata,
+              and a SQLite backend.
             </p>
+            <div class="project-highlights">
+              <span class="project-highlight">PyPI package</span>
+              <span class="project-highlight">SQLite ledger</span>
+              <span class="project-highlight">Dev.to write-up</span>
+            </div>
             <div class="tag-row">
-              <span class="tag">OpenCV</span>
-              <span class="tag">Facemark</span>
-              <span class="tag">EMA</span>
-              <span class="tag">CSV</span>
+              <span class="tag">Prompt Ops</span>
+              <span class="tag">Versioning</span>
+              <span class="tag">Developer Tools</span>
             </div>
-            <div class="card-footer-links" style="margin-top:0.7rem;">
-              <a
-                class="card-link"
-                href="https://github.com/Ertugrulmutlu/-Face-Landmark-Tracker"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-github"></i>
-                Code
+            <div class="project-impact-row">
+              <a class="card-link" href="https://github.com/Ertugrulmutlu/promptledger" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i> GitHub
               </a>
-              <a
-                class="card-link"
-                href="https://dev.to/ertugrulmutlu/-face-landmarks-detection-opencv-dnn-facemark-440d"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-dev"></i>
-                Blog
+              <a class="card-link" href="https://pypi.org/project/promptledger/" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-python"></i> PyPI
               </a>
-              <a
-                class="card-link"
-                href="https://www.youtube.com/watch?v=jQmMLPD_EUw"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-solid fa-play"></i>
-                Demo
+              <a class="card-link" href="https://dev.to/ertugrulmutlu/promptledger-local-first-prompt-version-control-2pk0" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-dev"></i> Write-up
               </a>
             </div>
-          </div>
+          </article>
 
-          <!-- ======================= Edge AI & Embedded ======================= -->
-
-          <!-- Edge AI Sound Classifier -->
-          <div class="card" data-category="edge">
-            <div class="card-header">
+          <article class="showcase-card">
+            <div class="showcase-card-top">
               <div>
-                <div class="card-title">Edge AI Sound Classifier on Raspberry Pi Pico</div>
-                <div class="project-meta">
-                  Edge AI · TinyML · Audio · C++ / Python
-                </div>
+                <h3 class="showcase-title">Edge AI Sound Classifier</h3>
+                <p class="showcase-meta">TinyML &middot; Audio &middot; Raspberry Pi Pico</p>
               </div>
+              <span class="project-status-pill">Edge AI</span>
             </div>
-            <p class="card-desc">
-              End-to-end TinyML pipeline on RP2040 that classifies short audio into
-              <em>baby cry, doorbell, smoke alarm, background</em>. 33-dim features
-              (Goertzel bands + spectral stats), multinomial Logistic Regression (~87%),
-              and C++ firmware with real-time z-score, softmax, and hysteresis FSM.
+            <p class="showcase-desc">
+              An end-to-end TinyML audio classifier running on Raspberry Pi Pico and
+              RP2040-class hardware.
             </p>
+            <div class="project-highlights">
+              <span class="project-highlight">On-device inference</span>
+              <span class="project-highlight">C++ firmware</span>
+              <span class="project-highlight">~87% accuracy</span>
+            </div>
             <div class="tag-row">
               <span class="tag">TinyML</span>
               <span class="tag">Audio</span>
-              <span class="tag">Raspberry Pi Pico</span>
-              <span class="tag">Logistic Regression</span>
+              <span class="tag">Embedded AI</span>
             </div>
-            <div class="card-footer-links" style="margin-top:0.7rem;">
-              <a
-                class="card-link"
-                href="https://github.com/Ertugrulmutlu/Edge-AI-Sound-Classifier-on-Raspberry-Pi-Pico"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-github"></i>
-                Code
+            <div class="project-impact-row">
+              <a class="card-link" href="https://github.com/Ertugrulmutlu/Edge-AI-Sound-Classifier-on-Raspberry-Pi-Pico" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i> GitHub
               </a>
-              <a
-                class="card-link"
-                href="https://dev.to/ertugrulmutlu/building-an-edge-ai-sound-classifier-part-1-collecting-and-preparing-the-dataset-moo"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-dev"></i>
-                Blog
+              <a class="card-link" href="https://dev.to/ertugrulmutlu/building-an-edge-ai-sound-classifier-part-1-collecting-and-preparing-the-dataset-moo" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-dev"></i> Write-up
               </a>
             </div>
-          </div>
+          </article>
+        </div>
+      </section>
 
-          <!-- Pico Trend Alarm -->
-          <div class="card" data-category="edge">
-            <div class="card-header">
+      <section class="project-section" id="public-products">
+        <div class="project-section-header">
+          <div>
+            <h2>Public Products</h2>
+            <p>Desktop software packaged and released for real users.</p>
+          </div>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="showcase-card-top">
               <div>
-                <div class="card-title">Pico Edge Trend Alarm (RP2040)</div>
-                <div class="project-meta">
-                  Time Series · On-device Inference · C++ / Python
-                </div>
+                <h3>OpenAnima</h3>
+                <p class="product-category">Desktop visual companion</p>
               </div>
+              <span class="project-status-pill">Released</span>
             </div>
-            <p class="card-desc">
-              Edge AI pipeline for detecting workload-induced heating trends on the Pico:
-              data logging firmware, Python logger, rolling OLS slope features, Logistic Regression,
-              and C++ inference with oversampled ADC, slope buffering, and hysteresis/hold FSM.
+            <p>
+              A lightweight desktop visual companion and animated overlay experience. It
+              started as a small alternative project and grew into a public release across
+              GitHub, itch.io, and the Microsoft Store.
             </p>
-            <div class="tag-row">
-              <span class="tag">Time Series</span>
-              <span class="tag">Edge AI</span>
-              <span class="tag">Pico SDK</span>
-              <span class="tag">TinyML</span>
+            <div class="project-highlights">
+              <span class="project-highlight">500+ downloads</span>
+              <span class="project-highlight">Public release</span>
+              <span class="project-highlight">Open source</span>
             </div>
-            <div class="card-footer-links" style="margin-top:0.7rem;">
-              <a
-                class="card-link"
-                href="https://github.com/Ertugrulmutlu/trend-alarm-pico"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-github"></i>
-                Code
-              </a>
-              <a
-                class="card-link"
-                href="https://dev.to/ertugrulmutlu/part-1-data-gathering-on-raspberry-pi-pico-for-edge-ai-trend-alarm-1ca"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-dev"></i>
-                Blog
-              </a>
-
+            <div class="card-footer-links">
+              <a class="card-link" href="https://github.com/Ertugrulmutlu/OpenAnima" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a class="card-link" href="https://ertugrulmutlu.github.io/OpenAnima/" target="_blank" rel="noopener noreferrer">Website</a>
+              <a class="card-link" href="https://apps.microsoft.com/detail/9n3hp2wxkxlg?hl=en-us&amp;gl=DE&amp;ocid=pdpshare" target="_blank" rel="noopener noreferrer">Microsoft Store</a>
             </div>
-          </div>
+          </article>
 
-          <!-- Mini SCADA Console -->
-          <div class="card" data-category="systems">
-            <div class="card-header">
+          <article class="product-card">
+            <div class="showcase-card-top">
               <div>
-                <div class="card-title">Mini SCADA Console (Raspberry Pi Pico, C++)</div>
-                <div class="project-meta">
-                  Embedded · RP2040 · USB-CDC · C++
-                </div>
+                <h3>MediaRecorder Lite</h3>
+                <p class="product-category">Creator screen recorder</p>
               </div>
+              <span class="project-status-pill">Released</span>
             </div>
-            <p class="card-desc">
-              USB-CDC command console simulating an industrial field device: internal temperature
-              telemetry via ADC4, logging, and LED control. Designed to mimic SCADA-style interaction
-              via a serial terminal (PuTTY @115200).
+            <p>
+              A lightweight desktop screen recorder for creators producing vertical videos
+              for TikTok, Instagram Reels, and YouTube Shorts. It focuses on fast
+              capture-area selection, simple recording, and 9:16 export.
             </p>
-            <div class="tag-row">
-              <span class="tag">Pico SDK</span>
-              <span class="tag">USB-CDC</span>
-              <span class="tag">ADC</span>
-              <span class="tag">CMake/Ninja</span>
+            <div class="project-highlights">
+              <span class="project-highlight">Microsoft Store</span>
+              <span class="project-highlight">Creator tool</span>
+              <span class="project-highlight">9:16 export</span>
             </div>
-            <div class="card-footer-links" style="margin-top:0.7rem;">
-              <a
-                class="card-link"
-                href="https://github.com/Ertugrulmutlu/mini_scada"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-github"></i>
-                Code
-              </a>
-              <a
-                class="card-link"
-                href="https://dev.to/ertugrulmutlu/building-a-mini-scada-console-on-raspberry-pi-pico-c-50bg"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-dev"></i>
-                Blog
+            <div class="card-footer-links">
+              <a class="card-link" href="https://apps.microsoft.com/detail/9nlb7l766q5m?hl=en-US&amp;gl=DE" target="_blank" rel="noopener noreferrer">
+                Microsoft Store
               </a>
             </div>
-          </div>
+          </article>
 
-          <!-- ======================= Generative Models ======================= -->
-
-          <!-- VAE vs VQ-VAE -->
-          <div class="card" data-category="gen">
-            <div class="card-header">
+          <article class="product-card">
+            <div class="showcase-card-top">
               <div>
-                <div class="card-title">VAE vs VQ-VAE Face Compression</div>
-                <div class="project-meta">
-                  Representation Learning · Image Compression · PyTorch
-                </div>
+                <h3>PromptLedger</h3>
+                <p class="product-category">Local-first developer tool</p>
               </div>
+              <span class="project-status-pill">PyPI</span>
             </div>
-            <p class="card-desc">
-              A side-by-side comparison between continuous and discrete latent spaces for
-              compressing face images. Evaluates reconstruction quality, latent structure,
-              and failure modes of VAE vs VQ-VAE architectures on the same dataset.
+            <p>
+              A local-first prompt version control tool for tracking prompt changes, diffs,
+              labels, and metadata in a portable SQLite file.
             </p>
-            <div class="tag-row">
-              <span class="tag">VAE</span>
-              <span class="tag">VQ-VAE</span>
-              <span class="tag">Face Dataset</span>
-              <span class="tag">PyTorch</span>
+            <div class="project-highlights">
+              <span class="project-highlight">PyPI</span>
+              <span class="project-highlight">CLI</span>
+              <span class="project-highlight">SQLite</span>
             </div>
-            <div class="card-footer-links" style="margin-top:0.7rem;">
-              <a
-                class="card-link"
-                href="https://github.com/Ertugrulmutlu/VQVAE-and-VAE"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-github"></i>
-                Code
-              </a>
-              <a
-                class="card-link"
-                href="https://dev.to/ertugrulmutlu/compressing-human-faces-with-vae-vs-vq-vae-a-deep-dive-into-autoencoder-design-j59"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-dev"></i>
-                Blog
-              </a>
+            <div class="card-footer-links">
+              <a class="card-link" href="https://github.com/Ertugrulmutlu/promptledger" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a class="card-link" href="https://pypi.org/project/promptledger/" target="_blank" rel="noopener noreferrer">PyPI</a>
+              <a class="card-link" href="https://dev.to/ertugrulmutlu/promptledger-local-first-prompt-version-control-2pk0" target="_blank" rel="noopener noreferrer">Write-up</a>
             </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="project-section" id="ai-systems">
+        <div class="project-section-header">
+          <div>
+            <h2>AI Systems &amp; Research</h2>
+            <p>Research-oriented and system-level AI projects.</p>
           </div>
+        </div>
 
-          <!-- Conditional GAN -->
-          <div class="card" data-category="gen">
-            <div class="card-header">
-              <div>
-                <div class="card-title">Conditional GAN &mdash; Sketch Generator</div>
-                <div class="project-meta">
-                  Generative Models · cGAN · PyTorch
-                </div>
-              </div>
-            </div>
-            <p class="card-desc">
-              A conditional GAN trained on Berlin sketch drawings, generating class-specific
-              sketches from a discrete label input. Includes improved training tricks,
-              loss tracking, checkpointing and a small GUI for interactive sampling.
-            </p>
+        <div class="ai-project-grid">
+          <article class="ai-project-card">
+            <h3>Edge AI Sound Classifier</h3>
+            <p class="project-meta">TinyML &middot; Audio &middot; C++ / Python</p>
+            <p>An RP2040 audio classification pipeline spanning feature extraction, training, and real-time firmware inference.</p>
             <div class="tag-row">
-              <span class="tag">cGAN</span>
-              <span class="tag">Computer Vision</span>
-              <span class="tag">Generative</span>
+              <span class="tag">TinyML</span><span class="tag">Audio</span><span class="tag">Pico</span><span class="tag">Embedded AI</span>
             </div>
-            <div class="card-footer-links" style="margin-top:0.7rem;">
-              <a
-                class="card-link"
-                href="https://github.com/Ertugrulmutlu/ConditionalGAN-SketchGeneration"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-github"></i>
-                Code
-              </a>
-              <a
-                class="card-link"
-                href="https://dev.to/ertugrulmutlu/a-cgan-story-three-attempts-and-an-incomplete-ending-2a1b"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-dev"></i>
-                Blog
-              </a>
+            <div class="card-footer-links">
+              <a class="card-link" href="https://github.com/Ertugrulmutlu/Edge-AI-Sound-Classifier-on-Raspberry-Pi-Pico" target="_blank" rel="noopener noreferrer">Code</a>
+              <a class="card-link" href="https://dev.to/ertugrulmutlu/building-an-edge-ai-sound-classifier-part-1-collecting-and-preparing-the-dataset-moo" target="_blank" rel="noopener noreferrer">Write-up</a>
             </div>
-          </div>
+          </article>
 
-          <!-- ======================= Tools & Apps (Data) ======================= -->
-
-          <!-- PDF Summary Chatbot -->
-          <div class="card" data-category="tools">
-            <div class="card-header">
-              <div>
-                <div class="card-title">PDF Summary Chatbot (Local LLM)</div>
-                <div class="project-meta">
-                  Local LLM · RAG · Tools
-                </div>
-              </div>
-            </div>
-            <p class="card-desc">
-              A local, privacy-friendly assistant that indexes PDFs, extracts key sections,
-              and lets you query documents using a lightweight LLM. Includes chunking,
-              similarity search and answer attribution with references to the source pages.
-            </p>
+          <article class="ai-project-card">
+            <h3>JumpNet &mdash; Vision-Based Game Agent</h3>
+            <p class="project-meta">Computer Vision &middot; Imitation Learning &middot; PyTorch</p>
+            <p>A real-time visual agent using a CNN with jump classification and press-duration regression heads.</p>
             <div class="tag-row">
-              <span class="tag">RAG</span>
-              <span class="tag">Local Inference</span>
-              <span class="tag">Python</span>
+              <span class="tag">Computer Vision</span><span class="tag">Imitation Learning</span><span class="tag">Game AI</span>
             </div>
-            <div class="card-footer-links" style="margin-top:0.7rem;">
-              <a
-                class="card-link"
-                href="https://github.com/Ertugrulmutlu/PDF-Summary"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-github"></i>
-                Code
-              </a>
-              <a
-                class="card-link"
-                href="https://dev.to/ertugrulmutlu/building-a-local-pdf-summarizer-with-llms-in-under-24-hours-2ijn"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-dev"></i>
-                Blog
-              </a>
+            <div class="card-footer-links">
+              <a class="card-link" href="https://github.com/Ertugrulmutlu/JumpNet" target="_blank" rel="noopener noreferrer">Code</a>
+              <a class="card-link" href="https://dev.to/ertugrulmutlu/jumpnet-part-1-from-raw-gameplay-to-labeled-intelligence-building-the-data-foundation-for-2e2f" target="_blank" rel="noopener noreferrer">Write-up</a>
             </div>
-          </div>
+          </article>
 
-          <!-- PromptLedger -->
-          <div class="card" data-category="tools">
-            <div class="card-header">
-              <div>
-                <div class="card-title">PromptLedger &mdash; Prompt Version Control</div>
-                <div class="project-meta">
-                  Prompt Ops / CLI / SQLite / Python
-                </div>
-              </div>
-            </div>
-            <p class="card-desc">
-              Local-first prompt change ledger with Git-style diffs, metadata, labels, and a
-              read-only Streamlit viewer. Stores history in a single SQLite file and supports
-              add/get/list/diff/export workflows.
-            </p>
+          <article class="ai-project-card">
+            <h3>VAE vs VQ-VAE Face Compression</h3>
+            <p class="project-meta">Generative Models &middot; Representation Learning &middot; PyTorch</p>
+            <p>A controlled comparison of continuous and discrete latent spaces, reconstruction quality, and failure modes.</p>
             <div class="tag-row">
-              <span class="tag">Versioning</span>
-              <span class="tag">Diffs</span>
-              <span class="tag">SQLite</span>
-              <span class="tag">Streamlit</span>
+              <span class="tag">VAE</span><span class="tag">VQ-VAE</span><span class="tag">Compression</span>
             </div>
-            <div class="card-footer-links" style="margin-top:0.7rem;">
-              <a
-                class="card-link"
-                href="https://github.com/Ertugrulmutlu/promptledger"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-github"></i>
-                Code
-              </a>
-              <a
-                class="card-link"
-                href="https://dev.to/ertugrulmutlu/promptledger-local-first-prompt-version-control-2pk0"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-dev"></i>
-                Blog
-              </a>
-              <a
-                class="card-link"
-                href="https://pypi.org/project/promptledger/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-python"></i>
-                PyPI
-              </a>
+            <div class="card-footer-links">
+              <a class="card-link" href="https://github.com/Ertugrulmutlu/VQVAE-and-VAE" target="_blank" rel="noopener noreferrer">Code</a>
+              <a class="card-link" href="https://dev.to/ertugrulmutlu/compressing-human-faces-with-vae-vs-vq-vae-a-deep-dive-into-autoencoder-design-j59" target="_blank" rel="noopener noreferrer">Write-up</a>
             </div>
-          </div>
+          </article>
 
-          <!-- Advanced Dataset Viewer -->
-          <div class="card" data-category="tools">
-            <div class="card-header">
-              <div>
-                <div class="card-title">Advanced Dataset Viewer / Data Recorder</div>
-                <div class="project-meta">
-                  Tooling · Visualization · Python / GUI
-                </div>
-              </div>
-            </div>
-            <p class="card-desc">
-              A GUI-based tool for inspecting large datasets, recording new examples, and
-              visualizing labels or metadata. Designed for debugging ML agents and
-              understanding real-world data distributions before training.
-            </p>
+          <article class="ai-project-card">
+            <h3>Conditional GAN &mdash; Sketch Generator</h3>
+            <p class="project-meta">Generative Models &middot; cGAN &middot; PyTorch</p>
+            <p>A class-conditioned sketch generator with training diagnostics, checkpoints, and a small sampling GUI.</p>
             <div class="tag-row">
-              <span class="tag">Data Tooling</span>
-              <span class="tag">Visualization</span>
-              <span class="tag">Python</span>
+              <span class="tag">cGAN</span><span class="tag">Computer Vision</span><span class="tag">Generative AI</span>
             </div>
-            <div class="card-footer-links" style="margin-top:0.7rem;">
-              <a
-                class="card-link"
-                href="https://github.com/Ertugrulmutlu/-Data-Scrap-Tool-Advanced-Dataset-Viewer"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-github"></i>
-                Code
-              </a>
-              <a
-                class="card-link"
-                href="https://dev.to/ertugrulmutlu/modular-snip-recorder-a-data-collection-tool-for-behavior-cloning-12-5di8"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-dev"></i>
-                Blog
-              </a>
+            <div class="card-footer-links">
+              <a class="card-link" href="https://github.com/Ertugrulmutlu/ConditionalGAN-SketchGeneration" target="_blank" rel="noopener noreferrer">Code</a>
+              <a class="card-link" href="https://dev.to/ertugrulmutlu/a-cgan-story-three-attempts-and-an-incomplete-ending-2a1b" target="_blank" rel="noopener noreferrer">Write-up</a>
             </div>
-          </div>
+          </article>
 
-          <!-- Real-Time Color Palette Extractor -->
-          <div class="card" data-category="tools">
-            <div class="card-header">
-              <div>
-                <div class="card-title">Real-Time Image Color Palette Extractor</div>
-                <div class="project-meta">
-                  Streamlit · OpenCV · k-means · Color Science
-                </div>
-              </div>
-            </div>
-            <p class="card-desc">
-              Streamlit app extracting dominant colors from images in real-time using k-means,
-              CIE LAB space, and ΔE2000 distance. Designed for designers and ML preprocessing workflows.
-            </p>
+          <article class="ai-project-card">
+            <h3>Pico Edge Trend Alarm</h3>
+            <p class="project-meta">Time Series &middot; On-device Inference &middot; C++ / Python</p>
+            <p>A temperature-trend detector combining rolling slope features, logistic regression, and embedded inference.</p>
             <div class="tag-row">
-              <span class="tag">OpenCV</span>
-              <span class="tag">k-means</span>
-              <span class="tag">CIE LAB</span>
-              <span class="tag">ΔE2000</span>
+              <span class="tag">Time Series</span><span class="tag">Edge AI</span><span class="tag">Pico SDK</span><span class="tag">TinyML</span>
             </div>
-            <div class="card-footer-links" style="margin-top:0.7rem;">
-              <a
-                class="card-link"
-                href="https://github.com/Ertugrulmutlu/Real-time-Image-Color-Palette-Extractor"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-github"></i>
-                Code
-              </a>
-              <a
-                class="card-link"
-                href="https://dev.to/ertugrulmutlu/real-time-image-color-palette-extractor-a-deep-dive-into-k-means-lab-and-de2000-4eoi"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-dev"></i>
-                Blog
-              </a>
-              <a
-                class="card-link"
-                href="https://real-time-image-color-palette-extractor-apps.streamlit.app"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-solid fa-play"></i>
-                Live Demo
-              </a>
+            <div class="card-footer-links">
+              <a class="card-link" href="https://github.com/Ertugrulmutlu/trend-alarm-pico" target="_blank" rel="noopener noreferrer">Code</a>
+              <a class="card-link" href="https://dev.to/ertugrulmutlu/part-1-data-gathering-on-raspberry-pi-pico-for-edge-ai-trend-alarm-1ca" target="_blank" rel="noopener noreferrer">Write-up</a>
             </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="project-section" id="experiments-tools">
+        <div class="project-section-header">
+          <div>
+            <h2>Experiments &amp; Tools</h2>
+            <p>Useful side tools, prototypes, and focused technical builds.</p>
           </div>
+        </div>
 
+        <div class="compact-project-grid">
+          <article class="compact-project-card">
+            <h3>Face Landmarks Detection</h3>
+            <p>Real-time 68-point facial landmarks with OpenCV DNN, Facemark LBF, smoothing, and CSV logging.</p>
+            <div class="tag-row"><span class="tag">OpenCV</span><span class="tag">Facemark</span><span class="tag">Python</span></div>
+            <div class="card-footer-links">
+              <a class="card-link" href="https://github.com/Ertugrulmutlu/-Face-Landmark-Tracker" target="_blank" rel="noopener noreferrer">Code</a>
+              <a class="card-link" href="https://dev.to/ertugrulmutlu/-face-landmarks-detection-opencv-dnn-facemark-440d" target="_blank" rel="noopener noreferrer">Write-up</a>
+              <a class="card-link" href="https://www.youtube.com/watch?v=jQmMLPD_EUw" target="_blank" rel="noopener noreferrer">Demo</a>
+            </div>
+          </article>
 
-          <!-- ======================= Applied ML & RL ======================= -->
+          <article class="compact-project-card">
+            <h3>Advanced Dataset Viewer / Data Recorder</h3>
+            <p>A GUI for recording examples, inspecting datasets, and debugging labels before model training.</p>
+            <div class="tag-row"><span class="tag">Data Tooling</span><span class="tag">GUI</span><span class="tag">Python</span></div>
+            <div class="card-footer-links">
+              <a class="card-link" href="https://github.com/Ertugrulmutlu/-Data-Scrap-Tool-Advanced-Dataset-Viewer" target="_blank" rel="noopener noreferrer">Code</a>
+              <a class="card-link" href="https://dev.to/ertugrulmutlu/modular-snip-recorder-a-data-collection-tool-for-behavior-cloning-12-5di8" target="_blank" rel="noopener noreferrer">Write-up</a>
+            </div>
+          </article>
 
-          <!-- Applied Linear Regression (x5) -->
-          <div class="card" data-category="ml">
-            <div class="card-header">
-              <div>
-                <div class="card-title">Applied Linear Regression (x5)</div>
-                <div class="project-meta">
-                  Regression · scikit-learn · Real Datasets
-                </div>
-              </div>
+          <article class="compact-project-card">
+            <h3>Real-Time Image Color Palette Extractor</h3>
+            <p>A Streamlit tool for extracting dominant image colors with k-means, CIE LAB, and ΔE2000.</p>
+            <div class="tag-row"><span class="tag">Streamlit</span><span class="tag">OpenCV</span><span class="tag">Color Science</span></div>
+            <div class="card-footer-links">
+              <a class="card-link" href="https://github.com/Ertugrulmutlu/Real-time-Image-Color-Palette-Extractor" target="_blank" rel="noopener noreferrer">Code</a>
+              <a class="card-link" href="https://dev.to/ertugrulmutlu/real-time-image-color-palette-extractor-a-deep-dive-into-k-means-lab-and-de2000-4eoi" target="_blank" rel="noopener noreferrer">Write-up</a>
+              <a class="card-link" href="https://real-time-image-color-palette-extractor-apps.streamlit.app" target="_blank" rel="noopener noreferrer">Demo</a>
             </div>
-            <p class="card-desc">
-              Five hands-on regression projects on real-world datasets (salary, cars, wine,
-              insurance, trips) using scikit-learn, focusing on feature engineering and metrics.
-            </p>
-            <div class="tag-row">
-              <span class="tag">Python</span>
-              <span class="tag">scikit-learn</span>
-              <span class="tag">Pandas</span>
+          </article>
+
+          <article class="compact-project-card">
+            <h3>PDF Summary Chatbot</h3>
+            <p>A local PDF assistant with chunking, similarity search, lightweight inference, and source attribution.</p>
+            <div class="tag-row"><span class="tag">RAG</span><span class="tag">Local LLM</span><span class="tag">Python</span></div>
+            <div class="card-footer-links">
+              <a class="card-link" href="https://github.com/Ertugrulmutlu/PDF-Summary" target="_blank" rel="noopener noreferrer">Code</a>
+              <a class="card-link" href="https://dev.to/ertugrulmutlu/building-a-local-pdf-summarizer-with-llms-in-under-24-hours-2ijn" target="_blank" rel="noopener noreferrer">Write-up</a>
             </div>
-            <div class="card-footer-links" style="margin-top:0.7rem;">
-              <a
-                class="card-link"
-                href="https://github.com/Ertugrulmutlu/5-Linear-Regression-Projects"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-github"></i>
-                Code
-              </a>
-              <a
-                class="card-link"
-                href="https://dev.to/ertugrulmutlu/real-time-regression-projects-in-python-with-full-code-p5g"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-dev"></i>
-                Blog
-              </a>
+          </article>
+
+          <article class="compact-project-card">
+            <h3>Mini SCADA Console</h3>
+            <p>A Raspberry Pi Pico serial console for temperature telemetry, logging, LED control, and SCADA-style interaction.</p>
+            <div class="tag-row"><span class="tag">RP2040</span><span class="tag">USB-CDC</span><span class="tag">C++</span></div>
+            <div class="card-footer-links">
+              <a class="card-link" href="https://github.com/Ertugrulmutlu/mini_scada" target="_blank" rel="noopener noreferrer">Code</a>
+              <a class="card-link" href="https://dev.to/ertugrulmutlu/building-a-mini-scada-console-on-raspberry-pi-pico-c-50bg" target="_blank" rel="noopener noreferrer">Write-up</a>
             </div>
+          </article>
+
+          <article class="compact-project-card">
+            <h3>Wavelets &amp; Clustering Parity</h3>
+            <p>An intentionally over-engineered parity experiment exploring wavelet features and unsupervised clustering.</p>
+            <div class="tag-row"><span class="tag">PyWavelets</span><span class="tag">k-means</span><span class="tag">Feature Engineering</span></div>
+            <div class="card-footer-links">
+              <a class="card-link" href="https://dev.to/ertugrulmutlu/using-wavelets-and-clustering-to-predict-odd-or-even-numbers-an-overengineered-approach-with-3ld4" target="_blank" rel="noopener noreferrer">Write-up</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="project-section" id="archive">
+        <div class="project-section-header">
+          <div>
+            <h2>Archive</h2>
+            <p>Older learning projects, algorithm practice, and smaller experiments.</p>
           </div>
+        </div>
 
-          <!-- ML Algorithms Comparison -->
-          <div class="card" data-category="ml">
-            <div class="card-header">
-              <div>
-                <div class="card-title">Machine Learning Algorithms Comparison</div>
-                <div class="project-meta">
-                  Classification · Metrics · scikit-learn
-                </div>
-              </div>
+        <div class="archive-list">
+          <article class="archive-item">
+            <div>
+              <h3>Applied Linear Regression (x5)</h3>
+              <p>Five real-dataset regression exercises &middot; Python &middot; scikit-learn</p>
             </div>
-            <p class="card-desc">
-              Compares Decision Tree, SVM, and KNN classifiers using Accuracy, Precision, Recall,
-              and F1-score on the same dataset. Includes clear plots and metric tables.
-            </p>
-            <div class="tag-row">
-              <span class="tag">Decision Tree</span>
-              <span class="tag">SVM</span>
-              <span class="tag">KNN</span>
-              <span class="tag">Metrics</span>
+            <div class="archive-links">
+              <a href="https://github.com/Ertugrulmutlu/5-Linear-Regression-Projects" target="_blank" rel="noopener noreferrer">Code</a>
+              <a href="https://dev.to/ertugrulmutlu/real-time-regression-projects-in-python-with-full-code-p5g" target="_blank" rel="noopener noreferrer">Write-up</a>
             </div>
-            <div class="card-footer-links" style="margin-top:0.7rem;">
-              <a
-                class="card-link"
-                href="https://github.com/Ertugrulmutlu/Machine_Learning_Alg_Comp"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-github"></i>
-                Code
-              </a>
-              <a
-                class="card-link"
-                href="https://dev.to/ertugrulmutlu/comparison-of-machine-learning-algorithms-2ag4"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-dev"></i>
-                Blog
-              </a>
-            </div>
-          </div>
+          </article>
 
-          <!-- Sentence Prediction with Q-Learning -->
-          <div class="card" data-category="ml">
-            <div class="card-header">
-              <div>
-                <div class="card-title">Sentence Prediction with Q-Learning</div>
-                <div class="project-meta">
-                  Reinforcement Learning · NLP · Python
-                </div>
-              </div>
+          <article class="archive-item">
+            <div>
+              <h3>Machine Learning Algorithms Comparison</h3>
+              <p>Decision Tree, SVM, and KNN comparison &middot; Metrics &middot; scikit-learn</p>
             </div>
-            <p class="card-desc">
-              Character-level Q-Learning agent that tries to reach target sentences.
-              A playful RL/NLP crossover exploring reward design and state spaces.
-            </p>
-            <div class="tag-row">
-              <span class="tag">Q-Learning</span>
-              <span class="tag">Text</span>
-              <span class="tag">Exploration</span>
+            <div class="archive-links">
+              <a href="https://github.com/Ertugrulmutlu/Machine_Learning_Alg_Comp" target="_blank" rel="noopener noreferrer">Code</a>
+              <a href="https://dev.to/ertugrulmutlu/comparison-of-machine-learning-algorithms-2ag4" target="_blank" rel="noopener noreferrer">Write-up</a>
             </div>
-            <div class="card-footer-links" style="margin-top:0.7rem;">
-              <a
-                class="card-link"
-                href="https://github.com/Ertugrulmutlu/Q_learning_Sentence_prediction_with"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-github"></i>
-                Code
-              </a>
-              <a
-                class="card-link"
-                href="https://dev.to/ertugrulmutlu/text-generation-with-artificial-intelligence-generation-of-target-sentences-with-q-learning-algorithm-12m0"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-dev"></i>
-                Blog
-              </a>
-            </div>
-          </div>
+          </article>
 
-          <!-- Wavelets & Clustering Parity -->
-          <div class="card" data-category="ml">
-            <div class="card-header">
-              <div>
-                <div class="card-title">Wavelets &amp; Clustering Parity</div>
-                <div class="project-meta">
-                  Signal Processing · Clustering · PyWavelets
-                </div>
-              </div>
+          <article class="archive-item">
+            <div>
+              <h3>Sentence Prediction with Q-Learning</h3>
+              <p>A playful character-level RL and reward-design experiment &middot; Python</p>
             </div>
-            <p class="card-desc">
-              Odd/even classification with wavelet features and unsupervised clustering —
-              an intentionally over-engineered toy problem to highlight feature engineering.
-            </p>
-            <div class="tag-row">
-              <span class="tag">PyWavelets</span>
-              <span class="tag">k-means</span>
-              <span class="tag">NumPy</span>
+            <div class="archive-links">
+              <a href="https://github.com/Ertugrulmutlu/Q_learning_Sentence_prediction_with" target="_blank" rel="noopener noreferrer">Code</a>
+              <a href="https://dev.to/ertugrulmutlu/text-generation-with-artificial-intelligence-generation-of-target-sentences-with-q-learning-algorithm-12m0" target="_blank" rel="noopener noreferrer">Write-up</a>
             </div>
-            <div class="card-footer-links" style="margin-top:0.7rem;">
-              <a
-                class="card-link"
-                href="https://dev.to/ertugrulmutlu/using-wavelets-and-clustering-to-predict-odd-or-even-numbers-an-overengineered-approach-with-3ld4"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-dev"></i>
-                Blog
-              </a>
-            </div>
-          </div>
+          </article>
 
-          <!-- ======================= Competitive Programming / Algo ======================= -->
+          <article class="archive-item">
+            <div>
+              <h3>Daily LeetCode Progress</h3>
+              <p>Algorithm and data-structure practice &middot; Python &middot; C++ &middot; Bash</p>
+            </div>
+            <div class="archive-links">
+              <a href="https://github.com/Ertugrulmutlu/leetcode-series" target="_blank" rel="noopener noreferrer">Code</a>
+              <a href="https://dev.to/ertugrulmutlu/daily-leetcode-progress-day-1-3d0a" target="_blank" rel="noopener noreferrer">Write-up</a>
+            </div>
+          </article>
 
-          <!-- Daily LeetCode -->
-          <div class="card" data-category="algo">
-            <div class="card-header">
-              <div>
-                <div class="card-title">Daily LeetCode Progress</div>
-                <div class="project-meta">
-                  Algorithms · Data Structures · Python &amp; C++
-                </div>
-              </div>
+          <article class="archive-item">
+            <div>
+              <h3>Simple Shell in C</h3>
+              <p>A minimal POSIX shell exploring parsing, fork, exec, and process waiting</p>
             </div>
-            <p class="card-desc">
-              Ongoing series of algorithm &amp; data structure challenges — daily solutions
-              and 5-day recap posts. Focus on patterns and reusable problem-solving techniques.
-            </p>
-            <div class="tag-row">
-              <span class="tag">LeetCode</span>
-              <span class="tag">DS &amp; Algo</span>
-              <span class="tag">Python</span>
-              <span class="tag">C++</span>
+            <div class="archive-links">
+              <a href="https://github.com/Ertugrulmutlu/Shell_of_mine" target="_blank" rel="noopener noreferrer">Code</a>
+              <a href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-13-238e" target="_blank" rel="noopener noreferrer">Write-up</a>
             </div>
-            <div class="card-footer-links" style="margin-top:0.7rem;">
-              <a
-                class="card-link"
-                href="https://github.com/Ertugrulmutlu/leetcode-series"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-github"></i>
-                Code
-              </a>
-              <a
-                class="card-link"
-                href="https://dev.to/ertugrulmutlu/daily-leetcode-progress-day-1-3d0a"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-dev"></i>
-                Blog
-              </a>
-            </div>
-          </div>
-
-          <!-- ======================= Systems & Embedded (OS-level) ======================= -->
-
-          <!-- Simple Shell in C -->
-          <div class="card" data-category="systems">
-            <div class="card-header">
-              <div>
-                <div class="card-title">Simple Shell in C</div>
-                <div class="project-meta">
-                  Systems Programming · POSIX · Processes
-                </div>
-              </div>
-            </div>
-            <p class="card-desc">
-              Minimal CLI shell to explore processes, files, and basic syscalls. Implements command
-              parsing, forking, exec, and process waiting in pure C on POSIX systems.
-            </p>
-            <div class="tag-row">
-              <span class="tag">C</span>
-              <span class="tag">POSIX</span>
-              <span class="tag">fork/exec</span>
-            </div>
-            <div class="card-footer-links" style="margin-top:0.7rem;">
-              <a
-                class="card-link"
-                href="https://github.com/Ertugrulmutlu/Shell_of_mine"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-github"></i>
-                Code
-              </a>
-              <a
-                class="card-link"
-                href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-13-238e"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-dev"></i>
-                Blog
-              </a>
-            </div>
-          </div>
+          </article>
         </div>
       </section>
     </div>
@@ -813,50 +510,15 @@
 
   <footer class="footer">
     <div class="footer-inner">
-      <div>© <span id="year"></span> Ertuğrul Mutlu.</div>
+      <div>&copy; <span id="year"></span> Ertuğrul Mutlu.</div>
       <div class="footer-links">
         <a href="index.html">Home</a>
-        <a href="blog.html">Blog</a>
+        <a href="blog.html">Writing</a>
         <a href="about.html">About</a>
       </div>
     </div>
   </footer>
 
   <script src="script.js"></script>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // === Simple category filter ===
-    (function () {
-      const filterBar = document.querySelector('.project-filters');
-      if (!filterBar) return;
-
-      const buttons = filterBar.querySelectorAll('.tag');
-      const cards = document.querySelectorAll('.card-grid .card');
-
-      if (!buttons.length || !cards.length) return;
-
-      buttons.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          e.preventDefault();
-
-          // active state
-          buttons.forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-
-          const filter = btn.getAttribute('data-filter') || 'all';
-
-          cards.forEach(card => {
-            const cat = card.getAttribute('data-category');
-            if (filter === 'all' || cat === filter) {
-              card.style.display = '';
-            } else {
-              card.style.display = 'none';
-            }
-          });
-        });
-      });
-    })();
-  </script>
 </body>
 </html>

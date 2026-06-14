@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Ertuğrul Mutlu — ML & Edge AI Engineer</title>
+  <title>Ertuğrul Mutlu — Computer Engineering &amp; AI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Developer portfolio of Ertuğrul Mutlu — ML Systems & Edge AI, Agentic AI, RWTH & Fraunhofer IAIS." />
+  <meta
+    name="description"
+    content="Portfolio of Ertuğrul Mutlu, a Computer Engineering student, AI researcher, and builder of practical AI systems."
+  />
   <link rel="stylesheet" href="styles.css" />
   <link
     rel="stylesheet"
@@ -19,285 +22,335 @@
         <div class="nav-badge">ML &amp; Edge AI</div>
       </div>
 
-      <button class="nav-toggle" aria-label="Toggle navigation">
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="site-navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
 
-      <nav class="nav-links">
-        <a href="index.html" class="nav-link active">Home</a>
+      <nav class="nav-links" id="site-navigation" aria-label="Primary navigation">
+        <a href="index.html" class="nav-link active" aria-current="page">Home</a>
         <a href="projects.html" class="nav-link">Projects</a>
-        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="blog.html" class="nav-link">Writing</a>
         <a href="about.html" class="nav-link">About</a>
-        <a href="misc.html" class="nav-link">Misc</a>
+        <a href="misc.html" class="nav-link">Lab</a>
       </nav>
     </div>
   </header>
 
   <main class="main-wrapper">
     <div class="container">
-      <!-- HERO -->
-      <section class="hero">
-        <!-- Sol: Ana blok -->
-        <div class="hero-main">
-          <div class="hero-intro">
-            <div class="hero-eyebrow">~ertugrul.</div>
-            <h1 class="hero-title">Building ML Systems &amp; Agentic Workflows.</h1>
-            <p class="hero-subtitle">
-              Machine Learning &amp; Edge AI engineer focusing on signal-theoretic
-              metrics, real-world deployments and agent-in-the-loop systems.
+      <section class="home-intro">
+        <div class="home-hero">
+          <div class="home-hero-copy">
+            <p class="home-eyebrow">Computer Engineering &middot; AI Research &middot; Product Building</p>
+            <h1>Building practical AI systems, public tools, and agentic workflows.</h1>
+            <p class="home-hero-subtitle">
+              I am a Computer Engineering student at RWTH Aachen University and a
+              Werkstudent Researcher at Fraunhofer IAIS. I build across prompt workflows,
+              local AI systems, edge deployments, and public-facing desktop tools.
             </p>
-            <div class="hero-meta">
-              <div><strong>Werkstudent Researcher @ Fraunhofer IAIS (EIS)</strong></div>
-              <div>RWTH Computer Engineering &mdash; ML Systems, Embedded/Edge AI</div>
-              <div>Location: Aachen, Germany</div>
+
+            <div class="home-identity-list">
+              <span><i class="fa-solid fa-flask"></i> Werkstudent Researcher @ Fraunhofer IAIS</span>
+              <span><i class="fa-solid fa-graduation-cap"></i> Computer Engineering Student @ RWTH Aachen University</span>
+              <span><i class="fa-solid fa-location-dot"></i> Aachen, Germany</span>
             </div>
-            <div class="hero-meta-pill">
+
+            <div class="home-latest">
               <span class="hero-meta-dot"></span>
-              <span><strong>Latest:</strong> PromptLedger Published &mdash; Jan 3, 2026</span>
+              <span><strong>Latest:</strong> OpenAnima surpassed 500+ downloads across platforms.</span>
+            </div>
+
+            <div class="home-hero-actions">
+              <a class="home-action-primary" href="projects.html">View Projects <span aria-hidden="true">&rarr;</span></a>
+              <a class="home-action-secondary" href="blog.html">Read Writing <span aria-hidden="true">&rarr;</span></a>
+              <a class="home-action-secondary" href="about.html">About Me <span aria-hidden="true">&rarr;</span></a>
             </div>
           </div>
 
-          <!-- Timeline ayrı blok -->
-          <div class="hero-timeline-block">
-            <div class="hero-timeline-header">
-              <span class="hero-timeline-label">Timeline</span>
-              <span class="hero-timeline-hint">scroll →</span>
-            </div>
-            <div class="hero-timeline">
-              <div class="hero-timeline-item">
-                <span class="hero-timeline-year">2018–2019</span>
-                High school robotics & contests
-              </div>
-              <div class="hero-timeline-item">
-                <span class="hero-timeline-year">2021</span>
-                Started Computer Engineering @ RWTH
-              </div>
-              <div class="hero-timeline-item">
-                <span class="hero-timeline-year">2023–2024</span>
-                ML & Edge AI side projects
-              </div>
-              <div class="hero-timeline-item">
-                <span class="hero-timeline-year">2025</span>
-                Wavelet-based parity preprint (arXiv)
-              </div>
-              <div class="hero-timeline-item">
-                <span class="hero-timeline-year">Dec 1, 2025</span>
-                Werkstudent @ Fraunhofer IAIS
-              </div>
-              <div class="hero-timeline-item">
-                <span class="hero-timeline-year">Dec 16, 2025</span>
-                DataTalks.Club webinar
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Sağ: Avatar + Currently working on -->
-        <div class="hero-side">
-          <!-- Avatar kartı -->
-          <div class="card hero-avatar-card">
-            <div class="hero-avatar-wrapper">
-              <img
-                src="profil_photo.png"
-                alt="Portrait of Ertuğrul Mutlu"
-                class="hero-avatar-img"
-              />
-            </div>
-            <p class="card-desc" style="text-align:center; margin-bottom:0;">
-              ML &amp; Edge AI engineer working on agentic workflows, robustness, and
-              real-world systems.
-            </p>
-          </div>
-
-          <!-- Currently working on kartı -->
-          <div class="card hero-current-card">
-            <div class="card-header">
-              <div>
-                <div class="card-title">Currently working on</div>
-                <div class="card-meta">
-                  Agentic evaluation pipelines, logit stability metrics, and edge deployment.
-                </div>
-              </div>
-            </div>
-            <div class="tag-row" style="margin-top: 0.3rem;">
-              <span class="tag">Agentic AI</span>
-              <span class="tag">LLM Reliability</span>
-              <span class="tag">Wavelets</span>
-              <span class="tag">Embedded / Edge</span>
-            </div>
-            <p class="card-desc" style="margin-top: 0.8rem;">
-              Combining classical signal processing with deep learning to make agents and
-              LLM systems stable enough for messy real-world inputs.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- FEATURED PROJECT -->
-      <section class="section">
-        <div class="section-header">
-          <h2 class="section-title">Featured Project</h2>
-          <div class="section-subtitle">
-            A quick snapshot of what I&apos;ve been building recently.
-          </div>
-        </div>
-
-
-
-        <div class="card featured-card">
-          <div class="featured-main">
+          <aside class="home-profile-card">
+            <img src="profil_photo.png" alt="Portrait of Ertuğrul Mutlu" />
             <div>
-              <h3 class="featured-title">PromptLedger &mdash; Local-first Prompt Version Control</h3>
-              <p class="featured-meta">
-                Python / CLI / SQLite/ Streamlit
-              </p>
+              <h2>Ertuğrul Mutlu</h2>
+              <p>AI researcher and builder of practical systems that move beyond notebooks.</p>
             </div>
-            <p class="featured-desc">
-              Local prompt change ledger with Git-style diffs, metadata, and labels, stored in a
-              single SQLite file. Includes a CLI, Python API, and a read-only Streamlit viewer
-              for timeline, filtering, and side-by-side comparisons.
-            </p>
-            <div class="tag-row" style="margin-top:0.4rem;">
-              <span class="tag">Prompt Ops</span>
-              <span class="tag">Versioning</span>
-              <span class="tag">Diffs</span>
-              <span class="tag">SQLite</span>
+            <div class="tag-row">
+              <span class="tag">Agentic AI</span>
+              <span class="tag">Local AI</span>
+              <span class="tag">Edge AI</span>
+              <span class="tag">Desktop Tools</span>
             </div>
-          </div>
-          <div class="featured-links">
-            <a
-              class="card-link"
-              href="https://github.com/Ertugrulmutlu/promptledger"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="fa-brands fa-github"></i>
-              GitHub
-            </a>
-            <a
-              class="card-link"
-              href="https://dev.to/ertugrulmutlu/promptledger-local-first-prompt-version-control-2pk0"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="fa-solid fa-book-open"></i>
-              Read blog post
-            </a>
-            <a
-              class="card-link"
-              href="https://pypi.org/project/promptledger/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="fa-brands fa-python"></i>
-              PyPI
-            </a>
-          </div>
+          </aside>
         </div>
       </section>
 
-      <!-- LINKS -->
-      <section class="section">
-        <div class="section-header">
-          <h2 class="section-title">Links</h2>
-          <div class="section-subtitle">Places where I build, write, and share work.</div>
+      <section class="home-section">
+        <div class="home-section-header">
+          <div>
+            <h2>Current Direction</h2>
+            <p>What I am building and researching right now.</p>
+          </div>
         </div>
 
-        <div class="card-grid card-grid-2">
-          <!-- GitHub -->
-          <a class="card" href="https://github.com/Ertugrulmutlu" target="_blank" rel="noopener noreferrer">
-            <div class="card-header">
-              <div>
-                <div class="card-title">GitHub</div>
-                <div class="card-meta">Projects, experiments, and research code.</div>
-              </div>
-              <div class="icon-pill"><i class="fa-brands fa-github"></i></div>
-            </div>
-            <p class="card-desc">
-              Active repositories for ML agents, edge deployments, and small tools that I use
-              in day-to-day workflows.
-            </p>
-            <span class="card-link">Open profile</span>
-          </a>
+        <div class="direction-grid">
+          <article class="direction-card">
+            <span class="direction-icon"><i class="fa-solid fa-code-compare"></i></span>
+            <h3>AI Workflow Reliability</h3>
+            <p>Prompt versioning, lightweight evaluation, and debugging practices for inspectable AI systems.</p>
+          </article>
 
-          <!-- LinkedIn -->
-          <a class="card" href="https://www.linkedin.com/in/ertugrul-mutlu/" target="_blank" rel="noopener noreferrer">
-            <div class="card-header">
-              <div>
-                <div class="card-title">LinkedIn</div>
-                <div class="card-meta">Professional profile &amp; updates.</div>
-              </div>
-              <div class="icon-pill"><i class="fa-brands fa-linkedin-in"></i></div>
-            </div>
-            <p class="card-desc">
-              Career timeline, talks, and short posts about ML systems, edge AI and agentic workflows.
-            </p>
-            <span class="card-link">Connect</span>
-          </a>
+          <article class="direction-card">
+            <span class="direction-icon"><i class="fa-solid fa-laptop-code"></i></span>
+            <h3>Local AI Tools</h3>
+            <p>Small, practical utilities for prompt workflows, local experimentation, and reproducible AI tooling.</p>
+          </article>
 
-          <!-- Blog / dev.to -->
-          <a class="card" href="https://dev.to/ertugrulmutlu" target="_blank" rel="noopener noreferrer">
-            <div class="card-header">
-              <div>
-                <div class="card-title">Blog on dev.to</div>
-                <div class="card-meta">Long-form write-ups of projects.</div>
-              </div>
-              <div class="icon-pill"><i class="fa-brands fa-dev"></i></div>
-            </div>
-            <p class="card-desc">
-              Deep dives into ML experiments, debugging stories, and end-to-end project
-              breakdowns.
-            </p>
-            <span class="card-link">Read posts</span>
-          </a>
+          <article class="direction-card">
+            <span class="direction-icon"><i class="fa-solid fa-microchip"></i></span>
+            <h3>Edge AI Deployments</h3>
+            <p>TinyML and embedded ML pipelines that run outside notebooks on constrained hardware.</p>
+          </article>
 
-          <!-- arXiv -->
-          <a class="card" href="https://arxiv.org/search/?query=Ertugrul+Mutlu&searchtype=author" target="_blank" rel="noopener noreferrer">
-            <div class="card-header">
-              <div>
-                <div class="card-title">arXiv</div>
-                <div class="card-meta">Research preprints &amp; experiments.</div>
-              </div>
-              <div class="icon-pill"><i class="fa-solid fa-flask"></i></div>
-            </div>
-            <p class="card-desc">
-              Wavelet-based feature engineering, clustering for parity detection, and future
-              work on logit stability metrics.
-            </p>
-            <span class="card-link">View papers</span>
-          </a>
+          <article class="direction-card">
+            <span class="direction-icon"><i class="fa-brands fa-windows"></i></span>
+            <h3>Public Desktop Products</h3>
+            <p>Packaged applications such as OpenAnima and MediaRecorder Lite, released for real users.</p>
+          </article>
+        </div>
+      </section>
 
-          <!-- Email -->
-          <a class="card" href="mailto:ertugrulmutlu004@gmail.com">
-            <div class="card-header">
-              <div>
-                <div class="card-title">Email</div>
-                <div class="card-meta">Get in touch for collaborations or questions.</div>
-              </div>
-              <div class="icon-pill"><i class="fa-regular fa-envelope"></i></div>
-            </div>
-            <p class="card-desc">
-              I&apos;m happy to talk about ML systems, edge deployments, or potential
-              collaborations.
-            </p>
-            <span class="card-link">Send email</span>
-          </a>
+      <section class="home-section">
+        <div class="home-section-header">
+          <div>
+            <h2>Selected Work</h2>
+            <p>A quick snapshot of the projects that best represent my current direction.</p>
+          </div>
+        </div>
 
-          <!-- DataTalks.Club -->
-          <a class="card" href="https://www.youtube.com/watch?v=HwCR59VuYn4&t=0s" target="_blank" rel="noopener noreferrer">
-            <div class="card-header">
-              <div>
-                <div class="card-title">DataTalks.Club Webinar</div>
-                <div class="card-meta">Dec 16, 2025</div>
-              </div>
-              <div class="icon-pill"><i class="fa-solid fa-podcast"></i></div>
+        <div class="home-selected-grid">
+          <article class="home-selected-card">
+            <div class="showcase-card-top">
+              <h3>OpenAnima</h3>
+              <span class="project-status-pill">Public Product</span>
             </div>
-            <p class="card-desc">
-              &ldquo;From Human-in-the-Loop to Agent-in-the-Loop&rdquo; &mdash; a
-              practical look at evolving ML workflows.
+            <p>A lightweight desktop visual companion and local-first animated overlay system.</p>
+            <div class="project-highlights">
+              <span class="project-highlight">500+ downloads</span>
+              <span class="project-highlight">Microsoft Store</span>
+              <span class="project-highlight">Open source</span>
+            </div>
+            <div class="card-footer-links">
+              <a class="card-link" href="https://ertugrulmutlu.github.io/OpenAnima/" target="_blank" rel="noopener noreferrer">Website</a>
+              <a class="card-link" href="https://github.com/Ertugrulmutlu/OpenAnima" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </article>
+
+          <article class="home-selected-card">
+            <div class="showcase-card-top">
+              <h3>JumpNet &mdash; Vision-Based Game Agent</h3>
+              <span class="project-status-pill">Computer Vision</span>
+            </div>
+            <p>A real-time visual agent where timing, data collection, and deployment behavior mattered as much as offline model metrics.</p>
+            <div class="project-highlights">
+              <span class="project-highlight">Real-time inference</span>
+              <span class="project-highlight">Timing</span>
+              <span class="project-highlight">Data tooling</span>
+            </div>
+            <div class="card-footer-links">
+              <a class="card-link" href="https://github.com/Ertugrulmutlu/JumpNet" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a class="card-link" href="https://dev.to/ertugrulmutlu/jumpnet-part-1-from-raw-gameplay-to-labeled-intelligence-building-the-data-foundation-for-2e2f" target="_blank" rel="noopener noreferrer">Write-up</a>
+            </div>
+          </article>
+
+          <article class="home-selected-card">
+            <div class="showcase-card-top">
+              <h3>PromptLedger</h3>
+              <span class="project-status-pill">Developer Tool</span>
+            </div>
+            <p>Local-first prompt version control with Git-style diffs, labels, metadata, and SQLite.</p>
+            <div class="project-highlights">
+              <span class="project-highlight">PyPI package</span>
+              <span class="project-highlight">SQLite ledger</span>
+              <span class="project-highlight">CLI</span>
+            </div>
+            <div class="card-footer-links">
+              <a class="card-link" href="https://github.com/Ertugrulmutlu/promptledger" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a class="card-link" href="https://pypi.org/project/promptledger/" target="_blank" rel="noopener noreferrer">PyPI</a>
+            </div>
+          </article>
+
+          <article class="home-selected-card">
+            <div class="showcase-card-top">
+              <h3>Edge AI Sound Classifier</h3>
+              <span class="project-status-pill">Edge AI</span>
+            </div>
+            <p>An end-to-end TinyML audio classifier running on Raspberry Pi Pico and RP2040 hardware.</p>
+            <div class="project-highlights">
+              <span class="project-highlight">On-device inference</span>
+              <span class="project-highlight">C++ firmware</span>
+              <span class="project-highlight">~87% accuracy</span>
+            </div>
+            <div class="card-footer-links">
+              <a class="card-link" href="https://github.com/Ertugrulmutlu/Edge-AI-Sound-Classifier-on-Raspberry-Pi-Pico" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a class="card-link" href="https://dev.to/ertugrulmutlu/building-an-edge-ai-sound-classifier-part-1-collecting-and-preparing-the-dataset-moo" target="_blank" rel="noopener noreferrer">Write-up</a>
+            </div>
+          </article>
+        </div>
+
+        <a class="home-section-link" href="projects.html">View all projects <span aria-hidden="true">&rarr;</span></a>
+      </section>
+
+      <section class="home-section">
+        <div class="home-section-header">
+          <div>
+            <h2>Public Products</h2>
+            <p>Small desktop tools packaged and released for real users.</p>
+          </div>
+        </div>
+
+        <div class="home-product-grid">
+          <article class="product-card">
+            <div class="showcase-card-top">
+              <div>
+                <h3>OpenAnima</h3>
+                <p class="product-category">Desktop visual companion</p>
+              </div>
+              <span class="project-status-pill">Released</span>
+            </div>
+            <p>
+              A lightweight desktop visual companion and local-first animated overlay
+              system. It has surpassed 500+ downloads across platforms and is available
+              through GitHub, Microsoft Store, and itch.io.
             </p>
-            <span class="card-link">Go Webinar</span>
-          </a>
+            <div class="project-highlights">
+              <span class="project-highlight">500+ downloads</span>
+              <span class="project-highlight">Microsoft Store</span>
+              <span class="project-highlight">Open source</span>
+            </div>
+            <div class="card-footer-links">
+              <a class="card-link" href="https://ertugrulmutlu.github.io/OpenAnima/" target="_blank" rel="noopener noreferrer">Website</a>
+              <a class="card-link" href="https://github.com/Ertugrulmutlu/OpenAnima" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a class="card-link" href="https://apps.microsoft.com/detail/9n3hp2wxkxlg?hl=en-us&amp;gl=DE&amp;ocid=pdpshare" target="_blank" rel="noopener noreferrer">Microsoft Store</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="showcase-card-top">
+              <div>
+                <h3>MediaRecorder Lite</h3>
+                <p class="product-category">Vertical screen recorder</p>
+              </div>
+              <span class="project-status-pill">Released</span>
+            </div>
+            <p>
+              A lightweight vertical screen recorder for creators making TikTok, Instagram
+              Reels, and YouTube Shorts content. It focuses on fast capture-area selection,
+              simple recording, and 9:16 export.
+            </p>
+            <div class="project-highlights">
+              <span class="project-highlight">Microsoft Store</span>
+              <span class="project-highlight">Creator tool</span>
+              <span class="project-highlight">9:16 export</span>
+            </div>
+            <div class="card-footer-links">
+              <a class="card-link" href="https://apps.microsoft.com/detail/9nlb7l766q5m?hl=en-US&amp;gl=DE" target="_blank" rel="noopener noreferrer">Microsoft Store</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="home-section">
+        <div class="home-section-header">
+          <div>
+            <h2>Research &amp; Engineering Tracks</h2>
+            <p>The main technical directions behind my projects.</p>
+          </div>
+        </div>
+
+        <div class="track-grid">
+          <article class="track-card">
+            <span class="direction-icon"><i class="fa-solid fa-diagram-project"></i></span>
+            <h3>AI Workflow Reliability &amp; Developer Tooling</h3>
+            <p>PromptLedger, local LLM tools, reproducible workflows, and debugging utilities for practical AI systems.</p>
+            <div class="track-links">
+              <a href="projects.html#experiments-tools">Projects</a>
+              <a href="https://dev.to/ertugrulmutlu/promptledger-local-first-prompt-version-control-2pk0" target="_blank" rel="noopener noreferrer">PromptLedger</a>
+            </div>
+          </article>
+
+          <article class="track-card">
+            <span class="direction-icon"><i class="fa-solid fa-memory"></i></span>
+            <h3>Edge AI &amp; Embedded ML</h3>
+            <p>Raspberry Pi Pico, TinyML, C++ inference, signal processing, and constrained hardware.</p>
+            <div class="track-links">
+              <a href="projects.html#ai-systems">Projects</a>
+              <a href="blog.html">Writing</a>
+            </div>
+          </article>
+
+          <article class="track-card">
+            <span class="direction-icon"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+            <h3>Experimental ML &amp; Developer Tools</h3>
+            <p>PromptLedger, VAE/VQ-VAE, JumpNet, dataset tooling, and learning through complete builds.</p>
+            <div class="track-links">
+              <a href="projects.html#experiments-tools">Projects</a>
+              <a href="https://arxiv.org/search/?query=Ertugrul+Mutlu&amp;searchtype=author" target="_blank" rel="noopener noreferrer">arXiv</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="home-section">
+        <div class="home-section-header">
+          <div>
+            <h2>Writing</h2>
+            <p>Project write-ups, technical notes, and public learning logs.</p>
+          </div>
+        </div>
+
+        <div class="writing-preview-grid">
+          <article class="writing-preview-card">
+            <p class="writing-preview-meta">Developer Tool</p>
+            <h3>PromptLedger &mdash; Local-first Prompt Version Control</h3>
+            <p>Designing a portable prompt ledger with diffs, metadata, labels, and SQLite.</p>
+            <a href="https://dev.to/ertugrulmutlu/promptledger-local-first-prompt-version-control-2pk0" target="_blank" rel="noopener noreferrer">Read write-up <span aria-hidden="true">&rarr;</span></a>
+          </article>
+
+          <article class="writing-preview-card">
+            <p class="writing-preview-meta">Edge AI Series</p>
+            <h3>Building an Edge AI Sound Classifier</h3>
+            <p>From dataset preparation and feature extraction to Pico firmware and live inference.</p>
+            <a href="https://dev.to/ertugrulmutlu/building-an-edge-ai-sound-classifier-part-1-collecting-and-preparing-the-dataset-moo" target="_blank" rel="noopener noreferrer">Start series <span aria-hidden="true">&rarr;</span></a>
+          </article>
+
+          <article class="writing-preview-card">
+            <p class="writing-preview-meta">Computer Vision Series</p>
+            <h3>Building JumpNet</h3>
+            <p>Collecting gameplay data, training a vision policy, and running real-time inference.</p>
+            <a href="https://dev.to/ertugrulmutlu/jumpnet-part-1-from-raw-gameplay-to-labeled-intelligence-building-the-data-foundation-for-2e2f" target="_blank" rel="noopener noreferrer">Start series <span aria-hidden="true">&rarr;</span></a>
+          </article>
+        </div>
+
+        <a class="home-section-link" href="blog.html">View all writing <span aria-hidden="true">&rarr;</span></a>
+      </section>
+
+      <section class="home-section">
+        <div class="next-steps-card">
+          <div class="next-steps-copy">
+            <p class="home-eyebrow">Contact / Next Steps</p>
+            <h2>Open to</h2>
+            <ul>
+              <li>Research conversations around AI workflow reliability</li>
+              <li>Open-source AI tooling</li>
+              <li>Edge AI and embedded ML projects</li>
+              <li>Technical writing, talks, and practical prototypes</li>
+            </ul>
+          </div>
+          <div class="next-steps-links">
+            <a class="home-action-primary" href="projects.html">Projects</a>
+            <a class="home-action-secondary" href="https://github.com/Ertugrulmutlu" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="home-action-secondary" href="https://www.linkedin.com/in/ertugrul-mutlu/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="home-action-secondary" href="mailto:ertugrulmutlu004@gmail.com">Email</a>
+          </div>
         </div>
       </section>
     </div>
@@ -305,18 +358,15 @@
 
   <footer class="footer">
     <div class="footer-inner">
-      <div>© <span id="year"></span> Ertuğrul Mutlu. Built as a lightweight static site.</div>
+      <div>&copy; <span id="year"></span> Ertuğrul Mutlu. Built as a lightweight static site.</div>
       <div class="footer-links">
         <a href="projects.html">Projects</a>
-        <a href="blog.html">Blog</a>
+        <a href="blog.html">Writing</a>
         <a href="about.html">About</a>
       </div>
     </div>
   </footer>
 
   <script src="script.js"></script>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>

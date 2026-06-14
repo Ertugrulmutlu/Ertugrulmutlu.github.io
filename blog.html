@@ -2,10 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Blog — Ertuğrul Mutlu</title>
+  <title>Writing — Ertuğrul Mutlu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Blog posts and external articles by Ertuğrul Mutlu (dev.to, etc.)." />
+  <meta
+    name="description"
+    content="Technical essays, engineering notes, project write-ups, and public learning logs by Ertuğrul Mutlu."
+  />
   <link rel="stylesheet" href="styles.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
 </head>
 <body>
   <header class="navbar">
@@ -15,601 +22,417 @@
         <div class="nav-badge">ML &amp; Edge AI</div>
       </div>
 
-      <button class="nav-toggle" aria-label="Toggle navigation">
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="site-navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
 
-      <nav class="nav-links">
+      <nav class="nav-links" id="site-navigation" aria-label="Primary navigation">
         <a href="index.html" class="nav-link">Home</a>
         <a href="projects.html" class="nav-link">Projects</a>
-        <a href="blog.html" class="nav-link active">Blog</a>
+        <a href="blog.html" class="nav-link active" aria-current="page">Writing</a>
         <a href="about.html" class="nav-link">About</a>
-        <a href="misc.html" class="nav-link">Misc</a>
+        <a href="misc.html" class="nav-link">Lab</a>
       </nav>
     </div>
   </header>
 
-  <main class="main-wrapper">
+  <main class="main-wrapper" id="top">
     <div class="container">
-      <section class="section">
-        <div class="section-header">
-          <h1 class="section-title">Blog</h1>
-          <div class="section-subtitle">
-            I publish most of my write-ups on dev.to. You can filter by topic below.
+      <section class="writing-intro">
+        <h1 class="writing-page-title">Writing</h1>
+        <p class="writing-page-subtitle">Technical essays, project write-ups, and public learning logs.</p>
+        <div class="writing-intro-text">
+          <p>
+            I use writing to document how systems fail, how projects evolve, and what I
+            learn while building. Some posts are polished essays, some are project series,
+            and some are public notes from experiments.
+          </p>
+          <p>
+            A recurring theme is reliable decision-making under real-world uncertainty:
+            prompts, tools, timing, data, edge devices, and systems that need to be
+            observable after they fail.
+          </p>
+        </div>
+      </section>
+
+      <nav class="writing-nav" aria-label="Writing sections">
+        <a href="#start-here">Start Here</a>
+        <a href="#featured-writing">Featured</a>
+        <a href="#product-build-logs">Products</a>
+        <a href="#project-series">Series</a>
+        <a href="#archive-series">Archive Series</a>
+        <a href="#reading-paths">Paths</a>
+        <a href="#archive">Archive</a>
+        <a href="#devto">dev.to</a>
+      </nav>
+
+      <section class="writing-section" id="start-here">
+        <div class="writing-section-header">
+          <div>
+            <h2>Start Here</h2>
+            <p>Three entry points depending on what you want to understand first.</p>
           </div>
         </div>
 
-        <!-- ==== FILTER BAR ==== -->
-        <div class="blog-filters" style="margin: 0.8rem 0 1.4rem; display:flex; flex-wrap:wrap; gap:0.5rem;">
-          <button class="tag blog-filter active" data-filter="all">All</button>
-          <button class="tag blog-filter" data-filter="talks">Talks &amp; Agentic AI</button>
-          <button class="tag blog-filter" data-filter="edge">Edge AI &amp; Embedded</button>
-          <button class="tag blog-filter" data-filter="vision">Computer Vision</button>
-          <button class="tag blog-filter" data-filter="gen">Generative Models</button>
-          <button class="tag blog-filter" data-filter="rag">LLMs, RAG &amp; Tools</button>
-          <button class="tag blog-filter" data-filter="ml-core">Classical ML &amp; Theory</button>
-          <button class="tag blog-filter" data-filter="systems">Systems &amp; Shell</button>
-          <button class="tag blog-filter" data-filter="leetcode">LeetCode &amp; Bash</button>
-        </div>
-
-        <div class="blog-list">
-          <!-- ==== ML / THEORY ==== -->
-          <article class="card" data-category="ml-core">
-            <h2 class="blog-item-title">
-              Wavelets &amp; Clustering to Detect Odd vs. Even Numbers
-            </h2>
-            <div class="blog-item-meta">
-              dev.to · Feature engineering, signal processing, unsupervised learning.
-            </div>
-            <p class="card-desc">
-              A deep dive into how wavelet transforms and clustering can uncover symbolic
-              structure (parity) from raw numerical sequences. Includes visualizations,
-              failure cases, and thoughts on feature engineering in the LLM era.
-            </p>
-            <a
-              class="card-link"
-              href="https://dev.to/ertugrulmutlu/using-wavelets-and-clustering-to-predict-odd-or-even-numbers-an-overengineered-approach-with-3ld4"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Read on dev.to
+        <div class="writing-start-grid">
+          <article class="writing-start-card">
+            <p class="writing-start-label">For the philosophy</p>
+            <h3>Deterministic Decision Making</h3>
+            <p>The core essay behind my current engineering philosophy: making decision systems reliable, inspectable, and reproducible in messy real-world environments.</p>
+            <a href="https://dev.to/ertugrulmutlu/deterministic-decision-making-in-non-deterministic-environments-why-all-my-projects-fight-the-same-c8p" target="_blank" rel="noopener noreferrer">
+              Read essay <span aria-hidden="true">&rarr;</span>
             </a>
           </article>
 
-          <article class="card" data-category="ml-core">
-            <h2 class="blog-item-title">
-              Applied Linear Regression Projects (x5)
-            </h2>
-            <div class="blog-item-meta">
-              dev.to · Classical ML, regression, real datasets.
-            </div>
-            <p class="card-desc">
-              Five different regression projects in Python (salary, cars, wine,
-              insurance, trips). Focus on data prep, model selection, evaluation
-              metrics, and practical trade-offs rather than pure theory.
-            </p>
-            <a
-              class="card-link"
-              href="https://dev.to/ertugrulmutlu/real-time-regression-projects-in-python-with-full-code-p5g"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Read on dev.to
+          <article class="writing-start-card">
+            <p class="writing-start-label">For practical AI tooling</p>
+            <h3>PromptLedger Series</h3>
+            <p>A 5-part build series about turning prompt history into a local-first, inspectable workspace.</p>
+            <a href="https://dev.to/ertugrulmutlu/series/35047" target="_blank" rel="noopener noreferrer">
+              Open full series <span aria-hidden="true">&rarr;</span>
             </a>
           </article>
 
-          <article class="card" data-category="ml-core">
-            <h2 class="blog-item-title">
-              Comparing ML Algorithms: KNN vs SVM vs Decision Tree
-            </h2>
-            <div class="blog-item-meta">
-              dev.to · Model comparison, metrics, experimentation.
-            </div>
-            <p class="card-desc">
-              Decision Tree, SVM, and KNN on the same dataset, compared with accuracy,
-              precision, recall, and F1. Shows how each model behaves, where it fails,
-              and how to interpret metric trade-offs.
-            </p>
-            <a
-              class="card-link"
-              href="https://dev.to/ertugrulmutlu/comparison-of-machine-learning-algorithms-2ag4"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Read on dev.to
-            </a>
-          </article>
-
-          <article class="card" data-category="ml-core">
-            <h2 class="blog-item-title">
-              Text Generation with Q-Learning
-            </h2>
-            <div class="blog-item-meta">
-              dev.to · Reinforcement learning, simple NLP, educational.
-            </div>
-            <p class="card-desc">
-              A character-level Q-Learning setup that tries to reach target sentences.
-              Explains states, actions, rewards and how RL can be used for toy NLP
-              tasks without any deep learning.
-            </p>
-            <a
-              class="card-link"
-              href="https://dev.to/ertugrulmutlu/text-generation-with-artificial-intelligence-generation-of-target-sentences-with-q-learning-algorithm-12m0"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Read on dev.to
-            </a>
-          </article>
-
-          <!-- ==== COMPUTER VISION ==== -->
-          <article class="card" data-category="vision">
-            <h2 class="blog-item-title">
-              Building JumpNet — A Vision-based Agent for a One-Button Game
-            </h2>
-            <div class="blog-item-meta">
-              dev.to · Computer vision, imitation learning, deployment.
-            </div>
-            <p class="card-desc">
-              How I recorded gameplay data, designed the training pipeline, and
-              evaluated a CNN-based agent that decides when (and how long) to jump.
-              Covers data collection pitfalls, modeling strategy and real-time GUI.
-            </p>
-            <p class="card-desc" style="margin-top:0.4rem;">
-              Series (3 parts):
-            </p>
-            <ul class="card-desc" style="margin-top:0.2rem; padding-left:0; list-style:none; display:flex; flex-wrap:wrap; gap:0.45rem;">
-              <li>
-                <a
-                  class="card-link"
-                  href="https://dev.to/ertugrulmutlu/jumpnet-part-1-from-raw-gameplay-to-labeled-intelligence-building-the-data-foundation-for-2e2f"
-                  target="_blank" rel="noopener noreferrer"
-                >Part 1 — Data foundation</a>
-              </li>
-              <li>
-                <a
-                  class="card-link"
-                  href="https://dev.to/ertugrulmutlu/jumpnet-part-2-from-pixels-to-policy-training-jumpnet-to-make-the-right-move-1eoi"
-                  target="_blank" rel="noopener noreferrer"
-                >Part 2 — Training the policy</a>
-              </li>
-              <li>
-                <a
-                  class="card-link"
-                  href="https://dev.to/ertugrulmutlu/jumpnet-part-3-real-time-inference-watching-jumpnet-come-alive-21b2"
-                  target="_blank" rel="noopener noreferrer"
-                >Part 3 — Real-time inference</a>
-              </li>
-            </ul>
-          </article>
-
-          <article class="card" data-category="vision">
-            <h2 class="blog-item-title">
-              Face Landmarks Detection with OpenCV DNN + Facemark
-            </h2>
-            <div class="blog-item-meta">
-              dev.to · Real-time vision, tracking, logging.
-            </div>
-            <p class="card-desc">
-              Real-time 68-point facial landmark tracker with EMA smoothing and CSV
-              logging. Uses OpenCV DNN for detection and Facemark LBF for landmark
-              prediction, plus temporal smoothing for stable overlays.
-            </p>
-            <a
-              class="card-link"
-              href="https://dev.to/ertugrulmutlu/-face-landmarks-detection-opencv-dnn-facemark-440d"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Read on dev.to
-            </a>
-          </article>
-
-          <article class="card" data-category="vision">
-            <h2 class="blog-item-title">
-              Modular Snip Recorder / Advanced Dataset Viewer
-            </h2>
-            <div class="blog-item-meta">
-              dev.to · Data tooling, behavior cloning.
-            </div>
-            <p class="card-desc">
-              A modular data collection tool that records screen + keypresses and lets
-              you browse and inspect behavior cloning datasets afterwards. Designed to
-              debug agents like JumpNet before training.
-            </p>
-            <p class="card-desc" style="margin-top:0.4rem;">
-              Series (2 parts):
-            </p>
-            <ul class="card-desc" style="margin-top:0.2rem; padding-left:0; list-style:none; display:flex; flex-wrap:wrap; gap:0.45rem;">
-              <li>
-                <a
-                  class="card-link"
-                  href="https://dev.to/ertugrulmutlu/modular-snip-recorder-a-data-collection-tool-for-behavior-cloning-12-5di8"
-                  target="_blank" rel="noopener noreferrer"
-                >Part 1 — Tool design</a>
-              </li>
-              <li>
-                <a
-                  class="card-link"
-                  href="https://dev.to/ertugrulmutlu/modular-snip-recorder-a-data-collection-tool-for-behavior-cloning-22-1lgl"
-                  target="_blank" rel="noopener noreferrer"
-                >Part 2 — Viewer &amp; insights</a>
-              </li>
-            </ul>
-          </article>
-
-
-          <article class="card" data-category="vision">
-            <h2 class="blog-item-title">
-              Real-Time Image Color Palette Extractor
-            </h2>
-            <div class="blog-item-meta">
-              dev.to · Computer vision, color science, Streamlit.
-            </div>
-            <p class="card-desc">
-              A Streamlit app that extracts dominant colors from images in real time
-              using k-means, CIE LAB, and ΔE2000. Includes details on color distance,
-              clustering stability and UX choices.
-            </p>
-            <a
-              class="card-link"
-              href="https://dev.to/ertugrulmutlu/real-time-image-color-palette-extractor-a-deep-dive-into-k-means-lab-and-de2000-4eoi"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Read on dev.to
-            </a>
-                        <a
-              class="card-link"
-              href= "https://real-time-image-color-palette-extractor-apps.streamlit.app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-             Live Demo
-            </a>
-          </article>
-
-          <!-- ==== GENERATIVE MODELS ==== -->
-          <article class="card" data-category="gen">
-            <h2 class="blog-item-title">
-              VAE vs VQ-VAE for Compact Face Representations
-            </h2>
-            <div class="blog-item-meta">
-              dev.to · Representation learning, generative models.
-            </div>
-            <p class="card-desc">
-              An experiment-heavy comparison between continuous and discrete latent
-              spaces for compressing faces. Architecture details, training curves, and
-              case studies where each method succeeds or fails.
-            </p>
-            <a
-              class="card-link"
-              href="https://dev.to/ertugrulmutlu/compressing-human-faces-with-vae-vs-vq-vae-a-deep-dive-into-autoencoder-design-j59"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Read on dev.to
-            </a>
-          </article>
-
-          <article class="card" data-category="gen">
-            <h2 class="blog-item-title">
-              Conditional GAN — Sketch Generation (Berlin Sketches)
-            </h2>
-            <div class="blog-item-meta">
-              dev.to · cGAN, computer vision, experiments.
-            </div>
-            <p class="card-desc">
-              A conditional GAN trained on black-and-white Berlin sketches, generating
-              class-specific images from labels. Walkthrough of training tricks, failure
-              modes, and what made convergence hard in practice.
-            </p>
-            <a
-              class="card-link"
-              href="https://dev.to/ertugrulmutlu/a-cgan-story-three-attempts-and-an-incomplete-ending-2a1b"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Read on dev.to
-            </a>
-          </article>
-
-          <!-- ==== EDGE AI & EMBEDDED ==== -->
-          <article class="card" data-category="edge">
-            <h2 class="blog-item-title">
-              Building an Edge AI Sound Classifier on Raspberry Pi Pico
-            </h2>
-            <div class="blog-item-meta">
-              dev.to · TinyML, audio, embedded C++.
-            </div>
-            <p class="card-desc">
-              End-to-end TinyML pipeline on RP2040 classifying audio into baby cry,
-              doorbell, smoke alarm, and background. From dataset collection to feature
-              extraction and C++ firmware with Logistic Regression on-device.
-            </p>
-            <p class="card-desc" style="margin-top:0.4rem;">
-              Series (3 parts):
-            </p>
-            <ul class="card-desc" style="margin-top:0.2rem; padding-left:0; list-style:none; display:flex; flex-wrap:wrap; gap:0.45rem;">
-              <li>
-                <a
-                  class="card-link"
-                  href="https://dev.to/ertugrulmutlu/building-an-edge-ai-sound-classifier-part-1-collecting-and-preparing-the-dataset-moo"
-                  target="_blank" rel="noopener noreferrer"
-                >Part 1 — Data collection</a>
-              </li>
-              <li>
-                <a
-                  class="card-link"
-                  href="https://dev.to/ertugrulmutlu/building-an-edge-ai-sound-classifier-part-2-feature-extraction-training-4bli"
-                  target="_blank" rel="noopener noreferrer"
-                >Part 2 — Features &amp; training</a>
-              </li>
-              <li>
-                <a
-                  class="card-link"
-                  href="https://dev.to/ertugrulmutlu/building-an-edge-ai-sound-classifier-part-3-pico-firmware-live-demo-571g"
-                  target="_blank" rel="noopener noreferrer"
-                >Part 3 — Firmware &amp; demo</a>
-              </li>
-            </ul>
-          </article>
-
-          <article class="card" data-category="edge">
-            <h2 class="blog-item-title">
-              Edge AI Trend Alarm on Raspberry Pi Pico
-            </h2>
-            <div class="blog-item-meta">
-              dev.to · Time series, TinyML, embedded C++.
-            </div>
-            <p class="card-desc">
-              Edge AI pipeline detecting workload-induced heating trends on the Pico.
-              Data logging, rolling OLS slopes, Logistic Regression, and real-time
-              inference in C++ with oversampled ADC and hysteresis FSM.
-            </p>
-            <p class="card-desc" style="margin-top:0.4rem;">
-              Series (3 parts):
-            </p>
-            <ul class="card-desc" style="margin-top:0.2rem; padding-left:0; list-style:none; display:flex; flex-wrap:wrap; gap:0.45rem;">
-              <li>
-                <a
-                  class="card-link"
-                  href="https://dev.to/ertugrulmutlu/part-1-data-gathering-on-raspberry-pi-pico-for-edge-ai-trend-alarm-1ca"
-                  target="_blank" rel="noopener noreferrer"
-                >Part 1 — Data gathering</a>
-              </li>
-              <li>
-                <a
-                  class="card-link"
-                  href="https://dev.to/ertugrulmutlu/part-2-training-model-on-raspberry-pi-pico-for-edge-ai-trend-alarm-9gf"
-                  target="_blank" rel="noopener noreferrer"
-                >Part 2 — Training</a>
-              </li>
-              <li>
-                <a
-                  class="card-link"
-                  href="https://dev.to/ertugrulmutlu/part-3-real-time-inference-on-pico-firmware-integration-3ga6"
-                  target="_blank" rel="noopener noreferrer"
-                >Part 3 — Firmware integration</a>
-              </li>
-            </ul>
-          </article>
-
-          <article class="card" data-category="edge">
-            <h2 class="blog-item-title">
-              Building a Mini SCADA Console on Raspberry Pi Pico (C++)
-            </h2>
-            <div class="blog-item-meta">
-              dev.to · Embedded systems, SCADA, serial CLI.
-            </div>
-            <p class="card-desc">
-              USB-CDC based command console simulating an industrial field device:
-              telemetry (internal temp via ADC4), logging and LED control. Shows how to
-              structure firmware for simple SCADA-style interactions.
-            </p>
-            <a
-              class="card-link"
-              href="https://dev.to/ertugrulmutlu/building-a-mini-scada-console-on-raspberry-pi-pico-c-50bg"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Read on dev.to
-            </a>
-          </article>
-
-          <!-- ==== LLMs / RAG / TOOLS ==== -->
-          <article class="card" data-category="rag">
-            <h2 class="blog-item-title">
-              PromptLedger · Local-first Prompt Version Control
-            </h2>
-            <div class="blog-item-meta">
-              dev.to · Prompt engineering, tooling, version control.
-            </div>
-            <p class="card-desc">
-              A local prompt change ledger stored in SQLite, with Git-style diffs,
-              metadata, labels, and a read-only Streamlit viewer. Built for teams that
-              want prompt history and review workflows without standing up a service.
-            </p>
-            <a
-              class="card-link"
-              href="https://dev.to/ertugrulmutlu/promptledger-local-first-prompt-version-control-2pk0"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Read on dev.to
-            </a>
-          </article>
-
-          <article class="card" data-category="rag">
-            <h2 class="blog-item-title">
-              Local PDF QA with Lightweight LLMs
-            </h2>
-            <div class="blog-item-meta">
-              dev.to · RAG, local inference, tooling.
-            </div>
-            <p class="card-desc">
-              Building a small, local-first PDF summarizer and QA system. Focus on
-              chunking strategies, retrieval quality, speed, and keeping everything
-              private on a normal laptop.
-            </p>
-            <a
-              class="card-link"
-              href="https://dev.to/ertugrulmutlu/building-a-local-pdf-summarizer-with-llms-in-under-24-hours-2ijn"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Read on dev.to
-            </a>
-          </article>
-
-
-          <!-- ==== TALKS / AGENTIC AI ==== -->
-          <article class="card" data-category="talks">
-            <h2 class="blog-item-title">
-              How Do You Actually Optimize Agents?
-            </h2>
-            <div class="blog-item-meta">
-              dev.to · Agentic AI, workflows, Optimization.
-            </div>
-            <p class="card-desc">
-A systems-level look at agent optimization beyond prompt tuning.
-Why most agent failures are task design failures — and how constraints, feedback loops, and human supervision shape reliable agent-in-the-loop systems.
-            </p>
-            <a
-              class="card-link"
-              href="https://dev.to/ertugrulmutlu/how-do-you-actually-optimize-agents-it-depends-on-the-task-2h0o"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Read related post(s) on dev.to
-            </a>
-          </article>
-          <article class="card" data-category="talks">
-            <h2 class="blog-item-title">
-              My First Public ML Talk: Human-in-the-Loop → Agent-in-the-Loop
-            </h2>
-            <div class="blog-item-meta">
-              dev.to · Talk recap, lessons learned.
-            </div>
-            <p class="card-desc">
-              A short recap of preparing and delivering my first public ML talk, focused
-              on transitioning from human-in-the-loop systems to agent-in-the-loop
-              architectures. Includes reflections, structure, and what I’d improve next
-              time.
-            </p>
-            <a
-              class="card-link"
-              href="https://dev.to/ertugrulmutlu/my-first-public-ml-talk-human-in-the-loop-agent-in-the-loop-dec-16-datatalksclub-2lf1"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Read on dev.to
-            </a>
-          </article>
-
-          <!-- ==== SYSTEMS / SHELL ==== -->
-          <article class="card" data-category="systems">
-            <h2 class="blog-item-title">
-              How I Built a Simple Shell in C — System Programming (1/3–3/3)
-            </h2>
-            <div class="blog-item-meta">
-              dev.to · C, POSIX, processes.
-            </div>
-            <p class="card-desc">
-              A three-part series on implementing a tiny Unix-like shell in C, covering
-              parsing, forking processes, exec, pipes, and basic error handling.
-            </p>
-            <ul class="card-desc" style="margin-top:0.4rem; padding-left:0; list-style:none; display:flex; flex-wrap:wrap; gap:0.45rem;">
-              <li>
-                <a
-                  class="card-link"
-                  href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-13-238e"
-                  target="_blank" rel="noopener noreferrer"
-                >Part 1 — Core loop &amp; parsing</a>
-              </li>
-              <li>
-                <a
-                  class="card-link"
-                  href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-23-3m2i"
-                  target="_blank" rel="noopener noreferrer"
-                >Part 2 — Processes &amp; exec</a>
-              </li>
-              <li>
-                <a
-                  class="card-link"
-                  href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-33-eah"
-                  target="_blank" rel="noopener noreferrer"
-                >Part 3 — Memory &amp; polish</a>
-              </li>
-            </ul>
-          </article>
-
-          <!-- ==== LEETCODE / BASH ==== -->
-          <article class="card" data-category="leetcode">
-            <h2 class="blog-item-title">
-              Tackling LeetCode Bash Problems – A Practical Guide
-            </h2>
-            <div class="blog-item-meta">
-              dev.to · Bash, LeetCode, practical scripting.
-            </div>
-            <p class="card-desc">
-              Summary of how I completed the LeetCode Bash problem set: patterns,
-              useful Unix tools, and thinking in data streams. Includes example
-              one-liners and explanations.
-            </p>
-            <a
-              class="card-link"
-              href="https://dev.to/ertugrulmutlu/tackling-leetcode-bash-problems-a-practical-guide-6ob"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Read on dev.to
-            </a>
-          </article>
-
-          <article class="card" data-category="leetcode">
-            <h2 class="blog-item-title">
-              Daily LeetCode Progress — Algorithm Practice Series
-            </h2>
-            <div class="blog-item-meta">
-              dev.to · Algorithms, data structures, practice logs.
-            </div>
-            <p class="card-desc">
-              A running series logging my daily LeetCode progress (Day 1, 2, 3, …),
-              focusing on patterns, mistakes, and what I learned from each batch of
-              problems in Python and C++.
-            </p>
-            <a
-              class="card-link"
-              href="https://dev.to/ertugrulmutlu/daily-leetcode-progress-day-1-3d0a"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Start at Day 1 on dev.to
-            </a>
+          <article class="writing-start-card">
+            <p class="writing-start-label">For systems under constraints</p>
+            <h3>Edge AI Sound Classifier</h3>
+            <p>A 3-part build series showing how models behave when they leave notebooks and face real data, firmware, and constrained hardware.</p>
+            <a href="https://dev.to/ertugrulmutlu/series/33033" target="_blank" rel="noopener noreferrer">Open full series <span aria-hidden="true">&rarr;</span></a>
           </article>
         </div>
+      </section>
 
-        <div class="section" style="margin-top:1.6rem;">
-          <p class="section-subtitle">
-            For the full list of posts (including future ones), visit my profile:
-          </p>
-          <a
-            class="card-link"
-            href="https://dev.to/ertugrulmutlu"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Open dev.to profile
+      <section class="writing-section" id="featured-writing">
+        <div class="writing-section-header">
+          <div>
+            <h2>Featured Writing</h2>
+            <p>Selected pieces that best represent the themes behind the work.</p>
+          </div>
+        </div>
+
+        <div class="featured-writing-grid">
+          <article class="featured-writing-card">
+            <div class="writing-card-meta">
+              <span class="writing-status-pill">Engineering Essay</span>
+              <span>System Reliability</span>
+            </div>
+            <h3>Deterministic Decision Making in Non-Deterministic Environments</h3>
+            <p>The central essay connecting my projects around reliability, observability, timing, data control, and deterministic system design.</p>
+            <div class="tag-row">
+              <span class="tag">Reliability</span><span class="tag">Observability</span><span class="tag">System Design</span>
+            </div>
+            <a class="writing-card-link" href="https://dev.to/ertugrulmutlu/deterministic-decision-making-in-non-deterministic-environments-why-all-my-projects-fight-the-same-c8p" target="_blank" rel="noopener noreferrer">Read essay <span aria-hidden="true">&rarr;</span></a>
+          </article>
+
+          <article class="featured-writing-card">
+            <div class="writing-card-meta">
+              <span class="writing-status-pill">Local AI Build</span>
+              <span>Lightweight LLMs</span>
+            </div>
+            <h3>Building a Local PDF Summarizer with LLMs &mdash; In Under 24 Hours</h3>
+            <p>A fast local LLM build showing how lightweight tools can turn documents into usable question-answering and summarization workflows.</p>
+            <div class="tag-row">
+              <span class="tag">Local AI</span><span class="tag">Document QA</span><span class="tag">Rapid Build</span>
+            </div>
+            <a class="writing-card-link" href="https://dev.to/ertugrulmutlu/building-a-local-pdf-summarizer-with-llms-in-under-24-hours-2ijn" target="_blank" rel="noopener noreferrer">Read build note <span aria-hidden="true">&rarr;</span></a>
+          </article>
+
+          <article class="featured-writing-card">
+            <div class="writing-card-meta">
+              <span class="writing-status-pill">Systems Note</span>
+              <span>Decision Reliability</span>
+            </div>
+            <h3>I Intentionally Built a Bad Decision System (So You Don&rsquo;t Have To)</h3>
+            <p>A small benchmark-style project showing how hidden state, side effects, and weak system design can break decision reliability even when code appears to work.</p>
+            <div class="tag-row">
+              <span class="tag">Hidden State</span><span class="tag">Side Effects</span><span class="tag">Debugging</span>
+            </div>
+            <a class="writing-card-link" href="https://dev.to/ertugrulmutlu/i-intentionally-built-a-bad-decision-system-so-you-dont-have-to-417j" target="_blank" rel="noopener noreferrer">Read systems note <span aria-hidden="true">&rarr;</span></a>
+          </article>
+
+          <article class="featured-writing-card">
+            <div class="writing-card-meta">
+              <span class="writing-status-pill">Data Reliability</span>
+              <span>Dataset Inspection</span>
+            </div>
+            <h3>DataLens: A Read-Only Image Dataset Sanity Checker</h3>
+            <p>A read-only dataset inspection tool for detecting corrupted images, duplicates, label alignment issues, and silent data problems before training.</p>
+            <div class="tag-row">
+              <span class="tag">Data Quality</span><span class="tag">Inspection</span><span class="tag">Computer Vision</span>
+            </div>
+            <a class="writing-card-link" href="https://dev.to/ertugrulmutlu/datalens-a-read-only-image-dataset-sanity-checker-2do0" target="_blank" rel="noopener noreferrer">Read data note <span aria-hidden="true">&rarr;</span></a>
+          </article>
+        </div>
+      </section>
+
+      <section class="writing-section" id="product-build-logs">
+        <div class="writing-section-header">
+          <div>
+            <h2>Product Build Logs</h2>
+            <p>Release notes and build stories from tools that became public products.</p>
+          </div>
+        </div>
+        <div class="writing-product-log-grid">
+          <article class="writing-product-log-card">
+            <p class="writing-product-meta">Open Source &middot; Desktop App &middot; Windows</p>
+            <h3>OpenAnima v1 &mdash; Open-Source Desktop Overlay Engine for Windows</h3>
+            <p>A release and build note for OpenAnima as a Windows desktop overlay engine.</p>
+            <div class="tag-row"><span class="tag">Open Source</span><span class="tag">Overlay Engine</span></div>
+            <a class="writing-card-link" href="https://dev.to/ertugrulmutlu/openanima-v1-open-source-desktop-overlay-engine-for-windows-3m9c" target="_blank" rel="noopener noreferrer">Read release note <span aria-hidden="true">&rarr;</span></a>
+          </article>
+          <article class="writing-product-log-card">
+            <p class="writing-product-meta">Desktop UI &middot; Creative Tool</p>
+            <h3>OpenAnima v0.2 Preview &mdash; Turning the Windows Desktop into a Living Canvas</h3>
+            <p>A preview note showing the evolution from a simple overlay idea toward a more flexible desktop asset system.</p>
+            <div class="tag-row"><span class="tag">Creative Tool</span><span class="tag">Asset System</span></div>
+            <a class="writing-card-link" href="https://dev.to/ertugrulmutlu/openanima-v02-preview-turning-the-windows-desktop-into-a-living-canvas-11lh" target="_blank" rel="noopener noreferrer">Read preview <span aria-hidden="true">&rarr;</span></a>
+          </article>
+        </div>
+      </section>
+
+      <section class="writing-section" id="project-series">
+        <div class="writing-section-header">
+          <div>
+            <h2>Project Series</h2>
+            <p>Multi-part build logs where the process matters as much as the result.</p>
+          </div>
+        </div>
+
+        <div class="writing-series-grid">
+          <article class="writing-series-card">
+            <div class="writing-series-top">
+              <p class="writing-series-meta">Prompt Workflows &middot; Local-first Tooling</p>
+              <span class="writing-series-badge">5-part series</span>
+            </div>
+            <h3>PromptLedger Series</h3>
+            <p>A local-first prompt version control series covering prompt history, labels, diffs, review workflows, faster logging, and the workspace dashboard.</p>
+            <span class="writing-series-start">Start with Part 1</span>
+            <div class="writing-series-links">
+              <a class="writing-series-link" href="https://dev.to/ertugrulmutlu/promptledger-local-first-prompt-version-control-2pk0" target="_blank" rel="noopener noreferrer"><span>01</span> Local-first prompt version control</a>
+              <a class="writing-series-link" href="https://dev.to/ertugrulmutlu/promptledger-v02-labels-status-and-better-diffs-137j" target="_blank" rel="noopener noreferrer"><span>02</span> Labels, Status, and Better Diffs</a>
+              <a class="writing-series-link" href="https://dev.to/ertugrulmutlu/promptledger-v03-labels-status-and-better-diffs-1ong" target="_blank" rel="noopener noreferrer"><span>03</span> A practical review workflow</a>
+              <a class="writing-series-link" href="https://dev.to/ertugrulmutlu/promptledger-v04-faster-prompt-logging-lightweight-markers-and-better-prompt-organization-2b2g" target="_blank" rel="noopener noreferrer"><span>04</span> Faster logging and organization</a>
+              <a class="writing-series-link" href="https://dev.to/ertugrulmutlu/promptledger-v06-turning-prompt-history-into-a-local-workspace-dashboard-3cen" target="_blank" rel="noopener noreferrer"><span>05</span> Local workspace dashboard</a>
+            </div>
+            <a class="writing-archive-series-link" href="https://dev.to/ertugrulmutlu/series/35047" target="_blank" rel="noopener noreferrer">View full series <span aria-hidden="true">&rarr;</span></a>
+          </article>
+          <article class="writing-series-card">
+            <div class="writing-series-top">
+              <p class="writing-series-meta">Computer Vision &middot; Imitation Learning</p>
+              <span class="writing-series-badge">3-part series</span>
+            </div>
+            <h3>JumpNet Series</h3>
+            <p>From raw gameplay data to a real-time vision-based game agent.</p>
+            <span class="writing-series-start">Start with Part 1</span>
+            <div class="writing-series-links">
+              <a class="writing-series-link" href="https://dev.to/ertugrulmutlu/jumpnet-part-1-from-raw-gameplay-to-labeled-intelligence-building-the-data-foundation-for-2e2f" target="_blank" rel="noopener noreferrer"><span>01</span> Data foundation</a>
+              <a class="writing-series-link" href="https://dev.to/ertugrulmutlu/jumpnet-part-2-from-pixels-to-policy-training-jumpnet-to-make-the-right-move-1eoi" target="_blank" rel="noopener noreferrer"><span>02</span> Training the policy</a>
+              <a class="writing-series-link" href="https://dev.to/ertugrulmutlu/jumpnet-part-3-real-time-inference-watching-jumpnet-come-alive-21b2" target="_blank" rel="noopener noreferrer"><span>03</span> Real-time inference</a>
+            </div>
+          </article>
+
+          <article class="writing-series-card">
+            <div class="writing-series-top">
+              <p class="writing-series-meta">TinyML &middot; Audio &middot; Embedded C++</p>
+              <span class="writing-series-badge">3-part series</span>
+            </div>
+            <h3>Edge AI Sound Classification</h3>
+            <p>Dataset collection, feature extraction, training, and firmware deployment for an embedded audio classifier.</p>
+            <span class="writing-series-start">Start with Part 1</span>
+            <div class="writing-series-links">
+              <a class="writing-series-link" href="https://dev.to/ertugrulmutlu/building-an-edge-ai-sound-classifier-part-1-collecting-and-preparing-the-dataset-moo" target="_blank" rel="noopener noreferrer"><span>01</span> Data collection</a>
+              <a class="writing-series-link" href="https://dev.to/ertugrulmutlu/building-an-edge-ai-sound-classifier-part-2-feature-extraction-training-4bli" target="_blank" rel="noopener noreferrer"><span>02</span> Features &amp; training</a>
+              <a class="writing-series-link" href="https://dev.to/ertugrulmutlu/building-an-edge-ai-sound-classifier-part-3-pico-firmware-live-demo-571g" target="_blank" rel="noopener noreferrer"><span>03</span> Firmware &amp; demo</a>
+            </div>
+            <a class="writing-archive-series-link" href="https://dev.to/ertugrulmutlu/series/33033" target="_blank" rel="noopener noreferrer">View full series <span aria-hidden="true">&rarr;</span></a>
+          </article>
+
+          <article class="writing-series-card">
+            <div class="writing-series-top">
+              <p class="writing-series-meta">Time Series &middot; TinyML &middot; RP2040</p>
+              <span class="writing-series-badge">3-part series</span>
+            </div>
+            <h3>Edge AI Trend Alarm</h3>
+            <p>A Raspberry Pi Pico trend-detection project covering data gathering, training, and firmware integration.</p>
+            <span class="writing-series-start">Start with Part 1</span>
+            <div class="writing-series-links">
+              <a class="writing-series-link" href="https://dev.to/ertugrulmutlu/part-1-data-gathering-on-raspberry-pi-pico-for-edge-ai-trend-alarm-1ca" target="_blank" rel="noopener noreferrer"><span>01</span> Data gathering</a>
+              <a class="writing-series-link" href="https://dev.to/ertugrulmutlu/part-2-training-model-on-raspberry-pi-pico-for-edge-ai-trend-alarm-9gf" target="_blank" rel="noopener noreferrer"><span>02</span> Model training</a>
+              <a class="writing-series-link" href="https://dev.to/ertugrulmutlu/part-3-real-time-inference-on-pico-firmware-integration-3ga6" target="_blank" rel="noopener noreferrer"><span>03</span> Firmware integration</a>
+            </div>
+            <a class="writing-archive-series-link" href="https://dev.to/ertugrulmutlu/series/33222" target="_blank" rel="noopener noreferrer">View full series <span aria-hidden="true">&rarr;</span></a>
+          </article>
+
+          <article class="writing-series-card">
+            <div class="writing-series-top">
+              <p class="writing-series-meta">Data Tooling &middot; Behavior Cloning</p>
+              <span class="writing-series-badge">2-part series</span>
+            </div>
+            <h3>Modular Snip Recorder</h3>
+            <p>A data collection and dataset inspection tool for behavior cloning workflows.</p>
+            <span class="writing-series-start">Start with Part 1</span>
+            <div class="writing-series-links">
+              <a class="writing-series-link" href="https://dev.to/ertugrulmutlu/modular-snip-recorder-a-data-collection-tool-for-behavior-cloning-12-5di8" target="_blank" rel="noopener noreferrer"><span>01</span> Tool design</a>
+              <a class="writing-series-link" href="https://dev.to/ertugrulmutlu/modular-snip-recorder-a-data-collection-tool-for-behavior-cloning-22-1lgl" target="_blank" rel="noopener noreferrer"><span>02</span> Viewer &amp; insights</a>
+            </div>
+            <a class="writing-archive-series-link" href="https://dev.to/ertugrulmutlu/series/33207" target="_blank" rel="noopener noreferrer">View full series <span aria-hidden="true">&rarr;</span></a>
+          </article>
+        </div>
+      </section>
+
+      <section class="writing-section" id="archive-series">
+        <div class="writing-section-header">
+          <div>
+            <h2>Archive Series</h2>
+            <p>Longer practice series and older learning logs kept compact.</p>
+          </div>
+        </div>
+        <div class="writing-archive-series-grid">
+          <article class="writing-archive-series-card">
+            <div class="writing-series-top">
+              <p class="writing-series-meta">Systems Programming &middot; C &middot; POSIX</p>
+              <span class="writing-series-badge">3-part series</span>
+            </div>
+            <h3>Simple Shell in C</h3>
+            <p>A beginner-friendly systems programming series about building a simple shell in C.</p>
+            <div class="writing-series-links">
+              <a class="writing-series-link" href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-13-238e" target="_blank" rel="noopener noreferrer"><span>01</span> Part 1</a>
+              <a class="writing-series-link" href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-23-3m2i" target="_blank" rel="noopener noreferrer"><span>02</span> Part 2</a>
+              <a class="writing-series-link" href="https://dev.to/ertugrulmutlu/how-i-built-a-simple-shell-in-c-a-beginners-guide-to-system-programming-33-eah" target="_blank" rel="noopener noreferrer"><span>03</span> Part 3</a>
+            </div>
+            <a class="writing-archive-series-link" href="https://dev.to/ertugrulmutlu/series/33032" target="_blank" rel="noopener noreferrer">View full series <span aria-hidden="true">&rarr;</span></a>
+          </article>
+          <article class="writing-archive-series-card">
+            <div class="writing-series-top">
+              <p class="writing-series-meta">Algorithms &middot; Data Structures</p>
+              <span class="writing-series-badge">22-part series</span>
+            </div>
+            <h3>Daily LeetCode Challenge</h3>
+            <p>A long-running practice series documenting daily LeetCode solutions and problem-solving notes.</p>
+            <a class="writing-archive-series-link" href="https://dev.to/ertugrulmutlu/series/33026" target="_blank" rel="noopener noreferrer">View full series <span aria-hidden="true">&rarr;</span></a>
+          </article>
+        </div>
+      </section>
+
+      <section class="writing-section" id="reading-paths">
+        <div class="writing-section-header">
+          <div>
+            <h2>Reading Paths</h2>
+            <p>Choose a theme and follow the related notes.</p>
+          </div>
+        </div>
+
+        <div class="writing-path-grid">
+          <article class="writing-path-panel">
+            <p class="writing-path-label"><i class="fa-solid fa-route"></i> Path 01</p>
+            <h3>AI Workflow Reliability &amp; Tooling</h3>
+            <p>Prompt workflows, local LLM utilities, retrieval experiments, and debugging practices for inspectable AI systems.</p>
+            <div class="writing-path-links">
+              <a href="https://dev.to/ertugrulmutlu/deterministic-decision-making-in-non-deterministic-environments-why-all-my-projects-fight-the-same-c8p" target="_blank" rel="noopener noreferrer">Deterministic Decision Making</a>
+              <a href="https://dev.to/ertugrulmutlu/series/35047" target="_blank" rel="noopener noreferrer">PromptLedger Series</a>
+              <a href="https://dev.to/ertugrulmutlu/building-a-local-pdf-summarizer-with-llms-in-under-24-hours-2ijn" target="_blank" rel="noopener noreferrer">Local PDF Summarizer</a>
+              <a href="https://dev.to/ertugrulmutlu/i-intentionally-built-a-bad-decision-system-so-you-dont-have-to-417j" target="_blank" rel="noopener noreferrer">I Intentionally Built a Bad Decision System</a>
+              <a href="https://dev.to/ertugrulmutlu/how-do-you-actually-optimize-agents-it-depends-on-the-task-2h0o" target="_blank" rel="noopener noreferrer">How Do You Actually Optimize Agents?</a>
+            </div>
+          </article>
+
+          <article class="writing-path-panel">
+            <p class="writing-path-label"><i class="fa-solid fa-database"></i> Path 02</p>
+            <h3>Data Quality &amp; Inspection</h3>
+            <p>Tools and practices for finding data problems before they become model problems.</p>
+            <div class="writing-path-links">
+              <a href="https://dev.to/ertugrulmutlu/datalens-a-read-only-image-dataset-sanity-checker-2do0" target="_blank" rel="noopener noreferrer">DataLens</a>
+              <a href="https://dev.to/ertugrulmutlu/series/33207" target="_blank" rel="noopener noreferrer">Modular Snip Recorder</a>
+              <a href="https://dev.to/ertugrulmutlu/real-time-image-color-palette-extractor-a-deep-dive-into-k-means-lab-and-de2000-4eoi" target="_blank" rel="noopener noreferrer">Color Palette Extractor</a>
+              <a href="https://dev.to/ertugrulmutlu/-face-landmarks-detection-opencv-dnn-facemark-440d" target="_blank" rel="noopener noreferrer">Face Landmarks Detection</a>
+            </div>
+          </article>
+
+          <article class="writing-path-panel">
+            <p class="writing-path-label"><i class="fa-solid fa-microchip"></i> Path 03</p>
+            <h3>Edge AI &amp; Hardware Constraints</h3>
+            <p>Models, state machines, and firmware built for constrained devices.</p>
+            <div class="writing-path-links">
+              <a href="https://dev.to/ertugrulmutlu/series/33033" target="_blank" rel="noopener noreferrer">Edge AI Sound Classification</a>
+              <a href="https://dev.to/ertugrulmutlu/series/33222" target="_blank" rel="noopener noreferrer">Edge AI Trend Alarm</a>
+              <a href="https://dev.to/ertugrulmutlu/building-a-mini-scada-console-on-raspberry-pi-pico-c-50bg" target="_blank" rel="noopener noreferrer">Mini SCADA Console</a>
+              <a href="https://dev.to/ertugrulmutlu/hysteresis-in-neural-networks-part-1-3c03" target="_blank" rel="noopener noreferrer">Hysteresis in Neural Networks &mdash; Part 1</a>
+            </div>
+          </article>
+
+          <article class="writing-path-panel">
+            <p class="writing-path-label"><i class="fa-solid fa-eye"></i> Path 04</p>
+            <h3>Perception, Timing &amp; Computer Vision</h3>
+            <p>Visual systems where data collection and response timing shape behavior.</p>
+            <div class="writing-path-links">
+              <a href="https://dev.to/ertugrulmutlu/jumpnet-part-1-from-raw-gameplay-to-labeled-intelligence-building-the-data-foundation-for-2e2f" target="_blank" rel="noopener noreferrer">JumpNet</a>
+              <a href="https://dev.to/ertugrulmutlu/-face-landmarks-detection-opencv-dnn-facemark-440d" target="_blank" rel="noopener noreferrer">Face Landmarks Detection</a>
+              <a href="https://dev.to/ertugrulmutlu/real-time-image-color-palette-extractor-a-deep-dive-into-k-means-lab-and-de2000-4eoi" target="_blank" rel="noopener noreferrer">Color Palette Extractor</a>
+            </div>
+          </article>
+
+          <article class="writing-path-panel">
+            <p class="writing-path-label"><i class="fa-solid fa-shapes"></i> Path 05</p>
+            <h3>Generative &amp; Representation Learning</h3>
+            <p>Experiments with latent spaces, reconstruction, and conditional generation.</p>
+            <div class="writing-path-links">
+              <a href="https://dev.to/ertugrulmutlu/compressing-human-faces-with-vae-vs-vq-vae-a-deep-dive-into-autoencoder-design-j59" target="_blank" rel="noopener noreferrer">VAE vs VQ-VAE</a>
+              <a href="https://dev.to/ertugrulmutlu/a-cgan-story-three-attempts-and-an-incomplete-ending-2a1b" target="_blank" rel="noopener noreferrer">Conditional GAN Sketch Generation</a>
+            </div>
+          </article>
+
+          <article class="writing-path-panel">
+            <p class="writing-path-label"><i class="fa-solid fa-chart-line"></i> Path 06</p>
+            <h3>Classical ML &amp; Experiments</h3>
+            <p>Feature engineering, model comparison, regression, and educational experiments.</p>
+            <div class="writing-path-links">
+              <a href="https://dev.to/ertugrulmutlu/using-wavelets-and-clustering-to-predict-odd-or-even-numbers-an-overengineered-approach-with-3ld4" target="_blank" rel="noopener noreferrer">Wavelets &amp; Clustering</a>
+              <a href="https://dev.to/ertugrulmutlu/real-time-regression-projects-in-python-with-full-code-p5g" target="_blank" rel="noopener noreferrer">Applied Linear Regression Projects</a>
+              <a href="https://dev.to/ertugrulmutlu/comparison-of-machine-learning-algorithms-2ag4" target="_blank" rel="noopener noreferrer">Comparing ML Algorithms</a>
+              <a href="https://dev.to/ertugrulmutlu/text-generation-with-artificial-intelligence-generation-of-target-sentences-with-q-learning-algorithm-12m0" target="_blank" rel="noopener noreferrer">Text Generation with Q-Learning</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="writing-section" id="archive">
+        <div class="writing-section-header">
+          <div>
+            <h2>Archive</h2>
+            <p>Older learning logs, practice notes, and smaller experiments.</p>
+          </div>
+        </div>
+
+        <div class="writing-archive-list">
+          <article class="writing-archive-item">
+            <div><h3>Tackling LeetCode Bash Problems</h3><p>Bash &middot; Unix Tools &middot; Practical Scripting</p></div>
+            <a href="https://dev.to/ertugrulmutlu/tackling-leetcode-bash-problems-a-practical-guide-6ob" target="_blank" rel="noopener noreferrer">Read</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="writing-section" id="devto">
+        <article class="writing-external-card">
+          <div>
+            <p class="writing-external-label">External Archive</p>
+            <h2>More on dev.to</h2>
+            <p>
+              This website highlights selected writing and grouped project series. The
+              full stream of posts, release notes, experiments, and practice logs lives
+              on dev.to.
+            </p>
+          </div>
+          <a class="home-action-primary" href="https://dev.to/ertugrulmutlu" target="_blank" rel="noopener noreferrer">
+            Open dev.to profile <span aria-hidden="true">&rarr;</span>
           </a>
-        </div>
+        </article>
       </section>
     </div>
   </main>
 
   <footer class="footer">
     <div class="footer-inner">
-      <div>© <span id="year"></span> Ertuğrul Mutlu.</div>
+      <div>&copy; <span id="year"></span> Ertuğrul Mutlu.</div>
       <div class="footer-links">
         <a href="index.html">Home</a>
         <a href="projects.html">Projects</a>
@@ -619,37 +442,5 @@ Why most agent failures are task design failures — and how constraints, feedba
   </footer>
 
   <script src="script.js"></script>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // === Blog category filter ===
-    (function () {
-      const filterContainer = document.querySelector(".blog-filters");
-      const cards = document.querySelectorAll(".blog-list .card");
-      if (!filterContainer || !cards.length) return;
-
-      const buttons = filterContainer.querySelectorAll(".blog-filter");
-
-      buttons.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const filter = btn.getAttribute("data-filter") || "all";
-
-          // active state
-          buttons.forEach((b) => b.classList.remove("active"));
-          btn.classList.add("active");
-
-          // show/hide cards
-          cards.forEach((card) => {
-            const cat = card.getAttribute("data-category");
-            if (filter === "all" || cat === filter) {
-              card.style.display = "";
-            } else {
-              card.style.display = "none";
-            }
-          });
-        });
-      });
-    })();
-  </script>
 </body>
 </html>
